@@ -12,5 +12,118 @@
   },
   "allProjects": {
     "title": "Todos os Projetos"
+  },
+  "mediasAPI": {
+    "menu": {
+      "apresentacao": "Apresentação",
+      "motivacao": "Motivação e Solução",
+      "funcionalidades": "Principais Funcionalidades",
+      "utilizandoApi": "Utilizando a API",
+      "praticas": "Práticas Adotadas"
+    },
+    "title": "API Rest de Gestão de Notas e Projeções Acadêmicas",
+    "placeholder": "AQUI",
+    "apresentacao": {
+      "title": "Apresentação",
+      "docLink": "Documentação técnica",
+      "p1": "Uma plataforma inteligente de gestão acadêmica que transforma a maneira como estudantes e professores lidam com avaliações. A solução oferece armazenamento centralizado de notas, cálculo automático de médias e, principalmente, projeções estratégicas que permitem aos usuários simular cenários e planejar seu desempenho com antecedência.",
+      "p2": "O diferencial está na flexibilidade: cada disciplina pode ter seu próprio método de cálculo personalizado através de expressões matemáticas customizáveis. O sistema processa essas expressões dinamicamente, identifica variáveis e constantes através de regex, e aplica o algoritmo Shunting Yard com notação polonesa reversa (RPN) para garantir a precedência correta dos operadores — tudo isso sem comprometer a performance ou usabilidade.",
+      "p3": "Desenvolvida seguindo princípios SOLID e arquitetura em camadas, a API combina validações robustas (Bean Validation), autenticação JWT, testes automatizados com mocks e documentação OpenAPI 3. A solução foi containerizada com Docker e utiliza Spring Data JPA para consultas otimizadas, demonstrando uma implementação backend completa e profissional."
+    },
+    "motivacao": {
+      "title": "Motivação e Solução",
+      "p1": "Durante a jornada acadêmica na universidade, gerenciar as notas ou até mesmo apenas armazená-las é um processo que pode ser automatizado de maneira eficiente. No entanto, como cada professor e disciplina definem seus próprios métodos de avaliação e critérios de desempenho de acordo com suas preferências e abordagens, há uma grande variabilidade e flexibilidade nesse processo.",
+      "p2": "Para que a aplicação possa suportar essas definições personalizadas, foi implementada uma solução baseada no processamento de expressões regulares, permitindo a identificação e manipulação dinâmica de variáveis, constantes e operadores. Dessa forma, o cálculo das médias finais é automatizado de maneira flexível e adaptável a diferentes regras de avaliação.",
+      "p3": "Outro desafio foi a implementação desse cálculo dinâmico. A solução adotada utiliza a notação polonesa inversa (RPN), que elimina a necessidade de parênteses ao definir a ordem correta de precedência diretamente em sua estrutura. Além disso, foi empregada uma adaptação do algoritmo Shunting Yard, utilizando pilhas e listas como estruturas de dados para garantir a correta avaliação das expressões."
+    },
+    "funcionalidades": {
+      "title": "Principais Funcionalidades",
+      "items": [
+        "Armazene notas de forma estruturada e eficiente.",
+        "Defina métodos personalizados para cálculo de médias.",
+        "Obtenha automaticamente a pontuação necessária para alcançar metas acadêmicas.",
+        "Simule diferentes cenários para planejamento estratégico.",
+        "Gerencie disciplinas."
+      ]
+    },
+    "utilizandoApi": {
+      "title": "Utilizando a API",
+      "login": {
+        "title": "Login:",
+        "item": "O usuário cria seu perfil se cadastrando no sistema."
+      },
+      "autenticacao": {
+        "title": "Autenticação:",
+        "item": "A API valida as credenciais e, se bem-sucedida, retorna um token JWT."
+      },
+      "disciplinas": {
+        "title": "Disciplinas:",
+        "item": "O usuário pode criar e editar suas disciplinas personalizadas."
+      },
+      "projecoes": {
+        "title": "Projeções:",
+        "item": "Uma projeção é criada automaticamente na definição do método de cálculo no passo anterior. Usuários podem criar, editar e visualizar outras projeções."
+      },
+      "avaliacoes": {
+        "title": "Avaliações:",
+        "item": "Também criadas automaticamente a cada projeção. Usuários podem lançar notas."
+      }
+    },
+    "praticas": {
+      "title": "Práticas Adotadas",
+      "arquitetura": {
+        "title": "Arquitetura e Design",
+        "items": [
+          "API REST com divisão em camadas",
+          "Aplicação dos princípios SOLID",
+          "Injeção de Dependências",
+          "Uso do padrão Data Transfer Object (DTO)"
+        ]
+      },
+      "validacao": {
+        "title": "Validação e Segurança",
+        "items": [
+          "Validações personalizadas e uso do Bean Validation",
+          "Implementação de autenticação e autorização via JWT"
+        ]
+      },
+      "erros": {
+        "title": "Tratamento de Erros e Respostas",
+        "items": [
+          "Captura e tratamento de erros padronizados"
+        ]
+      },
+      "documentacao": {
+        "title": "Documentação",
+        "items": [
+          "Documentação da API com diagramas e exemplos",
+          "Documentação técnica dos endpoints com OpenAPI 3"
+        ]
+      },
+      "testes": {
+        "title": "Testes e Qualidade de Código",
+        "items": [
+          "Testes automatizados com criação de mocks e ambiente separado"
+        ]
+      },
+      "banco": {
+        "title": "Banco de Dados",
+        "items": [
+          "Modelagem do banco de dados relacional com definições de constraints",
+          "Consultas JPQL e SQL nativo com Spring Data JPA"
+        ]
+      },
+      "ferramentas": {
+        "title": "Ferramentas e Deploy",
+        "items": [
+          "Uso de API Client e Database Client durante o desenvolvimento",
+          "Encapsulamento da aplicação com Docker, criando imagens e containers personalizados",
+          "Versionamento de código com Git"
+        ]
+      },
+      "tecnologias": {
+        "title": "Tecnologias"
+      }
+    }
   }
 }

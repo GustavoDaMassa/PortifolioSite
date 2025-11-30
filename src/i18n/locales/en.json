@@ -12,5 +12,118 @@
   },
   "allProjects": {
     "title": "All Projects"
+  },
+  "mediasAPI": {
+    "menu": {
+      "apresentacao": "Overview",
+      "motivacao": "Motivation and Solution",
+      "funcionalidades": "Key Features",
+      "utilizandoApi": "Using the API",
+      "praticas": "Practices Adopted"
+    },
+    "title": "Academic Grade Management and Projection REST API",
+    "placeholder": "HERE",
+    "apresentacao": {
+      "title": "Overview",
+      "docLink": "Technical documentation",
+      "p1": "An intelligent academic management platform that transforms how students and professors handle assessments. The solution offers centralized grade storage, automatic average calculation, and primarily strategic projections that allow users to simulate scenarios and plan their performance in advance.",
+      "p2": "The differentiator lies in flexibility: each course can have its own custom calculation method through customizable mathematical expressions. The system processes these expressions dynamically, identifies variables and constants through regex, and applies the Shunting Yard algorithm with reverse Polish notation (RPN) to ensure correct operator precedence — all without compromising performance or usability.",
+      "p3": "Developed following SOLID principles and layered architecture, the API combines robust validations (Bean Validation), JWT authentication, automated tests with mocks, and OpenAPI 3 documentation. The solution was containerized with Docker and uses Spring Data JPA for optimized queries, demonstrating a complete and professional backend implementation."
+    },
+    "motivacao": {
+      "title": "Motivation and Solution",
+      "p1": "During the academic journey at university, managing grades or even just storing them is a process that can be automated efficiently. However, as each professor and course define their own evaluation methods and performance criteria according to their preferences and approaches, there is great variability and flexibility in this process.",
+      "p2": "For the application to support these custom definitions, a solution based on regular expression processing was implemented, allowing dynamic identification and manipulation of variables, constants, and operators. This way, the calculation of final averages is automated flexibly and adaptable to different evaluation rules.",
+      "p3": "Another challenge was implementing this dynamic calculation. The adopted solution uses reverse Polish notation (RPN), which eliminates the need for parentheses by defining the correct order of precedence directly in its structure. Additionally, an adaptation of the Shunting Yard algorithm was employed, using stacks and lists as data structures to ensure correct expression evaluation."
+    },
+    "funcionalidades": {
+      "title": "Key Features",
+      "items": [
+        "Store grades in a structured and efficient way.",
+        "Define custom methods for calculating averages.",
+        "Automatically obtain the score needed to achieve academic goals.",
+        "Simulate different scenarios for strategic planning.",
+        "Manage courses."
+      ]
+    },
+    "utilizandoApi": {
+      "title": "Using the API",
+      "login": {
+        "title": "Login:",
+        "item": "The user creates their profile by registering in the system."
+      },
+      "autenticacao": {
+        "title": "Authentication:",
+        "item": "The API validates credentials and, if successful, returns a JWT token."
+      },
+      "disciplinas": {
+        "title": "Courses:",
+        "item": "The user can create and edit their custom courses."
+      },
+      "projecoes": {
+        "title": "Projections:",
+        "item": "A projection is automatically created when defining the calculation method in the previous step. Users can create, edit, and view other projections."
+      },
+      "avaliacoes": {
+        "title": "Assessments:",
+        "item": "Also automatically created with each projection. Users can submit grades."
+      }
+    },
+    "praticas": {
+      "title": "Practices Adopted",
+      "arquitetura": {
+        "title": "Architecture and Design",
+        "items": [
+          "REST API with layered architecture",
+          "Application of SOLID principles",
+          "Dependency Injection",
+          "Use of Data Transfer Object (DTO) pattern"
+        ]
+      },
+      "validacao": {
+        "title": "Validation and Security",
+        "items": [
+          "Custom validations and Bean Validation usage",
+          "Implementation of authentication and authorization via JWT"
+        ]
+      },
+      "erros": {
+        "title": "Error Handling and Responses",
+        "items": [
+          "Standardized error capture and handling"
+        ]
+      },
+      "documentacao": {
+        "title": "Documentation",
+        "items": [
+          "API documentation with diagrams and examples",
+          "Technical endpoint documentation with OpenAPI 3"
+        ]
+      },
+      "testes": {
+        "title": "Testing and Code Quality",
+        "items": [
+          "Automated tests with mock creation and separate environment"
+        ]
+      },
+      "banco": {
+        "title": "Database",
+        "items": [
+          "Relational database modeling with constraint definitions",
+          "JPQL and native SQL queries with Spring Data JPA"
+        ]
+      },
+      "ferramentas": {
+        "title": "Tools and Deployment",
+        "items": [
+          "Use of API Client and Database Client during development",
+          "Application encapsulation with Docker, creating custom images and containers",
+          "Code versioning with Git"
+        ]
+      },
+      "tecnologias": {
+        "title": "Technologies"
+      }
+    }
   }
 }

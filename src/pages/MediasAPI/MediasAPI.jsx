@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Layout } from '../../components/Layout/Layout';
 import { NavArrows } from '../../components/Navigation/NavArrows';
 import { SideMenu } from '../../components/SideMenu/SideMenu';
@@ -6,16 +7,17 @@ import { VideoPlayer } from '../../components/VideoPlayer/VideoPlayer';
 import { useSwipe } from '../../hooks/useSwipe';
 import styles from './MediasAPI.module.css';
 
-const menuItems = [
-  { label: 'Apresentação', href: '#apresentacao' },
-  { label: 'Motivação e Solução', href: '#motivacao' },
-  { label: 'Principais Funcionalidades', href: '#funcionalidades' },
-  { label: 'Utilizando a API', href: '#utilizando-api' },
-  { label: 'Práticas Adotadas', href: '#praticas' }
-];
-
 export const MediasAPI = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
+
+  const menuItems = [
+    { label: t('mediasAPI.menu.apresentacao'), href: '#apresentacao' },
+    { label: t('mediasAPI.menu.motivacao'), href: '#motivacao' },
+    { label: t('mediasAPI.menu.funcionalidades'), href: '#funcionalidades' },
+    { label: t('mediasAPI.menu.utilizandoApi'), href: '#utilizando-api' },
+    { label: t('mediasAPI.menu.praticas'), href: '#praticas' }
+  ];
 
   useSwipe(
     () => navigate('/finance'), // Swipe left -> próxima
@@ -36,153 +38,121 @@ export const MediasAPI = () => {
           posterSrc="/assets/images/capamedias.png"
         />
 
-        <h1>API Rest de Gestão de Notas e Projeções Acadêmicas</h1>
+        <h1>{t('mediasAPI.title')}</h1>
 
-        <p style={{ fontStyle: 'italic', color: 'var(--color-text-tertiary)' }}>AQUI</p>
+        <p style={{ fontStyle: 'italic', color: 'var(--color-text-tertiary)' }}>{t('mediasAPI.placeholder')}</p>
 
         <div id="apresentacao">
-          <h2>Apresentação</h2>
+          <h2>{t('mediasAPI.apresentacao.title')}</h2>
           <p>
             Acesse a{' '}
             <a href="https://github.com/GustavoDaMassa/MediasAPI" target="_blank" rel="noopener noreferrer">
-              Documentação técnica
+              {t('mediasAPI.apresentacao.docLink')}
             </a>
           </p>
-          <p>
-            Uma plataforma inteligente de gestão acadêmica que transforma a maneira como estudantes e
-            professores lidam com avaliações. A solução oferece armazenamento centralizado de notas,
-            cálculo automático de médias e, principalmente, projeções estratégicas que permitem aos
-            usuários simular cenários e planejar seu desempenho com antecedência.
-          </p>
-          <p>
-            O diferencial está na flexibilidade: cada disciplina pode ter seu próprio método de cálculo
-            personalizado através de expressões matemáticas customizáveis. O sistema processa essas
-            expressões dinamicamente, identifica variáveis e constantes através de regex, e aplica o
-            algoritmo Shunting Yard com notação polonesa reversa (RPN) para garantir a precedência
-            correta dos operadores — tudo isso sem comprometer a performance ou usabilidade.
-          </p>
-          <p>
-            Desenvolvida seguindo princípios SOLID e arquitetura em camadas, a API combina validações
-            robustas (Bean Validation), autenticação JWT, testes automatizados com mocks e documentação
-            OpenAPI 3. A solução foi containerizada com Docker e utiliza Spring Data JPA para consultas
-            otimizadas, demonstrando uma implementação backend completa e profissional.
-          </p>
+          <p>{t('mediasAPI.apresentacao.p1')}</p>
+          <p>{t('mediasAPI.apresentacao.p2')}</p>
+          <p>{t('mediasAPI.apresentacao.p3')}</p>
         </div>
 
         <div id="motivacao">
-          <h2>Motivação e Solução</h2>
-          <p>
-            Durante a jornada acadêmica na universidade, gerenciar as notas ou até mesmo apenas
-            armazená-las é um processo que pode ser automatizado de maneira eficiente. No entanto,
-            como cada professor e disciplina definem seus próprios métodos de avaliação e critérios
-            de desempenho de acordo com suas preferências e abordagens, há uma grande variabilidade
-            e flexibilidade nesse processo.
-          </p>
-          <p>
-            Para que a aplicação possa suportar essas definições personalizadas, foi implementada
-            uma solução baseada no processamento de expressões regulares, permitindo a identificação
-            e manipulação dinâmica de variáveis, constantes e operadores. Dessa forma, o cálculo das
-            médias finais é automatizado de maneira flexível e adaptável a diferentes regras de avaliação.
-          </p>
-          <p>
-            Outro desafio foi a implementação desse cálculo dinâmico. A solução adotada utiliza a
-            notação polonesa inversa (RPN), que elimina a necessidade de parênteses ao definir a ordem
-            correta de precedência diretamente em sua estrutura. Além disso, foi empregada uma adaptação
-            do algoritmo Shunting Yard, utilizando pilhas e listas como estruturas de dados para garantir
-            a correta avaliação das expressões.
-          </p>
+          <h2>{t('mediasAPI.motivacao.title')}</h2>
+          <p>{t('mediasAPI.motivacao.p1')}</p>
+          <p>{t('mediasAPI.motivacao.p2')}</p>
+          <p>{t('mediasAPI.motivacao.p3')}</p>
         </div>
 
         <div id="funcionalidades">
-          <h2>Principais Funcionalidades</h2>
+          <h2>{t('mediasAPI.funcionalidades.title')}</h2>
           <ul>
-            <li>Armazene notas de forma estruturada e eficiente.</li>
-            <li>Defina métodos personalizados para cálculo de médias.</li>
-            <li>Obtenha automaticamente a pontuação necessária para alcançar metas acadêmicas.</li>
-            <li>Simule diferentes cenários para planejamento estratégico.</li>
-            <li>Gerencie disciplinas.</li>
+            {t('mediasAPI.funcionalidades.items', { returnObjects: true }).map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
           </ul>
         </div>
 
         <div id="utilizando-api">
-          <h2>Utilizando a API</h2>
+          <h2>{t('mediasAPI.utilizandoApi.title')}</h2>
 
-          <h4>Login:</h4>
+          <h4>{t('mediasAPI.utilizandoApi.login.title')}</h4>
           <ul>
-            <li>O usuário cria seu perfil se cadastrando no sistema.</li>
+            <li>{t('mediasAPI.utilizandoApi.login.item')}</li>
           </ul>
 
-          <h4>Autenticação:</h4>
+          <h4>{t('mediasAPI.utilizandoApi.autenticacao.title')}</h4>
           <ul>
-            <li>A API valida as credenciais e, se bem-sucedida, retorna um token JWT.</li>
+            <li>{t('mediasAPI.utilizandoApi.autenticacao.item')}</li>
           </ul>
 
-          <h4>Disciplinas:</h4>
+          <h4>{t('mediasAPI.utilizandoApi.disciplinas.title')}</h4>
           <ul>
-            <li>O usuário pode criar e editar suas disciplinas personalizadas.</li>
+            <li>{t('mediasAPI.utilizandoApi.disciplinas.item')}</li>
           </ul>
 
-          <h4>Projeções:</h4>
+          <h4>{t('mediasAPI.utilizandoApi.projecoes.title')}</h4>
           <ul>
-            <li>
-              Uma projeção é criada automaticamente na definição do método de cálculo no passo
-              anterior. Usuários podem criar, editar e visualizar outras projeções.
-            </li>
+            <li>{t('mediasAPI.utilizandoApi.projecoes.item')}</li>
           </ul>
 
-          <h4>Avaliações:</h4>
+          <h4>{t('mediasAPI.utilizandoApi.avaliacoes.title')}</h4>
           <ul>
-            <li>Também criadas automaticamente a cada projeção. Usuários podem lançar notas.</li>
+            <li>{t('mediasAPI.utilizandoApi.avaliacoes.item')}</li>
           </ul>
         </div>
 
         <div id="praticas">
-          <h2>Práticas Adotadas</h2>
+          <h2>{t('mediasAPI.praticas.title')}</h2>
 
-          <h3>Arquitetura e Design</h3>
+          <h3>{t('mediasAPI.praticas.arquitetura.title')}</h3>
           <ul>
-            <li>API REST com divisão em camadas</li>
-            <li>Aplicação dos princípios SOLID</li>
-            <li>Injeção de Dependências</li>
-            <li>Uso do padrão Data Transfer Object (DTO)</li>
+            {t('mediasAPI.praticas.arquitetura.items', { returnObjects: true }).map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
           </ul>
 
-          <h3>Validação e Segurança</h3>
+          <h3>{t('mediasAPI.praticas.validacao.title')}</h3>
           <ul>
-            <li>Validações personalizadas e uso do Bean Validation</li>
-            <li>Implementação de autenticação e autorização via JWT</li>
+            {t('mediasAPI.praticas.validacao.items', { returnObjects: true }).map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
           </ul>
 
-          <h3>Tratamento de Erros e Respostas</h3>
+          <h3>{t('mediasAPI.praticas.erros.title')}</h3>
           <ul>
-            <li>Captura e tratamento de erros padronizados</li>
+            {t('mediasAPI.praticas.erros.items', { returnObjects: true }).map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
           </ul>
 
-          <h3>Documentação</h3>
+          <h3>{t('mediasAPI.praticas.documentacao.title')}</h3>
           <ul>
-            <li>Documentação da API com diagramas e exemplos</li>
-            <li>Documentação técnica dos endpoints com OpenAPI 3</li>
+            {t('mediasAPI.praticas.documentacao.items', { returnObjects: true }).map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
           </ul>
 
-          <h3>Testes e Qualidade de Código</h3>
+          <h3>{t('mediasAPI.praticas.testes.title')}</h3>
           <ul>
-            <li>Testes automatizados com criação de mocks e ambiente separado</li>
+            {t('mediasAPI.praticas.testes.items', { returnObjects: true }).map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
           </ul>
 
-          <h3>Banco de Dados</h3>
+          <h3>{t('mediasAPI.praticas.banco.title')}</h3>
           <ul>
-            <li>Modelagem do banco de dados relacional com definições de constraints</li>
-            <li>Consultas JPQL e SQL nativo com Spring Data JPA</li>
+            {t('mediasAPI.praticas.banco.items', { returnObjects: true }).map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
           </ul>
 
-          <h3>Ferramentas e Deploy</h3>
+          <h3>{t('mediasAPI.praticas.ferramentas.title')}</h3>
           <ul>
-            <li>Uso de API Client e Database Client durante o desenvolvimento</li>
-            <li>Encapsulamento da aplicação com Docker, criando imagens e containers personalizados</li>
-            <li>Versionamento de código com Git</li>
+            {t('mediasAPI.praticas.ferramentas.items', { returnObjects: true }).map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
           </ul>
 
-          <h3>Tecnologias</h3>
+          <h3>{t('mediasAPI.praticas.tecnologias.title')}</h3>
           <ul>
             <li>
               <a href="https://spring.io/projects/spring-boot" target="_blank" rel="noopener noreferrer">
