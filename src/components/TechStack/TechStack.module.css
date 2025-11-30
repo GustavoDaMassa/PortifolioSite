@@ -1,6 +1,7 @@
 .techStackContainer {
   margin-top: var(--spacing-2xl);
   padding: 0 var(--spacing-lg);
+  overflow: hidden;
 }
 
 .techStackContainer h2 {
@@ -10,16 +11,59 @@
   color: var(--color-text-primary);
 }
 
-.techStack {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: var(--spacing-md);
+.carouselWrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+.carouselWrapper::before,
+.carouselWrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.carouselWrapper::before {
+  left: 0;
+  background: linear-gradient(to right, var(--color-bg-canvas), transparent);
+}
+
+.carouselWrapper::after {
+  right: 0;
+  background: linear-gradient(to left, var(--color-bg-canvas), transparent);
+}
+
+.techStack {
+  display: flex;
+  gap: var(--spacing-md);
+  animation: scroll 40s linear infinite;
+  width: fit-content;
+}
+
+.techStack:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 .techItem {
-  aspect-ratio: 1;
+  flex-shrink: 0;
+  width: 120px;
+  height: 120px;
   background: var(--color-bg-secondary);
   border: 1px solid var(--color-border-default);
   border-radius: var(--border-radius-md);
