@@ -40,8 +40,6 @@ export const MediasAPI = () => {
 
         <h1>{t('mediasAPI.title')}</h1>
 
-        <p style={{ fontStyle: 'italic', color: 'var(--color-text-tertiary)' }}>{t('mediasAPI.placeholder')}</p>
-
         <div id="apresentacao">
           <h2>{t('mediasAPI.apresentacao.title')}</h2>
           <p>

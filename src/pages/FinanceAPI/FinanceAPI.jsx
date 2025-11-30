@@ -40,8 +40,6 @@ export const FinanceAPI = () => {
 
         <h1>{t('financeAPI.title')}</h1>
 
-        <p style={{ fontStyle: 'italic', color: 'var(--color-text-tertiary)' }}>{t('financeAPI.placeholder')}</p>
-
         <div id="apresentacao">
           <h2>{t('financeAPI.apresentacao.title')}</h2>
           <p>
