@@ -38,6 +38,8 @@ export const FinanceAPI = () => {
 
         <h1>API GraphQL de Integração Bancária, Análise e Classificação de Transações</h1>
 
+        <p style={{ fontStyle: 'italic', color: 'var(--color-text-tertiary)' }}>AQUI</p>
+
         <div id="apresentacao">
           <h2>Apresentação</h2>
           <p>

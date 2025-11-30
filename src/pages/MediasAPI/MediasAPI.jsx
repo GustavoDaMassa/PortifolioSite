@@ -38,6 +38,8 @@ export const MediasAPI = () => {
 
         <h1>API Rest de Gestão de Notas e Projeções Acadêmicas</h1>
 
+        <p style={{ fontStyle: 'italic', color: 'var(--color-text-tertiary)' }}>AQUI</p>
+
         <div id="apresentacao">
           <h2>Apresentação</h2>
           <p>
