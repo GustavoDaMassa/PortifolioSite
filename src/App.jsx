@@ -10,7 +10,7 @@ import './styles/global.css';
 function App() {
   return (
     <ThemeProvider>
-      <Router>
+      <Router basename="/PortifolioSite">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/medias" element={<MediasAPI />} />
