@@ -1,7 +1,11 @@
 .videoPlayer {
-  width: 1080px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 900px;
   height: auto;
-  margin: 30px auto;
+  margin: var(--spacing-2xl) auto;
   display: block;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-border-default);
+  background: var(--color-bg-tertiary);
+  box-shadow: var(--shadow-md);
 }
