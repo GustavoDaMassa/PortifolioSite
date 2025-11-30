@@ -69,3 +69,68 @@
   color: var(--color-text-secondary);
   padding: 0 var(--spacing-lg);
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profileSection {
+    margin-top: var(--spacing-xl);
+  }
+
+  .profilePic {
+    width: 200px;
+    height: 200px;
+  }
+
+  .profileSection h1 {
+    font-size: 32px;
+  }
+
+  .socials a {
+    width: 40px;
+    height: 40px;
+  }
+
+  .socials img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .techText {
+    font-size: 14px;
+    padding: 0 var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .profileSection {
+    margin-top: var(--spacing-lg);
+  }
+
+  .profilePic {
+    width: 160px;
+    height: 160px;
+  }
+
+  .profileSection h1 {
+    font-size: 26px;
+  }
+
+  .socials {
+    gap: var(--spacing-sm);
+  }
+
+  .socials a {
+    width: 36px;
+    height: 36px;
+  }
+
+  .socials img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .techText {
+    font-size: 13px;
+    padding: 0 var(--spacing-sm);
+  }
+}

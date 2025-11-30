@@ -52,3 +52,37 @@
   background: var(--color-bg-tertiary);
   text-decoration: none;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menuToggle {
+    font-size: 20px;
+  }
+
+  .sideMenu {
+    top: 45px;
+    right: 0;
+    min-width: 180px;
+  }
+
+  .sideMenu a {
+    font-size: 13px;
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .menuToggle {
+    font-size: 18px;
+  }
+
+  .sideMenu {
+    top: 40px;
+    min-width: 160px;
+    padding: var(--spacing-sm);
+  }
+
+  .sideMenu a {
+    font-size: 12px;
+  }
+}

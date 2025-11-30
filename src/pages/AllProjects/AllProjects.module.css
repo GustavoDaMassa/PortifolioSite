@@ -27,9 +27,28 @@
     padding: 80px var(--spacing-md) var(--spacing-lg);
   }
 
+  .header span {
+    font-size: 26px;
+  }
+
   .cards {
     grid-template-columns: 1fr;
     padding: 0 var(--spacing-md) var(--spacing-xl);
     gap: var(--spacing-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 70px var(--spacing-sm) var(--spacing-md);
+  }
+
+  .header span {
+    font-size: 22px;
+  }
+
+  .cards {
+    padding: 0 var(--spacing-sm) var(--spacing-lg);
+    gap: var(--spacing-md);
   }
 }

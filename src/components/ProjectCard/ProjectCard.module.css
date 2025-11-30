@@ -94,3 +94,48 @@
   flex-wrap: wrap;
   align-items: center;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .projectCard {
+    padding: var(--spacing-lg);
+  }
+
+  .projectCard img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .content h1 {
+    font-size: 20px;
+  }
+
+  .content p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projectCard {
+    padding: var(--spacing-md);
+  }
+
+  .projectCard img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .content h1 {
+    font-size: 18px;
+  }
+
+  .content p {
+    font-size: 12px;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .content a {
+    font-size: 13px;
+  }
+}
