@@ -5,6 +5,7 @@ import { NavArrows } from '../../components/Navigation/NavArrows';
 import { SideMenu } from '../../components/SideMenu/SideMenu';
 import { VideoPlayer } from '../../components/VideoPlayer/VideoPlayer';
 import { useSwipe } from '../../hooks/useSwipe';
+import { getAssetPath } from '../../utils/paths';
 import styles from './FinanceAPI.module.css';
 
 export const FinanceAPI = () => {
@@ -34,8 +35,8 @@ export const FinanceAPI = () => {
         </div>
 
         <VideoPlayer
-          videoSrc="/assets/images/financeVideo.mp4"
-          posterSrc="/assets/images/capafinance.png"
+          videoSrc={getAssetPath('assets/images/financeVideo.mp4')}
+          posterSrc={getAssetPath('assets/images/capafinance.png')}
         />
 
         <h1>{t('financeAPI.title')}</h1>

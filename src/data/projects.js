@@ -1,37 +1,39 @@
+import { getAssetPath } from '../utils/paths';
+
 export const projects = [
   {
     id: 'tiobolas',
-    image: '/assets/images/tiobolascard.png',
+    image: getAssetPath('assets/images/tiobolascard.png'),
     github: 'https://github.com/GustavoDaMassa/TioBolas'
   },
   {
     id: 'hashtable',
-    image: '/assets/images/hashtablecard.png',
+    image: getAssetPath('assets/images/hashtablecard.png'),
     github: 'https://github.com/GustavoDaMassa/HashTable'
   },
   {
     id: 'agenda',
-    image: '/assets/images/agendacard.png',
+    image: getAssetPath('assets/images/agendacard.png'),
     github: 'https://github.com/GustavoDaMassa/AgendaToDo'
   },
   {
     id: 'codinome',
-    image: '/assets/images/codinomecard.png',
+    image: getAssetPath('assets/images/codinomecard.png'),
     github: 'https://github.com/GustavoDaMassa/CodinomeUol'
   },
   {
     id: 'wallet',
-    image: '/assets/images/simplifiedwallet.png',
+    image: getAssetPath('assets/images/simplifiedwallet.png'),
     github: 'https://github.com/GustavoDaMassa/SimplifiedWallet'
   },
   {
     id: 'dotnetFinance',
-    image: '/assets/images/dotnetfinancecard.jpg',
+    image: getAssetPath('assets/images/dotnetfinancecard.jpg'),
     github: 'https://github.com/GustavoDaMassa/dotNetFinaAPI'
   },
   {
     id: 'dotnetMedias',
-    image: '/assets/images/dotnetmediascard.jpg',
+    image: getAssetPath('assets/images/dotnetmediascard.jpg'),
     github: 'https://github.com/GustavoDaMassa/dotNetMediasAPI',
     additionalLinks: [
       { label: '.Net', url: 'https://github.com/GustavoDaMassa/dotNetMediasAPI' },

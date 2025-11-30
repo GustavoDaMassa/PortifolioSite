@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { socialLinks } from '../../data/socialLinks';
+import { getAssetPath } from '../../utils/paths';
 import styles from './ProfileSection.module.css';
 
 export const ProfileSection = () => {
@@ -7,7 +8,10 @@ export const ProfileSection = () => {
 
   return (
     <div className={styles.profileSection}>
-      <div className={styles.profilePic}></div>
+      <div
+        className={styles.profilePic}
+        style={{ backgroundImage: `url(${getAssetPath('assets/images/profile.jpg')})` }}
+      ></div>
       <h1>{t('home.title')}</h1>
 
       <div className={styles.socials}>

@@ -5,6 +5,7 @@ import { NavArrows } from '../../components/Navigation/NavArrows';
 import { SideMenu } from '../../components/SideMenu/SideMenu';
 import { VideoPlayer } from '../../components/VideoPlayer/VideoPlayer';
 import { useSwipe } from '../../hooks/useSwipe';
+import { getAssetPath } from '../../utils/paths';
 import styles from './MediasAPI.module.css';
 
 export const MediasAPI = () => {
@@ -34,8 +35,8 @@ export const MediasAPI = () => {
         </div>
 
         <VideoPlayer
-          videoSrc="/assets/images/mediasVideo.mp4"
-          posterSrc="/assets/images/capamedias.png"
+          videoSrc={getAssetPath('assets/images/mediasVideo.mp4')}
+          posterSrc={getAssetPath('assets/images/capamedias.png')}
         />
 
         <h1>{t('mediasAPI.title')}</h1>
