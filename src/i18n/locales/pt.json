@@ -125,5 +125,123 @@
         "title": "Tecnologias"
       }
     }
+  },
+  "financeAPI": {
+    "menu": {
+      "apresentacao": "Apresentação",
+      "motivacao": "Motivação e Solução",
+      "funcionalidades": "Principais Funcionalidades",
+      "utilizandoApi": "Utilizando a API",
+      "praticas": "Práticas Adotadas"
+    },
+    "title": "API GraphQL de Integração Bancária, Análise e Classificação de Transações",
+    "placeholder": "AQUI",
+    "apresentacao": {
+      "title": "Apresentação",
+      "docLink": "Documentação técnica",
+      "p1": "Uma API GraphQL completa para gestão financeira inteligente que conecta o ecossistema Open Finance ao usuário final. A plataforma captura automaticamente transações bancárias via webhooks, organiza movimentações em categorias personalizadas e oferece análises detalhadas com cálculo automático de saldo — tudo através de consultas GraphQL flexíveis e precisas.",
+      "p2": "O sistema foi projetado para resolver um problema real: a dificuldade de consolidar e categorizar movimentações financeiras de múltiplas contas. Através da integração com o agregador Pluggy em ambiente sandbox, a API simula o comportamento de uma instituição participante do Open Finance, processando webhooks em tempo real e persistindo dados com relacionamentos complexos em PostgreSQL.",
+      "p3": "A arquitetura implementa mensageria com Kafka para processamento assíncrono, Spring Security com autenticação X-API-KEY, e utiliza GraphQL para proporcionar aos clientes (dashboards, apps mobile, integrações) a flexibilidade de requisitar exatamente os dados necessários. O projeto demonstra conhecimento profundo em integração de APIs externas, processamento de eventos em tempo real e design de APIs modernas orientadas a GraphQL."
+    },
+    "motivacao": {
+      "title": "Motivação e Solução",
+      "p1": "A intenção inicial era construir um sistema integrado e funcional capaz de processar automaticamente as movimentações financeiras. Acontece que obter, classificar e analisar transações bancárias em tempo real é um processo que demanda alto nível de integração com instituições financeiras. No entando, o acesso direto a dados bancários reais exige a habilitação como instituição autorizada no Open Finance. Para seguir com o propósito, foi implementada uma solução utilizando um agregador de dados financeiros que oferece um ambiente sandbox, simulando o comportamento de uma instituição participante do Open Finance. Assim, foi possível simular webhooks, testando cenários reais sem depender de dados sensíveis.",
+      "p2": "Outro ponto relevante foi a escolha do GraphQL, que possibilita consultas flexíveis e precisas, retornando apenas os dados realmente necessários para cada cliente ou integração. Isso facilita a construção de dashboards dinâmicos e aplicações front-end, bem como a análise pessoal.",
+      "p3": "Além disso, a API permite a categorização inteligente de transações, possibilitando ao usuário final ou à aplicação selecionar apenas os lançamentos relevantes e calcular automaticamente o saldo para análise, filtragem ou integração com relatórios financeiros personalizados."
+    },
+    "funcionalidades": {
+      "title": "Principais Funcionalidades",
+      "items": [
+        "Receber transações de forma automática via webhook Pluggy.",
+        "Persistir transações em banco de dados relacional.",
+        "Classificar por categorias personalizadas.",
+        "Consultar histórico de transações.",
+        "Visualizar transações de acordo com filtros- por categoria,por período e por tipo.",
+        "Cálculo automático do saldo de acordo com as transações selecionadas."
+      ]
+    },
+    "utilizandoApi": {
+      "title": "Utilizando a API",
+      "users": {
+        "title": "Users:",
+        "item": "O usuário cria seu perfil se cadastrando no sistema."
+      },
+      "accounts": {
+        "title": "Accounts:",
+        "item": "o usuário pode criar e editar suas contas, ainda sem conexão com o agregador."
+      },
+      "integration": {
+        "title": "FinancialIntegration:",
+        "item": "Com a conta criada é possível conectá-la com uma instituição financeira."
+      },
+      "category": {
+        "title": "Category:",
+        "item": "Usuários criam e gerenciam suas próprias categorias e subcategorias que poderão ser atribuídas à transações"
+      },
+      "transactions": {
+        "title": "Transactions:",
+        "item": "Armazene e selecione as transações desejadas calculando automaticamente o saldo."
+      }
+    },
+    "praticas": {
+      "title": "Práticas Adotadas",
+      "arquitetura": {
+        "title": "Arquitetura e Design",
+        "items": [
+          "API GraphQL com divisão em camadas",
+          "Aplicação dos princípios SOLID",
+          "Injeção de Dependências",
+          "Uso do padrão Data Transfer Object (DTO)",
+          "Uso de ferramenta de Tuneamento (Ngrok)",
+          "Integração com modelo de dados de API externas (Pluggy)",
+          "Mensageria com Kafka",
+          "Armazenamento de credenciais em arquivos"
+        ]
+      },
+      "validacao": {
+        "title": "Validação e Segurança",
+        "items": [
+          "Validações personalizadas e uso do Bean Validation",
+          "Implementação de autenticação por meio de X-API-KEY"
+        ]
+      },
+      "erros": {
+        "title": "Tratamento de Erros e Respostas",
+        "items": [
+          "Captura e tratamento de erros padronizados"
+        ]
+      },
+      "documentacao": {
+        "title": "Documentação",
+        "items": [
+          "Documentação da API com diagramas e exemplos",
+          "Documentação técnica dos endpoints com GraphiQL"
+        ]
+      },
+      "testes": {
+        "title": "Testes e Qualidade de Código",
+        "items": [
+          "Testes automatizados com criação de mocks e ambiente separado"
+        ]
+      },
+      "banco": {
+        "title": "Banco de Dados",
+        "items": [
+          "Modelagem do banco de dados relacional com definições de constraints",
+          "Consultas JPQL e SQL nativo com Spring Data JPA"
+        ]
+      },
+      "ferramentas": {
+        "title": "Ferramentas e Deploy",
+        "items": [
+          "Uso de API Client, Database Client e Ambiente Sandbox durante o desenvolvimento",
+          "Encapsulamento da aplicação com Docker, criando imagens e containers personalizados",
+          "Versionamento de código com Git"
+        ]
+      },
+      "tecnologias": {
+        "title": "Tecnologias"
+      }
+    }
   }
 }

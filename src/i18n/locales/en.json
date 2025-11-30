@@ -125,5 +125,123 @@
         "title": "Technologies"
       }
     }
+  },
+  "financeAPI": {
+    "menu": {
+      "apresentacao": "Overview",
+      "motivacao": "Motivation and Solution",
+      "funcionalidades": "Key Features",
+      "utilizandoApi": "Using the API",
+      "praticas": "Practices Adopted"
+    },
+    "title": "GraphQL API for Banking Integration, Analysis and Transaction Classification",
+    "placeholder": "HERE",
+    "apresentacao": {
+      "title": "Overview",
+      "docLink": "Technical documentation",
+      "p1": "A complete GraphQL API for intelligent financial management that connects the Open Finance ecosystem to the end user. The platform automatically captures banking transactions via webhooks, organizes movements into custom categories, and offers detailed analyses with automatic balance calculation — all through flexible and precise GraphQL queries.",
+      "p2": "The system was designed to solve a real problem: the difficulty of consolidating and categorizing financial movements from multiple accounts. Through integration with the Pluggy aggregator in a sandbox environment, the API simulates the behavior of an Open Finance participating institution, processing webhooks in real-time and persisting data with complex relationships in PostgreSQL.",
+      "p3": "The architecture implements messaging with Kafka for asynchronous processing, Spring Security with X-API-KEY authentication, and uses GraphQL to provide clients (dashboards, mobile apps, integrations) the flexibility to request exactly the necessary data. The project demonstrates deep knowledge in external API integration, real-time event processing, and modern GraphQL-oriented API design."
+    },
+    "motivacao": {
+      "title": "Motivation and Solution",
+      "p1": "The initial intention was to build an integrated and functional system capable of automatically processing financial movements. However, obtaining, classifying, and analyzing banking transactions in real-time is a process that demands a high level of integration with financial institutions. Direct access to real banking data requires authorization as an institution in Open Finance. To pursue this purpose, a solution was implemented using a financial data aggregator that offers a sandbox environment, simulating the behavior of an Open Finance participating institution. Thus, it was possible to simulate webhooks, testing real scenarios without depending on sensitive data.",
+      "p2": "Another relevant point was the choice of GraphQL, which enables flexible and precise queries, returning only the truly necessary data for each client or integration. This facilitates the construction of dynamic dashboards and front-end applications, as well as personal analysis.",
+      "p3": "Additionally, the API allows intelligent transaction categorization, enabling the end user or application to select only relevant entries and automatically calculate the balance for analysis, filtering, or integration with custom financial reports."
+    },
+    "funcionalidades": {
+      "title": "Key Features",
+      "items": [
+        "Automatically receive transactions via Pluggy webhook.",
+        "Persist transactions in a relational database.",
+        "Classify by custom categories.",
+        "Query transaction history.",
+        "View transactions according to filters - by category, period, and type.",
+        "Automatic balance calculation based on selected transactions."
+      ]
+    },
+    "utilizandoApi": {
+      "title": "Using the API",
+      "users": {
+        "title": "Users:",
+        "item": "The user creates their profile by registering in the system."
+      },
+      "accounts": {
+        "title": "Accounts:",
+        "item": "The user can create and edit their accounts, not yet connected with the aggregator."
+      },
+      "integration": {
+        "title": "FinancialIntegration:",
+        "item": "With the account created, it's possible to connect it with a financial institution."
+      },
+      "category": {
+        "title": "Category:",
+        "item": "Users create and manage their own categories and subcategories that can be assigned to transactions"
+      },
+      "transactions": {
+        "title": "Transactions:",
+        "item": "Store and select desired transactions, automatically calculating the balance."
+      }
+    },
+    "praticas": {
+      "title": "Practices Adopted",
+      "arquitetura": {
+        "title": "Architecture and Design",
+        "items": [
+          "GraphQL API with layered architecture",
+          "Application of SOLID principles",
+          "Dependency Injection",
+          "Use of Data Transfer Object (DTO) pattern",
+          "Use of tunneling tool (Ngrok)",
+          "Integration with external API data models (Pluggy)",
+          "Messaging with Kafka",
+          "Credential storage in files"
+        ]
+      },
+      "validacao": {
+        "title": "Validation and Security",
+        "items": [
+          "Custom validations and Bean Validation usage",
+          "Implementation of authentication via X-API-KEY"
+        ]
+      },
+      "erros": {
+        "title": "Error Handling and Responses",
+        "items": [
+          "Standardized error capture and handling"
+        ]
+      },
+      "documentacao": {
+        "title": "Documentation",
+        "items": [
+          "API documentation with diagrams and examples",
+          "Technical endpoint documentation with GraphiQL"
+        ]
+      },
+      "testes": {
+        "title": "Testing and Code Quality",
+        "items": [
+          "Automated tests with mock creation and separate environment"
+        ]
+      },
+      "banco": {
+        "title": "Database",
+        "items": [
+          "Relational database modeling with constraint definitions",
+          "JPQL and native SQL queries with Spring Data JPA"
+        ]
+      },
+      "ferramentas": {
+        "title": "Tools and Deployment",
+        "items": [
+          "Use of API Client, Database Client, and Sandbox Environment during development",
+          "Application encapsulation with Docker, creating custom images and containers",
+          "Code versioning with Git"
+        ]
+      },
+      "tecnologias": {
+        "title": "Technologies"
+      }
+    }
   }
 }
