@@ -1,16 +1,92 @@
-# React + Vite
+# Portfólio Gustavo Henrique - React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfólio profissional desenvolvido em React para apresentar projetos e habilidades como desenvolvedor backend.
 
-Currently, two official plugins are available:
+## Tecnologias
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 18
+- React Router DOM
+- Vite
+- CSS Modules
 
-## React Compiler
+## Branches
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### `main`
+Design original com tema escuro minimalista, fonte monospace e bordas brancas.
 
-## Expanding the ESLint configuration
+### `github-theme`
+Design inspirado no GitHub Dark Theme com:
+- Paleta de cores do GitHub Dark
+- Tipografia system fonts
+- Cards com hover effects e sombras
+- Navegação superior fixa
+- Grid layout responsivo
+- Bordas e espaçamentos consistentes
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Estrutura do Projeto
+
+```
+src/
+├── components/
+│   ├── Layout/           # Wrapper principal
+│   ├── Navigation/       # TopNav e NavArrows
+│   ├── SideMenu/         # Menu hambúrguer
+│   ├── ProfileSection/   # Seção de apresentação
+│   ├── TechStack/        # Grid de tecnologias
+│   ├── ProjectCard/      # Card de projeto
+│   └── VideoPlayer/      # Player de vídeo
+├── pages/
+│   ├── Home/            # Página principal
+│   ├── MediasAPI/       # Detalhes MediasAPI
+│   ├── FinanceAPI/      # Detalhes FinanceAPI
+│   └── AllProjects/     # Galeria de projetos
+├── data/
+│   ├── technologies.js  # Lista de tecnologias
+│   ├── projects.js      # Lista de projetos
+│   └── socialLinks.js   # Links sociais
+└── styles/
+    └── global.css       # Estilos globais e variáveis
+```
+
+## Rotas
+
+- `/` - Home
+- `/medias` - MediasAPI
+- `/finance` - FinanceAPI
+- `/projetos` - Todos os Projetos
+
+## Como Executar
+
+```bash
+# Instalar dependências
+npm install
+
+# Desenvolvimento
+npm run dev
+
+# Build
+npm run build
+
+# Preview
+npm run preview
+```
+
+## Commits (GitHub Theme)
+
+1. `add github dark theme colors` - Cores e variáveis CSS
+2. `update navigation with github style` - Navegação superior
+3. `update profile section styling` - Seção de perfil
+4. `update tech stack with grid layout` - Grid de tecnologias
+5. `update home page layout` - Layout da home
+6. `update project card with hover effects` - Cards de projeto
+7. `update all projects page with grid` - Página de projetos
+8. `update side menu styling` - Menu lateral
+9. `update video player styling` - Player de vídeo
+10. `update project detail pages styling` - Páginas de detalhes
+
+## Desenvolvedor
+
+Gustavo Henrique - Desenvolvedor Backend
+
+- [GitHub](https://github.com/GustavoDaMassa)
+- [LinkedIn](https://www.linkedin.com/in/gustavohpereiradev/)
