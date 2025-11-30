@@ -1,57 +1,96 @@
 .projectCard {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background: var(--color-bg);
-  padding: 40px;
-  border-radius: 16px;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  border: var(--border-width) solid var(--color-border);
+  background: var(--color-bg-secondary);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--color-border-default);
+  transition: all 0.2s ease;
   position: relative;
-  overflow: visible;
+  overflow: hidden;
+}
+
+.projectCard:hover {
+  border-color: var(--color-border-muted);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.projectCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-accent-primary), var(--color-success));
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.projectCard:hover::before {
+  opacity: 1;
 }
 
 .projectCard img {
-  width: 120px;
-  margin-bottom: 20px;
-  position: absolute;
-  top: -60px;
-  background: var(--color-bg);
+  width: 80px;
+  height: 80px;
+  margin-bottom: var(--spacing-lg);
+  border-radius: var(--border-radius-md);
+  background: var(--color-bg-tertiary);
+  padding: var(--spacing-sm);
+  object-fit: contain;
 }
 
 .content {
   flex: 1;
-  text-align: center;
-  margin-top: 70px;
 }
 
 .content h1 {
-  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-md);
 }
 
 .content p {
-  margin: 0 0 15px 0;
-  font-size: 18px;
-  line-height: 1.5;
+  margin: 0 0 var(--spacing-lg) 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
 }
 
 .content a {
-  color: var(--color-accent);
-  text-decoration: underline;
-  display: inline-block;
-  font-size: 18px;
-  margin: 0 10px;
+  color: var(--color-accent-primary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: var(--spacing-md);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  transition: all 0.2s ease;
 }
 
 .content a:hover {
-  opacity: 0.8;
+  background: var(--color-bg-tertiary);
+  text-decoration: none;
+}
+
+.content a::after {
+  content: '→';
+  margin-left: var(--spacing-xs);
+  transition: transform 0.2s ease;
+}
+
+.content a:hover::after {
+  transform: translateX(4px);
 }
 
 .links {
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  gap: var(--spacing-md);
   flex-wrap: wrap;
+  align-items: center;
 }
