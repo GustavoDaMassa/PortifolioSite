@@ -1,0 +1,16 @@
+{
+  "nav": {
+    "medias": "MediasAPI",
+    "finance": "FinanceAPI",
+    "projects": "Todos os Projetos"
+  },
+  "home": {
+    "title": "Gustavo Henrique | Desenvolvedor",
+    "description1": "Atuo no desenvolvimento back-end construindo APIs, aplicações escaláveis e projetos estruturados com boas práticas de engenharia de software com Java e Spring. Trabalho com arquitetura limpa, princípios SOLID, padrões de projeto, versionamento de código, documentação técnica e testes automatizados. Tenho experiência em bancos de dados relacionais, estruturas de dados e algoritmos, aplicando soluções eficientes e de qualidade.",
+    "description2": "Ao lado lhe apresento alguns projetos pessoais que resolvem problemas do meu dia a dia, as soluções foram elaboradas e documentadas visando seguir boas práticas e recursos do mercado de desenvolvimente de software.",
+    "techTitle": "Tecnologias"
+  },
+  "allProjects": {
+    "title": "Todos os Projetos"
+  }
+}

@@ -1,4 +1,5 @@
-:root {
+:root,
+[data-theme="dark"] {
   /* GitHub Dark Theme Colors */
   --color-bg-primary: #0d1117;
   --color-bg-secondary: #161b22;
@@ -17,6 +18,27 @@
   --color-accent-emphasis: #1f6feb;
   --color-success: #3fb950;
   --color-danger: #f85149;
+}
+
+[data-theme="light"] {
+  /* GitHub Light Theme Colors */
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f6f8fa;
+  --color-bg-tertiary: #eaeef2;
+  --color-bg-canvas: #ffffff;
+  --color-bg-overlay: #f6f8fa;
+
+  --color-border-default: #d0d7de;
+  --color-border-muted: #d8dee4;
+
+  --color-text-primary: #1f2328;
+  --color-text-secondary: #656d76;
+  --color-text-tertiary: #818b98;
+
+  --color-accent-primary: #0969da;
+  --color-accent-emphasis: #0550ae;
+  --color-success: #1a7f37;
+  --color-danger: #d1242f;
 
   --border-radius-sm: 6px;
   --border-radius-md: 12px;

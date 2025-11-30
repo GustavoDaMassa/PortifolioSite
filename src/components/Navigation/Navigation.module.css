@@ -8,15 +8,26 @@
   border-bottom: 1px solid var(--color-border-default);
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding: 0 var(--spacing-lg);
   z-index: 100;
   backdrop-filter: blur(8px);
 }
 
-.topNav a {
+.controls {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.links a {
   color: var(--color-text-primary);
-  margin-left: var(--spacing-md);
   text-decoration: none;
   font-weight: 500;
   font-size: 13px;
@@ -25,7 +36,7 @@
   transition: background 0.2s ease, color 0.2s ease;
 }
 
-.topNav a:hover {
+.links a:hover {
   background: var(--color-bg-tertiary);
   color: var(--color-text-primary);
   text-decoration: none;

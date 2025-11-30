@@ -1,0 +1,16 @@
+{
+  "nav": {
+    "medias": "MediasAPI",
+    "finance": "FinanceAPI",
+    "projects": "All Projects"
+  },
+  "home": {
+    "title": "Gustavo Henrique | Developer",
+    "description1": "I work in backend development building APIs, scalable applications and structured projects with software engineering best practices using Java and Spring. I work with clean architecture, SOLID principles, design patterns, version control, technical documentation and automated testing. I have experience in relational databases, data structures and algorithms, applying efficient and quality solutions.",
+    "description2": "Here I present some personal projects that solve my daily problems, the solutions were designed and documented aiming to follow best practices and resources from the software development market.",
+    "techTitle": "Technologies"
+  },
+  "allProjects": {
+    "title": "All Projects"
+  }
+}

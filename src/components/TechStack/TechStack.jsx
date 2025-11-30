@@ -1,7 +1,10 @@
+import { useTranslation } from 'react-i18next';
 import { technologies } from '../../data/technologies';
 import styles from './TechStack.module.css';
 
 export const TechStack = () => {
+  const { t } = useTranslation();
+
   // Dividir tecnologias em 3 linhas
   const itemsPerRow = Math.ceil(technologies.length / 3);
   const row1 = technologies.slice(0, itemsPerRow);
@@ -15,7 +18,7 @@ export const TechStack = () => {
 
   return (
     <div className={styles.techStackContainer}>
-      <h2>Tecnologias</h2>
+      <h2>{t('home.techTitle')}</h2>
       <div className={styles.carouselContainer}>
         {/* Linha 1 - esquerda para direita */}
         <div className={styles.carouselWrapper}>
