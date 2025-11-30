@@ -1,7 +1,9 @@
+import { useNavigate } from 'react-router-dom';
 import { Layout } from '../../components/Layout/Layout';
 import { NavArrows } from '../../components/Navigation/NavArrows';
 import { SideMenu } from '../../components/SideMenu/SideMenu';
 import { VideoPlayer } from '../../components/VideoPlayer/VideoPlayer';
+import { useSwipe } from '../../hooks/useSwipe';
 import styles from './FinanceAPI.module.css';
 
 const menuItems = [
@@ -13,6 +15,13 @@ const menuItems = [
 ];
 
 export const FinanceAPI = () => {
+  const navigate = useNavigate();
+
+  useSwipe(
+    () => navigate('/projetos'), // Swipe left -> próxima
+    () => navigate('/medias') // Swipe right -> anterior
+  );
+
   return (
     <Layout>
       <NavArrows leftPath="/medias" rightPath="/projetos" />
