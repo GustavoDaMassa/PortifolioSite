@@ -1,9 +1,13 @@
 .hero {
-  background: var(--color-bg);
-  width: 60%;
-  margin: 220px auto;
-  padding: 50px;
-  text-align: center;
-  border: var(--border-width) solid var(--color-border);
-  border-radius: var(--border-radius-md);
+  min-height: 100vh;
+  background: var(--color-bg-canvas);
+  padding: 120px var(--spacing-xl) var(--spacing-2xl);
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px var(--spacing-md) var(--spacing-xl);
+  }
 }
