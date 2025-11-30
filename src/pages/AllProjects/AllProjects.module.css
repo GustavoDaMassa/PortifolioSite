@@ -1,5 +1,5 @@
 .header {
-  padding: 100px var(--spacing-xl) var(--spacing-2xl);
+  padding: 80px var(--spacing-xl) var(--spacing-2xl);
   max-width: 1280px;
   margin: 0 auto;
 }

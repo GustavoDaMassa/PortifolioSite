@@ -1,13 +1,13 @@
 .hero {
   min-height: 100vh;
   background: var(--color-bg-canvas);
-  padding: 120px var(--spacing-xl) var(--spacing-2xl);
+  padding: 80px var(--spacing-xl) var(--spacing-2xl);
   max-width: 1280px;
   margin: 0 auto;
 }
 
 @media (max-width: 768px) {
   .hero {
-    padding: 100px var(--spacing-md) var(--spacing-xl);
+    padding: 70px var(--spacing-md) var(--spacing-xl);
   }
 }
