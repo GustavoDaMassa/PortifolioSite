@@ -243,5 +243,37 @@
         "title": "Technologies"
       }
     }
+  },
+  "projects": {
+    "tiobolas": {
+      "title": "Tio Bolas",
+      "description": "Team project implementing concepts such as ADT, file manipulation, binary search, and data structures (queue)."
+    },
+    "hashtable": {
+      "title": "HashTable",
+      "description": "Project developed to apply data structures 2 course content, implementing hash table and hash function with operations."
+    },
+    "agenda": {
+      "title": "AgendaToDO",
+      "description": "API for managing tasks (CRUD) that is part of Simplify's challenge for junior backend developers."
+    },
+    "codinome": {
+      "title": "CodinomeUol",
+      "description": "Java application capable of retrieving information from an XML file and a JSON file, persisting a record in an in-memory or file database, and listing records in a simple interface."
+    },
+    "wallet": {
+      "title": "SimplifiedWallet",
+      "description": "Simplified payment system. It allows depositing and transferring money between users. We have 2 types of users, regular and merchants, both have wallets with money and make transfers between them."
+    },
+    "dotnetFinance": {
+      "title": ".FinanceAPI",
+      "description": "REST version of the banking transaction processing API based on Open Finance, developed in .Net"
+    },
+    "dotnetMedias": {
+      "title": ".MediasAPI",
+      "description": "Medias API Project: Grade management and academic score projection. Written in two other stacks - .Net and NodeJS",
+      "linkLabel": ".Net",
+      "additionalLabel": "NodeJS"
+    }
   }
 }
