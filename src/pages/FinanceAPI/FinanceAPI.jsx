@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Layout } from '../../components/Layout/Layout';
-import { NavArrows } from '../../components/Navigation/NavArrows';
 import { SideMenu } from '../../components/SideMenu/SideMenu';
 import { VideoPlayer } from '../../components/VideoPlayer/VideoPlayer';
 import { useSwipe } from '../../hooks/useSwipe';
@@ -27,7 +26,6 @@ export const FinanceAPI = () => {
 
   return (
     <Layout>
-      <NavArrows leftPath="/medias" rightPath="/projetos" />
       <main className={styles.content}>
         <div className={styles.contentHeader}>
           <span className={styles.projectTitle}>FinanceAPI</span>

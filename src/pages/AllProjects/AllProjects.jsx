@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Layout } from '../../components/Layout/Layout';
-import { NavArrows } from '../../components/Navigation/NavArrows';
 import { ProjectCard } from '../../components/ProjectCard/ProjectCard';
 import { projects } from '../../data/projects';
 import { useSwipe } from '../../hooks/useSwipe';
@@ -18,7 +17,6 @@ export const AllProjects = () => {
 
   return (
     <Layout showTopNav={false}>
-      <NavArrows leftPath="/finance" />
       <div className={styles.header}>
         <span>{t('allProjects.title')}</span>
       </div>

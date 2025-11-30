@@ -1,6 +1,5 @@
 import { useNavigate } from 'react-router-dom';
 import { Layout } from '../../components/Layout/Layout';
-import { NavArrows } from '../../components/Navigation/NavArrows';
 import { ProfileSection } from '../../components/ProfileSection/ProfileSection';
 import { TechStack } from '../../components/TechStack/TechStack';
 import { useSwipe } from '../../hooks/useSwipe';
@@ -16,7 +15,6 @@ export const Home = () => {
 
   return (
     <Layout>
-      <NavArrows rightPath="/medias" />
       <main className={styles.hero}>
         <ProfileSection />
         <TechStack />
