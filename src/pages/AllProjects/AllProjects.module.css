@@ -1,0 +1,21 @@
+.header {
+  display: block;
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 40px;
+}
+
+.header span {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding: 40px;
+  width: 80%;
+  margin: 120px auto;
+}

@@ -1,0 +1,39 @@
+.menuToggle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  font-size: 32px;
+  user-select: none;
+}
+
+.sideMenu {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background: #333;
+  padding: 10px;
+  border-radius: var(--border-radius-sm);
+  z-index: 100;
+}
+
+.sideMenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sideMenu li {
+  margin: 10px 0;
+}
+
+.sideMenu a {
+  color: var(--color-text);
+  text-decoration: none;
+  display: block;
+  padding: 5px 10px;
+}
+
+.sideMenu a:hover {
+  color: var(--color-accent);
+}

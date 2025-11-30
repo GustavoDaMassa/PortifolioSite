@@ -1,0 +1,9 @@
+.hero {
+  background: var(--color-bg);
+  width: 60%;
+  margin: 220px auto;
+  padding: 50px;
+  text-align: center;
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--border-radius-md);
+}

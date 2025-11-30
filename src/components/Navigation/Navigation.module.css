@@ -1,0 +1,44 @@
+.topNav {
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  z-index: 100;
+}
+
+.topNav a {
+  color: var(--color-text);
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.topNav a:hover {
+  color: var(--color-accent);
+}
+
+.navArrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #111;
+  color: var(--color-text);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--border-radius-circle);
+  width: 100px;
+  height: 100px;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 50;
+  transition: background 0.3s ease;
+}
+
+.navArrow:hover {
+  background: #222;
+}
+
+.navArrow.right {
+  right: 30px;
+}
+
+.navArrow.left {
+  left: 30px;
+}
