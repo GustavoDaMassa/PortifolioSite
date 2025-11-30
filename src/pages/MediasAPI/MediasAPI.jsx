@@ -38,20 +38,23 @@ export const MediasAPI = () => {
             </a>
           </p>
           <p>
-            Esta API foi desenvolvida para oferecer uma solução completa na gestão de notas acadêmicas.
-            Com ela, os usuários podem armazenar suas avaliações e obter automaticamente a média final
-            de cada disciplina. Ela foi idealizada com o objetivo core de permitir projeções estratégicas
-            para um melhor planejamento do desempenho acadêmico.
+            Uma plataforma inteligente de gestão acadêmica que transforma a maneira como estudantes e
+            professores lidam com avaliações. A solução oferece armazenamento centralizado de notas,
+            cálculo automático de médias e, principalmente, projeções estratégicas que permitem aos
+            usuários simular cenários e planejar seu desempenho com antecedência.
           </p>
           <p>
-            A característica exclusiva desta API está na personalização do método de cálculo em cada
-            disciplina. Onde é possível definir regras próprias para o cálculo da média, tornando o
-            sistema adaptável a diferentes abordagens. Além disso, a API calcula automaticamente a
-            pontuação necessária para atingir a nota de corte.
+            O diferencial está na flexibilidade: cada disciplina pode ter seu próprio método de cálculo
+            personalizado através de expressões matemáticas customizáveis. O sistema processa essas
+            expressões dinamicamente, identifica variáveis e constantes através de regex, e aplica o
+            algoritmo Shunting Yard com notação polonesa reversa (RPN) para garantir a precedência
+            correta dos operadores — tudo isso sem comprometer a performance ou usabilidade.
           </p>
           <p>
-            Tanto estudantes quanto docentes podem utilizá-la para gerenciar notas, criar projeções
-            para cada aluno ou cenário e realizar o lançamento de notas.
+            Desenvolvida seguindo princípios SOLID e arquitetura em camadas, a API combina validações
+            robustas (Bean Validation), autenticação JWT, testes automatizados com mocks e documentação
+            OpenAPI 3. A solução foi containerizada com Docker e utiliza Spring Data JPA para consultas
+            otimizadas, demonstrando uma implementação backend completa e profissional.
           </p>
         </div>
 
