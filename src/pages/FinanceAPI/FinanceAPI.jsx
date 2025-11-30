@@ -37,21 +37,24 @@ export const FinanceAPI = () => {
             </a>
           </p>
           <p>
-            Está aplicação foi desenvolvida com a intenção de proporcionar o controle e gestão de
-            ganhos e gastos. Nela, os usuários podem registrar suas transações e visualizá-las de
-            acordo com suas caracteríscas. Com fim, de permitir uma análise detalhada e personalizada
-            sobre as finanças.
+            Uma API GraphQL completa para gestão financeira inteligente que conecta o ecossistema Open
+            Finance ao usuário final. A plataforma captura automaticamente transações bancárias via
+            webhooks, organiza movimentações em categorias personalizadas e oferece análises detalhadas
+            com cálculo automático de saldo — tudo através de consultas GraphQL flexíveis e precisas.
           </p>
           <p>
-            A particularidade distintiva desta API reside no processo de classificação das transações
-            financeiras. Com ela, é viável estabelecer categorias próprias, tornando o sistema flexível
-            a personalizável a cada usuário. Ademais, a API traz a noção de detecção e armazenamento
-            automático de movimentações financeiras através de Webhooks por meio de agregadores
-            financeiros baseados em Open Finance.
+            O sistema foi projetado para resolver um problema real: a dificuldade de consolidar e
+            categorizar movimentações financeiras de múltiplas contas. Através da integração com o
+            agregador Pluggy em ambiente sandbox, a API simula o comportamento de uma instituição
+            participante do Open Finance, processando webhooks em tempo real e persistindo dados com
+            relacionamentos complexos em PostgreSQL.
           </p>
           <p>
-            Usuários finais podem utilizá-la de forma pessoal, enquanto profissionais podem empregá-la
-            como recurso para integrar dashboards e aplicações front-end.
+            A arquitetura implementa mensageria com Kafka para processamento assíncrono, Spring Security
+            com autenticação X-API-KEY, e utiliza GraphQL para proporcionar aos clientes (dashboards,
+            apps mobile, integrações) a flexibilidade de requisitar exatamente os dados necessários.
+            O projeto demonstra conhecimento profundo em integração de APIs externas, processamento de
+            eventos em tempo real e design de APIs modernas orientadas a GraphQL.
           </p>
         </div>
 
