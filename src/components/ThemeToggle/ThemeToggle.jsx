@@ -10,7 +10,7 @@ export const ThemeToggle = () => {
       className={styles.themeToggle}
       aria-label="Toggle theme"
     >
-      {theme === 'dark' ? '☀️' : '🌙'}
+      {theme === 'dark' ? '☀' : '☾'}
     </button>
   );
 };

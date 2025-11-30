@@ -11,6 +11,7 @@
   justify-content: center;
   width: 36px;
   height: 36px;
+  color: var(--color-text-primary);
 }
 
 .themeToggle:hover {
