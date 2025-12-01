@@ -14,6 +14,7 @@ export const TopNav = () => {
         <LanguageSelector />
       </div>
       <div className={styles.links}>
+        <Link to="/">{t('nav.home')}</Link>
         <Link to="/medias">{t('nav.medias')}</Link>
         <Link to="/finance">{t('nav.finance')}</Link>
         <Link to="/projetos">{t('nav.projects')}</Link>

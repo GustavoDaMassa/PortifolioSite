@@ -1,5 +1,6 @@
 {
   "nav": {
+    "home": "Início",
     "medias": "MediasAPI",
     "finance": "FinanceAPI",
     "projects": "Todos os Projetos"
