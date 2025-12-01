@@ -16,7 +16,7 @@ export const AllProjects = () => {
   );
 
   return (
-    <Layout showTopNav={false}>
+    <Layout>
       <div className={styles.header}>
         <span>{t('allProjects.title')}</span>
       </div>
