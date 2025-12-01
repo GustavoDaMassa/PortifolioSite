@@ -1,14 +1,11 @@
-import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Layout } from '../../components/Layout/Layout';
 import { SideMenu } from '../../components/SideMenu/SideMenu';
 import { VideoPlayer } from '../../components/VideoPlayer/VideoPlayer';
-import { useSwipe } from '../../hooks/useSwipe';
 import { getAssetPath } from '../../utils/paths';
 import styles from './FinanceAPI.module.css';
 
 export const FinanceAPI = () => {
-  const navigate = useNavigate();
   const { t } = useTranslation();
 
   const menuItems = [
@@ -18,11 +15,6 @@ export const FinanceAPI = () => {
     { label: t('financeAPI.menu.utilizandoApi'), href: '#utilizando-api' },
     { label: t('financeAPI.menu.praticas'), href: '#praticas' }
   ];
-
-  useSwipe(
-    () => navigate('/projetos'), // Swipe left -> próxima
-    () => navigate('/medias') // Swipe right -> anterior
-  );
 
   return (
     <Layout>
