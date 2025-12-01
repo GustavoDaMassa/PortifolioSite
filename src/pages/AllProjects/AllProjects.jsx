@@ -1,19 +1,11 @@
-import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Layout } from '../../components/Layout/Layout';
 import { ProjectCard } from '../../components/ProjectCard/ProjectCard';
 import { projects } from '../../data/projects';
-import { useSwipe } from '../../hooks/useSwipe';
 import styles from './AllProjects.module.css';
 
 export const AllProjects = () => {
-  const navigate = useNavigate();
   const { t } = useTranslation();
-
-  useSwipe(
-    null, // Sem próxima página
-    () => navigate('/finance') // Swipe right -> anterior
-  );
 
   return (
     <Layout>

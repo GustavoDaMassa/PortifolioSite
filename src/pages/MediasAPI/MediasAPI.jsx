@@ -1,14 +1,11 @@
-import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Layout } from '../../components/Layout/Layout';
 import { SideMenu } from '../../components/SideMenu/SideMenu';
 import { VideoPlayer } from '../../components/VideoPlayer/VideoPlayer';
-import { useSwipe } from '../../hooks/useSwipe';
 import { getAssetPath } from '../../utils/paths';
 import styles from './MediasAPI.module.css';
 
 export const MediasAPI = () => {
-  const navigate = useNavigate();
   const { t } = useTranslation();
 
   const menuItems = [
@@ -18,11 +15,6 @@ export const MediasAPI = () => {
     { label: t('mediasAPI.menu.utilizandoApi'), href: '#utilizando-api' },
     { label: t('mediasAPI.menu.praticas'), href: '#praticas' }
   ];
-
-  useSwipe(
-    () => navigate('/finance'), // Swipe left -> próxima
-    () => navigate('/') // Swipe right -> anterior
-  );
 
   return (
     <Layout>

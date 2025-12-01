@@ -34,12 +34,27 @@
   padding: var(--spacing-xs) var(--spacing-sm);
   border-radius: var(--border-radius-sm);
   transition: background 0.2s ease, color 0.2s ease;
+  position: relative;
 }
 
 .links a:hover {
   background: var(--color-bg-tertiary);
   color: var(--color-text-primary);
   text-decoration: none;
+}
+
+.links a.active {
+  color: var(--color-text-link);
+}
+
+.links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-text-link);
 }
 
 .navArrow {
