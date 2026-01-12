@@ -39,5 +39,10 @@ export const projects = [
       { label: '.Net', url: 'https://github.com/GustavoDaMassa/dotNetMediasAPI' },
       { label: 'NodeJS', url: 'https://github.com/GustavoDaMassa/nodeMediasAPI' }
     ]
+  },
+  {
+    id: 'compiler',
+    image: getAssetPath('assets/images/compilercard.png'),
+    github: 'https://github.com/GustavoDaMassa/GoianinhaCompiler'
   }
 ];

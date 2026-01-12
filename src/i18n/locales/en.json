@@ -275,6 +275,10 @@
       "description": "Medias API Project: Grade management and academic score projection. Written in two other stacks - .Net and NodeJS",
       "linkLabel": ".Net",
       "additionalLabel": "NodeJS"
+    },
+    "compiler": {
+      "title": "GoianinhaCompiler",
+      "description": "Compiler for the goianinha programming language (syntactic analysis, lexical analysis, semantic analysis, symbol table generation and Assembly code generation)"
     }
   }
 }

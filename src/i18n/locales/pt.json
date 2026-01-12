@@ -275,6 +275,10 @@
       "description": "Projeto Medias API : Gestão de médias e Projeção de notas acadêmicas. Escrito em duas outras stacks - .Net e NodeJS",
       "linkLabel": ".Net",
       "additionalLabel": "NodeJS"
+    },
+    "compiler": {
+      "title": "GoianinhaCompiler",
+      "description": "Compilador para a linguagem de programação goianinha (análise sintática, análise léxica, análise semântica, geração da tabela de símbolos e geração de código em Assembly)"
     }
   }
 }
