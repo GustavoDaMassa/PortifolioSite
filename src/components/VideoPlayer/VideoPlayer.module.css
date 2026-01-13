@@ -1,7 +1,8 @@
 .videoPlayer {
   width: 100%;
-  max-width: 900px;
-  height: auto;
+  max-width: 1200px;
+  aspect-ratio: 16 / 9;
+  min-height: 400px;
   margin: var(--spacing-2xl) auto;
   display: block;
   border-radius: var(--border-radius-md);
@@ -13,6 +14,7 @@
 /* Responsive */
 @media (max-width: 768px) {
   .videoPlayer {
+    min-height: 300px;
     margin: var(--spacing-xl) auto;
     border-radius: var(--border-radius-sm);
   }
@@ -20,6 +22,7 @@
 
 @media (max-width: 480px) {
   .videoPlayer {
+    min-height: 200px;
     margin: var(--spacing-lg) auto;
     border-radius: var(--border-radius-sm);
   }
