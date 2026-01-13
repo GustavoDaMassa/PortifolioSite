@@ -10,7 +10,7 @@ export const ProfileSection = () => {
     <div className={styles.profileSection}>
       <div
         className={styles.profilePic}
-        style={{ backgroundImage: `url(${getAssetPath('assets/images/profile.jpg')})` }}
+        style={{ backgroundImage: `url(${getAssetPath('assets/images/profile.png')})` }}
       ></div>
       <h1>{t('home.title')}</h1>
 
