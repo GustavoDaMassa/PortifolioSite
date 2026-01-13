@@ -25,7 +25,7 @@ export const FinanceAPI = () => {
         </div>
 
         <VideoPlayer
-          videoSrc={getAssetPath('assets/images/financeVideo.mp4')}
+          videoSrc="https://youtu.be/WVfYWVNJeOM"
           posterSrc={getAssetPath('assets/images/capafinance.png')}
         />
 

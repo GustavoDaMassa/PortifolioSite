@@ -25,7 +25,7 @@ export const MediasAPI = () => {
         </div>
 
         <VideoPlayer
-          videoSrc={getAssetPath('assets/images/mediasVideo.mp4')}
+          videoSrc="https://youtu.be/dcPSl0qejQk"
           posterSrc={getAssetPath('assets/images/capamedias.png')}
         />
 
