@@ -10,7 +10,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  border: 2px solid var(--color-border-default);
+  border: 2px solid #000;
   margin: 0 auto var(--spacing-xl) auto;
   box-shadow: var(--shadow-lg);
 }
