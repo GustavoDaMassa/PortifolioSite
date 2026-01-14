@@ -279,6 +279,10 @@
     "compiler": {
       "title": "GoianinhaCompiler",
       "description": "Compilador para a linguagem de programação goianinha (análise sintática, análise léxica, análise semântica, geração da tabela de símbolos e geração de código em Assembly)"
+    },
+    "devbrain": {
+      "title": "DevBrain",
+      "description": "Repositório onde organizei todo o meu conhecimento como engenheiro de software e desenvolvedor back-end para auxiliar nos estudos e armazenar novos conteúdos. Também serve para auxiliar outros desenvolvedores a se organizarem na era da IA."
     }
   }
 }

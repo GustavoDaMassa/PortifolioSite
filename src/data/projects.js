@@ -44,5 +44,10 @@ export const projects = [
     id: 'compiler',
     image: getAssetPath('assets/images/compilercard.png'),
     github: 'https://github.com/GustavoDaMassa/GoianinhaCompiler'
+  },
+  {
+    id: 'devbrain',
+    image: getAssetPath('assets/images/devbraincard.png'),
+    github: 'https://github.com/GustavoDaMassa/DevBrain'
   }
 ];

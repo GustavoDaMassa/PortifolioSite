@@ -279,6 +279,10 @@
     "compiler": {
       "title": "GoianinhaCompiler",
       "description": "Compiler for the goianinha programming language (syntactic analysis, lexical analysis, semantic analysis, symbol table generation and Assembly code generation)"
+    },
+    "devbrain": {
+      "title": "DevBrain",
+      "description": "Repository where I organized all my knowledge as a software engineer and back-end developer to assist in studies and store new content. It also serves to help other developers organize themselves in the AI era."
     }
   }
 }
