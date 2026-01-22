@@ -23,7 +23,7 @@ export const FinanceAPI = () => {
   const endpoints = t('financeAPI.endpoints', { returnObjects: true });
 
   const heroLinks = [
-    { label: 'GitHub', href: 'https://github.com/GustavoDaMassa/FinanceAPI', primary: true }
+    { label: 'GitHub', href: 'https://github.com/GustavoDaMassa/FinanceAPI', primary: false }
   ];
 
   const heroTags = ['GraphQL', 'Kafka', 'PostgreSQL', 'Spring Security', 'Pluggy', 'Docker'];
