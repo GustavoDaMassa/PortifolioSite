@@ -2,6 +2,9 @@ import { useTranslation } from 'react-i18next';
 import { Layout } from '../../components/Layout/Layout';
 import { SideMenu } from '../../components/SideMenu/SideMenu';
 import { VideoPlayer } from '../../components/VideoPlayer/VideoPlayer';
+import { HeroSection } from '../../components/HeroSection/HeroSection';
+import { FeatureCard } from '../../components/FeatureCard/FeatureCard';
+import { ApiEndpoint } from '../../components/ApiEndpoint/ApiEndpoint';
 import { getAssetPath } from '../../utils/paths';
 import styles from './FinanceAPI.module.css';
 
@@ -16,6 +19,30 @@ export const FinanceAPI = () => {
     { label: t('financeAPI.menu.praticas'), href: '#praticas' }
   ];
 
+  const features = [
+    { icon: '🔄', title: 'Webhooks Automáticos', description: 'Receba transações automaticamente via webhook Pluggy.' },
+    { icon: '💾', title: 'Persistência Segura', description: 'Persista transações em banco de dados relacional.' },
+    { icon: '🏷️', title: 'Categorização Inteligente', description: 'Classifique por categorias personalizadas.' },
+    { icon: '📜', title: 'Histórico Completo', description: 'Consulte histórico de transações com filtros avançados.' },
+    { icon: '🔍', title: 'Filtros Avançados', description: 'Visualize transações por categoria, período e tipo.' },
+    { icon: '💰', title: 'Cálculo de Saldo', description: 'Saldo automático das transações selecionadas.' }
+  ];
+
+  const endpoints = [
+    { method: 'POST', route: '/graphql - mutation createUser', description: 'Criar perfil cadastrando-se no sistema.' },
+    { method: 'POST', route: '/graphql - mutation createAccount', description: 'Criar e editar contas bancárias.' },
+    { method: 'POST', route: '/graphql - mutation connectAccount', description: 'Conectar conta com instituição financeira via Pluggy.' },
+    { method: 'POST', route: '/graphql - mutation createCategory', description: 'Criar e gerenciar categorias personalizadas.' },
+    { method: 'GET', route: '/graphql - query transactions', description: 'Listar transações com filtros e calcular saldo automaticamente.' }
+  ];
+
+  const heroLinks = [
+    { label: 'Ver Documentação', href: 'https://github.com/GustavoDaMassa/FinanceAPI', primary: true },
+    { label: 'GitHub', href: 'https://github.com/GustavoDaMassa/FinanceAPI', primary: false }
+  ];
+
+  const heroTags = ['GraphQL', 'Kafka', 'PostgreSQL', 'Spring Security', 'Pluggy', 'Docker'];
+
   return (
     <Layout>
       <main className={styles.content}>
@@ -29,15 +56,15 @@ export const FinanceAPI = () => {
           posterSrc={getAssetPath('assets/images/capafinance.png')}
         />
 
-        <h1>{t('financeAPI.title')}</h1>
+        <HeroSection
+          title={t('financeAPI.title')}
+          description="Conecte-se ao ecossistema Open Finance com integração bancária em tempo real. Capture transações via webhooks, categorize movimentações e analise suas finanças com consultas GraphQL flexíveis."
+          tags={heroTags}
+          links={heroLinks}
+        />
 
         <div id="apresentacao">
           <h2>{t('financeAPI.apresentacao.title')}</h2>
-          <p>
-            <a href="https://github.com/GustavoDaMassa/FinanceAPI" target="_blank" rel="noopener noreferrer">
-              {t('financeAPI.apresentacao.docLink')}
-            </a>
-          </p>
           <p>{t('financeAPI.apresentacao.p1')}</p>
           <p>{t('financeAPI.apresentacao.p2')}</p>
           <p>{t('financeAPI.apresentacao.p3')}</p>
@@ -52,40 +79,30 @@ export const FinanceAPI = () => {
 
         <div id="funcionalidades">
           <h2>{t('financeAPI.funcionalidades.title')}</h2>
-          <ul>
-            {t('financeAPI.funcionalidades.items', { returnObjects: true }).map((item, index) => (
-              <li key={index}>{item}</li>
+          <div className={styles.featuresGrid}>
+            {features.map((feature, index) => (
+              <FeatureCard
+                key={index}
+                icon={feature.icon}
+                title={feature.title}
+                description={feature.description}
+              />
             ))}
-          </ul>
+          </div>
         </div>
 
         <div id="utilizando-api">
           <h2>{t('financeAPI.utilizandoApi.title')}</h2>
-
-          <h4>{t('financeAPI.utilizandoApi.users.title')}</h4>
-          <ul>
-            <li>{t('financeAPI.utilizandoApi.users.item')}</li>
-          </ul>
-
-          <h4>{t('financeAPI.utilizandoApi.accounts.title')}</h4>
-          <ul>
-            <li>{t('financeAPI.utilizandoApi.accounts.item')}</li>
-          </ul>
-
-          <h4>{t('financeAPI.utilizandoApi.integration.title')}</h4>
-          <ul>
-            <li>{t('financeAPI.utilizandoApi.integration.item')}</li>
-          </ul>
-
-          <h4>{t('financeAPI.utilizandoApi.category.title')}</h4>
-          <ul>
-            <li>{t('financeAPI.utilizandoApi.category.item')}</li>
-          </ul>
-
-          <h4>{t('financeAPI.utilizandoApi.transactions.title')}</h4>
-          <ul>
-            <li>{t('financeAPI.utilizandoApi.transactions.item')}</li>
-          </ul>
+          <div className={styles.endpointsContainer}>
+            {endpoints.map((endpoint, index) => (
+              <ApiEndpoint
+                key={index}
+                method={endpoint.method}
+                route={endpoint.route}
+                description={endpoint.description}
+              />
+            ))}
+          </div>
         </div>
 
         <div id="praticas">
