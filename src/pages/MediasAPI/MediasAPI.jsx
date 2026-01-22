@@ -2,6 +2,9 @@ import { useTranslation } from 'react-i18next';
 import { Layout } from '../../components/Layout/Layout';
 import { SideMenu } from '../../components/SideMenu/SideMenu';
 import { VideoPlayer } from '../../components/VideoPlayer/VideoPlayer';
+import { HeroSection } from '../../components/HeroSection/HeroSection';
+import { FeatureCard } from '../../components/FeatureCard/FeatureCard';
+import { ApiEndpoint } from '../../components/ApiEndpoint/ApiEndpoint';
 import { getAssetPath } from '../../utils/paths';
 import styles from './MediasAPI.module.css';
 
@@ -16,6 +19,30 @@ export const MediasAPI = () => {
     { label: t('mediasAPI.menu.praticas'), href: '#praticas' }
   ];
 
+  const features = [
+    { icon: '📊', title: 'Armazenamento de Notas', description: 'Armazene notas de forma estruturada e eficiente.' },
+    { icon: '🧮', title: 'Cálculo Personalizado', description: 'Defina métodos personalizados para cálculo de médias.' },
+    { icon: '🎯', title: 'Metas Acadêmicas', description: 'Obtenha automaticamente a pontuação necessária para alcançar suas metas.' },
+    { icon: '📈', title: 'Simulações', description: 'Simule diferentes cenários para planejamento estratégico.' },
+    { icon: '📚', title: 'Gestão de Disciplinas', description: 'Gerencie disciplinas com flexibilidade total.' }
+  ];
+
+  const endpoints = [
+    { method: 'POST', route: '/api/auth/register', description: 'Criar perfil cadastrando-se no sistema.' },
+    { method: 'POST', route: '/api/auth/login', description: 'Validar credenciais e obter token JWT.' },
+    { method: 'GET', route: '/api/disciplinas', description: 'Listar todas as disciplinas do usuário.' },
+    { method: 'POST', route: '/api/disciplinas', description: 'Criar disciplina com método de cálculo personalizado.' },
+    { method: 'GET', route: '/api/projecoes', description: 'Visualizar projeções e simular cenários.' },
+    { method: 'PUT', route: '/api/avaliacoes/{id}', description: 'Lançar e atualizar notas das avaliações.' }
+  ];
+
+  const heroLinks = [
+    { label: 'Ver Documentação', href: 'https://github.com/GustavoDaMassa/MediasAPI', primary: true },
+    { label: 'GitHub', href: 'https://github.com/GustavoDaMassa/MediasAPI', primary: false }
+  ];
+
+  const heroTags = ['Spring Boot', 'JWT', 'OpenAPI 3', 'Docker', 'MySQL', 'JUnit'];
+
   return (
     <Layout>
       <main className={styles.content}>
@@ -29,16 +56,15 @@ export const MediasAPI = () => {
           posterSrc={getAssetPath('assets/images/capamedias.png')}
         />
 
-        <h1>{t('mediasAPI.title')}</h1>
+        <HeroSection
+          title={t('mediasAPI.title')}
+          description="Transforme sua gestão acadêmica com cálculos dinâmicos de médias, projeções inteligentes e simulações estratégicas. Suporte a expressões matemáticas customizáveis com algoritmo Shunting Yard."
+          tags={heroTags}
+          links={heroLinks}
+        />
 
         <div id="apresentacao">
           <h2>{t('mediasAPI.apresentacao.title')}</h2>
-          <p>
-            Acesse a{' '}
-            <a href="https://github.com/GustavoDaMassa/MediasAPI" target="_blank" rel="noopener noreferrer">
-              {t('mediasAPI.apresentacao.docLink')}
-            </a>
-          </p>
           <p>{t('mediasAPI.apresentacao.p1')}</p>
           <p>{t('mediasAPI.apresentacao.p2')}</p>
           <p>{t('mediasAPI.apresentacao.p3')}</p>
@@ -53,40 +79,30 @@ export const MediasAPI = () => {
 
         <div id="funcionalidades">
           <h2>{t('mediasAPI.funcionalidades.title')}</h2>
-          <ul>
-            {t('mediasAPI.funcionalidades.items', { returnObjects: true }).map((item, index) => (
-              <li key={index}>{item}</li>
+          <div className={styles.featuresGrid}>
+            {features.map((feature, index) => (
+              <FeatureCard
+                key={index}
+                icon={feature.icon}
+                title={feature.title}
+                description={feature.description}
+              />
             ))}
-          </ul>
+          </div>
         </div>
 
         <div id="utilizando-api">
           <h2>{t('mediasAPI.utilizandoApi.title')}</h2>
-
-          <h4>{t('mediasAPI.utilizandoApi.login.title')}</h4>
-          <ul>
-            <li>{t('mediasAPI.utilizandoApi.login.item')}</li>
-          </ul>
-
-          <h4>{t('mediasAPI.utilizandoApi.autenticacao.title')}</h4>
-          <ul>
-            <li>{t('mediasAPI.utilizandoApi.autenticacao.item')}</li>
-          </ul>
-
-          <h4>{t('mediasAPI.utilizandoApi.disciplinas.title')}</h4>
-          <ul>
-            <li>{t('mediasAPI.utilizandoApi.disciplinas.item')}</li>
-          </ul>
-
-          <h4>{t('mediasAPI.utilizandoApi.projecoes.title')}</h4>
-          <ul>
-            <li>{t('mediasAPI.utilizandoApi.projecoes.item')}</li>
-          </ul>
-
-          <h4>{t('mediasAPI.utilizandoApi.avaliacoes.title')}</h4>
-          <ul>
-            <li>{t('mediasAPI.utilizandoApi.avaliacoes.item')}</li>
-          </ul>
+          <div className={styles.endpointsContainer}>
+            {endpoints.map((endpoint, index) => (
+              <ApiEndpoint
+                key={index}
+                method={endpoint.method}
+                route={endpoint.route}
+                description={endpoint.description}
+              />
+            ))}
+          </div>
         </div>
 
         <div id="praticas">
