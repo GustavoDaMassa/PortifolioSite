@@ -19,22 +19,8 @@ export const MediasAPI = () => {
     { label: t('mediasAPI.menu.praticas'), href: '#praticas' }
   ];
 
-  const features = [
-    { icon: '📊', title: 'Armazenamento de Notas', description: 'Armazene notas de forma estruturada e eficiente.' },
-    { icon: '🧮', title: 'Cálculo Personalizado', description: 'Defina métodos personalizados para cálculo de médias.' },
-    { icon: '🎯', title: 'Metas Acadêmicas', description: 'Obtenha automaticamente a pontuação necessária para alcançar suas metas.' },
-    { icon: '📈', title: 'Simulações', description: 'Simule diferentes cenários para planejamento estratégico.' },
-    { icon: '📚', title: 'Gestão de Disciplinas', description: 'Gerencie disciplinas com flexibilidade total.' }
-  ];
-
-  const endpoints = [
-    { method: 'POST', route: '/api/auth/register', description: 'Criar perfil cadastrando-se no sistema.' },
-    { method: 'POST', route: '/api/auth/login', description: 'Validar credenciais e obter token JWT.' },
-    { method: 'GET', route: '/api/disciplinas', description: 'Listar todas as disciplinas do usuário.' },
-    { method: 'POST', route: '/api/disciplinas', description: 'Criar disciplina com método de cálculo personalizado.' },
-    { method: 'GET', route: '/api/projecoes', description: 'Visualizar projeções e simular cenários.' },
-    { method: 'PUT', route: '/api/avaliacoes/{id}', description: 'Lançar e atualizar notas das avaliações.' }
-  ];
+  const features = t('mediasAPI.features', { returnObjects: true });
+  const endpoints = t('mediasAPI.endpoints', { returnObjects: true });
 
   const heroLinks = [
     { label: 'GitHub', href: 'https://github.com/GustavoDaMassa/MediasAPI', primary: true }
@@ -57,7 +43,7 @@ export const MediasAPI = () => {
 
         <HeroSection
           title={t('mediasAPI.title')}
-          description="Transforme sua gestão acadêmica com cálculos dinâmicos de médias, projeções inteligentes e simulações estratégicas. Suporte a expressões matemáticas customizáveis com algoritmo Shunting Yard."
+          description={t('mediasAPI.heroDescription')}
           tags={heroTags}
           links={heroLinks}
         />

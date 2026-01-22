@@ -19,22 +19,8 @@ export const FinanceAPI = () => {
     { label: t('financeAPI.menu.praticas'), href: '#praticas' }
   ];
 
-  const features = [
-    { icon: '🔄', title: 'Webhooks Automáticos', description: 'Receba transações automaticamente via webhook Pluggy.' },
-    { icon: '💾', title: 'Persistência Segura', description: 'Persista transações em banco de dados relacional.' },
-    { icon: '🏷️', title: 'Categorização Inteligente', description: 'Classifique por categorias personalizadas.' },
-    { icon: '📜', title: 'Histórico Completo', description: 'Consulte histórico de transações com filtros avançados.' },
-    { icon: '🔍', title: 'Filtros Avançados', description: 'Visualize transações por categoria, período e tipo.' },
-    { icon: '💰', title: 'Cálculo de Saldo', description: 'Saldo automático das transações selecionadas.' }
-  ];
-
-  const endpoints = [
-    { method: 'POST', route: '/graphql - mutation createUser', description: 'Criar perfil cadastrando-se no sistema.' },
-    { method: 'POST', route: '/graphql - mutation createAccount', description: 'Criar e editar contas bancárias.' },
-    { method: 'POST', route: '/graphql - mutation connectAccount', description: 'Conectar conta com instituição financeira via Pluggy.' },
-    { method: 'POST', route: '/graphql - mutation createCategory', description: 'Criar e gerenciar categorias personalizadas.' },
-    { method: 'GET', route: '/graphql - query transactions', description: 'Listar transações com filtros e calcular saldo automaticamente.' }
-  ];
+  const features = t('financeAPI.features', { returnObjects: true });
+  const endpoints = t('financeAPI.endpoints', { returnObjects: true });
 
   const heroLinks = [
     { label: 'GitHub', href: 'https://github.com/GustavoDaMassa/FinanceAPI', primary: true }
@@ -57,7 +43,7 @@ export const FinanceAPI = () => {
 
         <HeroSection
           title={t('financeAPI.title')}
-          description="Conecte-se ao ecossistema Open Finance com integração bancária em tempo real. Capture transações via webhooks, categorize movimentações e analise suas finanças com consultas GraphQL flexíveis."
+          description={t('financeAPI.heroDescription')}
           tags={heroTags}
           links={heroLinks}
         />

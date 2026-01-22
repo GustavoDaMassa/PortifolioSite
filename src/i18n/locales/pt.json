@@ -23,6 +23,22 @@
       "praticas": "Práticas Adotadas"
     },
     "title": "API Rest de Gestão de Notas e Projeções Acadêmicas",
+    "heroDescription": "Transforme sua gestão acadêmica com cálculos dinâmicos de médias, projeções inteligentes e simulações estratégicas. Suporte a expressões matemáticas customizáveis com algoritmo Shunting Yard.",
+    "features": [
+      { "icon": "📊", "title": "Armazenamento de Notas", "description": "Armazene notas de forma estruturada e eficiente." },
+      { "icon": "🧮", "title": "Cálculo Personalizado", "description": "Defina métodos personalizados para cálculo de médias." },
+      { "icon": "🎯", "title": "Metas Acadêmicas", "description": "Obtenha automaticamente a pontuação necessária para alcançar suas metas." },
+      { "icon": "📈", "title": "Simulações", "description": "Simule diferentes cenários para planejamento estratégico." },
+      { "icon": "📚", "title": "Gestão de Disciplinas", "description": "Gerencie disciplinas com flexibilidade total." }
+    ],
+    "endpoints": [
+      { "method": "POST", "route": "/api/auth/register", "description": "Criar perfil cadastrando-se no sistema." },
+      { "method": "POST", "route": "/api/auth/login", "description": "Validar credenciais e obter token JWT." },
+      { "method": "GET", "route": "/api/disciplinas", "description": "Listar todas as disciplinas do usuário." },
+      { "method": "POST", "route": "/api/disciplinas", "description": "Criar disciplina com método de cálculo personalizado." },
+      { "method": "GET", "route": "/api/projecoes", "description": "Visualizar projeções e simular cenários." },
+      { "method": "PUT", "route": "/api/avaliacoes/{id}", "description": "Lançar e atualizar notas das avaliações." }
+    ],
     "placeholder": "AQUI",
     "apresentacao": {
       "title": "Apresentação",
@@ -136,6 +152,22 @@
       "praticas": "Práticas Adotadas"
     },
     "title": "API GraphQL de Integração Bancária, Análise e Classificação de Transações",
+    "heroDescription": "Conecte-se ao ecossistema Open Finance com integração bancária em tempo real. Capture transações via webhooks, categorize movimentações e analise suas finanças com consultas GraphQL flexíveis.",
+    "features": [
+      { "icon": "🔄", "title": "Webhooks Automáticos", "description": "Receba transações automaticamente via webhook Pluggy." },
+      { "icon": "💾", "title": "Persistência Segura", "description": "Persista transações em banco de dados relacional." },
+      { "icon": "🏷️", "title": "Categorização Inteligente", "description": "Classifique por categorias personalizadas." },
+      { "icon": "📜", "title": "Histórico Completo", "description": "Consulte histórico de transações com filtros avançados." },
+      { "icon": "🔍", "title": "Filtros Avançados", "description": "Visualize transações por categoria, período e tipo." },
+      { "icon": "💰", "title": "Cálculo de Saldo", "description": "Saldo automático das transações selecionadas." }
+    ],
+    "endpoints": [
+      { "method": "POST", "route": "/graphql - mutation createUser", "description": "Criar perfil cadastrando-se no sistema." },
+      { "method": "POST", "route": "/graphql - mutation createAccount", "description": "Criar e editar contas bancárias." },
+      { "method": "POST", "route": "/graphql - mutation connectAccount", "description": "Conectar conta com instituição financeira via Pluggy." },
+      { "method": "POST", "route": "/graphql - mutation createCategory", "description": "Criar e gerenciar categorias personalizadas." },
+      { "method": "GET", "route": "/graphql - query transactions", "description": "Listar transações com filtros e calcular saldo automaticamente." }
+    ],
     "placeholder": "AQUI",
     "apresentacao": {
       "title": "Apresentação",

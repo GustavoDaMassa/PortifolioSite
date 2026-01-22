@@ -23,6 +23,22 @@
       "praticas": "Practices Adopted"
     },
     "title": "Academic Grade Management and Projection REST API",
+    "heroDescription": "Transform your academic management with dynamic grade calculations, intelligent projections, and strategic simulations. Support for customizable mathematical expressions with Shunting Yard algorithm.",
+    "features": [
+      { "icon": "📊", "title": "Grade Storage", "description": "Store grades in a structured and efficient way." },
+      { "icon": "🧮", "title": "Custom Calculation", "description": "Define custom methods for calculating averages." },
+      { "icon": "🎯", "title": "Academic Goals", "description": "Automatically get the score needed to achieve your goals." },
+      { "icon": "📈", "title": "Simulations", "description": "Simulate different scenarios for strategic planning." },
+      { "icon": "📚", "title": "Course Management", "description": "Manage courses with full flexibility." }
+    ],
+    "endpoints": [
+      { "method": "POST", "route": "/api/auth/register", "description": "Create profile by registering in the system." },
+      { "method": "POST", "route": "/api/auth/login", "description": "Validate credentials and get JWT token." },
+      { "method": "GET", "route": "/api/disciplinas", "description": "List all user's courses." },
+      { "method": "POST", "route": "/api/disciplinas", "description": "Create course with custom calculation method." },
+      { "method": "GET", "route": "/api/projecoes", "description": "View projections and simulate scenarios." },
+      { "method": "PUT", "route": "/api/avaliacoes/{id}", "description": "Submit and update assessment grades." }
+    ],
     "placeholder": "HERE",
     "apresentacao": {
       "title": "Overview",
@@ -136,6 +152,22 @@
       "praticas": "Practices Adopted"
     },
     "title": "GraphQL API for Banking Integration, Analysis and Transaction Classification",
+    "heroDescription": "Connect to the Open Finance ecosystem with real-time banking integration. Capture transactions via webhooks, categorize movements, and analyze your finances with flexible GraphQL queries.",
+    "features": [
+      { "icon": "🔄", "title": "Automatic Webhooks", "description": "Receive transactions automatically via Pluggy webhook." },
+      { "icon": "💾", "title": "Secure Persistence", "description": "Persist transactions in a relational database." },
+      { "icon": "🏷️", "title": "Smart Categorization", "description": "Classify by custom categories." },
+      { "icon": "📜", "title": "Complete History", "description": "Query transaction history with advanced filters." },
+      { "icon": "🔍", "title": "Advanced Filters", "description": "View transactions by category, period, and type." },
+      { "icon": "💰", "title": "Balance Calculation", "description": "Automatic balance of selected transactions." }
+    ],
+    "endpoints": [
+      { "method": "POST", "route": "/graphql - mutation createUser", "description": "Create profile by registering in the system." },
+      { "method": "POST", "route": "/graphql - mutation createAccount", "description": "Create and edit bank accounts." },
+      { "method": "POST", "route": "/graphql - mutation connectAccount", "description": "Connect account with financial institution via Pluggy." },
+      { "method": "POST", "route": "/graphql - mutation createCategory", "description": "Create and manage custom categories." },
+      { "method": "GET", "route": "/graphql - query transactions", "description": "List transactions with filters and calculate balance automatically." }
+    ],
     "placeholder": "HERE",
     "apresentacao": {
       "title": "Overview",
