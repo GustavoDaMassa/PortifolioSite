@@ -37,8 +37,7 @@ export const MediasAPI = () => {
   ];
 
   const heroLinks = [
-    { label: 'Ver Documentação', href: 'https://github.com/GustavoDaMassa/MediasAPI', primary: true },
-    { label: 'GitHub', href: 'https://github.com/GustavoDaMassa/MediasAPI', primary: false }
+    { label: 'GitHub', href: 'https://github.com/GustavoDaMassa/MediasAPI', primary: true }
   ];
 
   const heroTags = ['Spring Boot', 'JWT', 'OpenAPI 3', 'Docker', 'MySQL', 'JUnit'];

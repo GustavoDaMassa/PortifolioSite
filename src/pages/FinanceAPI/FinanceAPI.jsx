@@ -37,8 +37,7 @@ export const FinanceAPI = () => {
   ];
 
   const heroLinks = [
-    { label: 'Ver Documentação', href: 'https://github.com/GustavoDaMassa/FinanceAPI', primary: true },
-    { label: 'GitHub', href: 'https://github.com/GustavoDaMassa/FinanceAPI', primary: false }
+    { label: 'GitHub', href: 'https://github.com/GustavoDaMassa/FinanceAPI', primary: true }
   ];
 
   const heroTags = ['GraphQL', 'Kafka', 'PostgreSQL', 'Spring Security', 'Pluggy', 'Docker'];
