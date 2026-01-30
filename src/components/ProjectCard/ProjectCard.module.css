@@ -55,8 +55,8 @@
 
 .content p {
   margin: 0 0 var(--spacing-lg) 0;
-  font-size: 14px;
-  line-height: 1.6;
+  font-size: 15px;
+  line-height: 1.7;
   color: var(--color-text-secondary);
 }
 
