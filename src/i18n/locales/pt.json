@@ -7,8 +7,8 @@
   },
   "home": {
     "title": "Gustavo Henrique | Desenvolvedor",
-    "description1": "Atuo no desenvolvimento back-end construindo APIs, aplicações escaláveis e projetos estruturados com boas práticas de engenharia de software com Java e Spring. Trabalho com arquitetura limpa, princípios SOLID, padrões de projeto, versionamento de código, documentação técnica e testes automatizados. Tenho experiência em bancos de dados relacionais, estruturas de dados e algoritmos, aplicando soluções eficientes e de qualidade.",
-    "description2": "Ao lado lhe apresento alguns projetos pessoais que resolvem problemas do meu dia a dia, as soluções foram elaboradas e documentadas visando seguir boas práticas e recursos do mercado de desenvolvimente de software.",
+    "description1": "Desenvolvedor back-end com 3 anos de estudo focado em Java e Spring Boot, cursando Ciência da Computação na UFG. Construo APIs que resolvem problemas reais — desde cálculo dinâmico de médias acadêmicas com o algoritmo Shunting Yard até integração bancária via Open Finance com GraphQL e Kafka. Também reimplementei os mesmos projetos em .NET e Node.js para dominar os conceitos além de uma única stack.",
+    "description2": "Ao lado estão alguns dos meus projetos. Cada um nasceu de um problema concreto do meu dia a dia e foi estruturado com testes, documentação e boas práticas de engenharia de software.",
     "techTitle": "Tecnologias"
   },
   "allProjects": {
@@ -23,7 +23,7 @@
       "praticas": "Práticas Adotadas"
     },
     "title": "API Rest de Gestão de Notas e Projeções Acadêmicas",
-    "heroDescription": "Transforme sua gestão acadêmica com cálculos dinâmicos de médias, projeções inteligentes e simulações estratégicas. Suporte a expressões matemáticas customizáveis com algoritmo Shunting Yard.",
+    "heroDescription": "API REST para cálculo dinâmico de médias acadêmicas com suporte a fórmulas customizáveis. Usa o algoritmo Shunting Yard e notação polonesa reversa para interpretar expressões matemáticas definidas pelo usuário.",
     "features": [
       { "icon": "📊", "title": "Armazenamento de Notas", "description": "Armazene notas de forma estruturada e eficiente." },
       { "icon": "🧮", "title": "Cálculo Personalizado", "description": "Defina métodos personalizados para cálculo de médias." },
@@ -152,7 +152,7 @@
       "praticas": "Práticas Adotadas"
     },
     "title": "API GraphQL de Integração Bancária, Análise e Classificação de Transações",
-    "heroDescription": "Conecte-se ao ecossistema Open Finance com integração bancária em tempo real. Capture transações via webhooks, categorize movimentações e analise suas finanças com consultas GraphQL flexíveis.",
+    "heroDescription": "API GraphQL que processa transações bancárias via Open Finance. Recebe webhooks de agregadores financeiros, categoriza movimentações e calcula saldos — com mensageria Kafka para processamento assíncrono.",
     "features": [
       { "icon": "🔄", "title": "Webhooks Automáticos", "description": "Receba transações automaticamente via webhook Pluggy." },
       { "icon": "💾", "title": "Persistência Segura", "description": "Persista transações em banco de dados relacional." },
@@ -280,23 +280,23 @@
   "projects": {
     "tiobolas": {
       "title": "Tio Bolas",
-      "description": "Projeto desenvolvido em equipe, implementando conceitos como, TAD, manipulação de arquivos, Busca binária e estruturas de dados (fila)."
+      "description": "Projeto em equipe com TAD, manipulação de arquivos, busca binária e fila. Desenvolvido em C."
     },
     "hashtable": {
       "title": "HashTable",
-      "description": "Projeto desenvolvido para aplicar o conteúdo da disciplina de estruturas de dados 2, implementando tabela e função hash e operações sobre ela."
+      "description": "Implementação de tabela hash com tratamento de colisões e operações de inserção, busca e remoção."
     },
     "agenda": {
       "title": "AgendaToDO",
-      "description": "API para gerenciar tarefas (CRUD) que faz parte do desafio do Simplify para pessoas desenvolvedoras backend júnior."
+      "description": "API REST de gerenciamento de tarefas (CRUD completo) com Spring Boot, validações e documentação Swagger."
     },
     "codinome": {
       "title": "CodinomeUol",
-      "description": "aplicação Java capaz de recuperar informações de um arquivo XML e de um arquivo JSON, persistir um cadastro em um banco de dados em memória ou em arquivo e listar os cadastros em uma interface simples."
+      "description": "Aplicação Java que lê dados de XML e JSON, persiste em banco em memória e exibe em interface web simples."
     },
     "wallet": {
       "title": "SimplifiedWallet",
-      "description": "Sistema de pagamentos simplificada. Nela é possível depositar e realizar transferências de dinheiro entre usuários. Temos 2 tipos de usuários, os comuns e lojistas, ambos têm carteira com dinheiro e realizam transferências entre eles."
+      "description": "Sistema de transferências entre usuários comuns e lojistas, com validação de saldo, autorização externa e notificações."
     },
     "dotnetFinance": {
       "title": ".FinanceAPI",
@@ -310,11 +310,11 @@
     },
     "compiler": {
       "title": "GoianinhaCompiler",
-      "description": "Compilador para a linguagem de programação goianinha (análise sintática, análise léxica, análise semântica, geração da tabela de símbolos e geração de código em Assembly)"
+      "description": "Compilador completo em C: análise léxica, sintática, semântica, tabela de símbolos e geração de código Assembly."
     },
     "devbrain": {
       "title": "DevBrain",
-      "description": "Repositório onde organizei todo o meu conhecimento como engenheiro de software e desenvolvedor back-end para auxiliar nos estudos e armazenar novos conteúdos. Também serve para auxiliar outros desenvolvedores a se organizarem na era da IA."
+      "description": "Base de conhecimento pessoal com 100+ documentos sobre engenharia de software, System Design, segurança, testes e preparação para entrevistas."
     }
   }
 }
