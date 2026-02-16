@@ -42,12 +42,12 @@
 }
 
 [data-theme="light"] {
-  /* GitHub Light Theme Colors */
-  --color-bg-primary: #ffffff;
-  --color-bg-secondary: #f6f8fa;
-  --color-bg-tertiary: #eaeef2;
-  --color-bg-canvas: #ffffff;
-  --color-bg-overlay: #f6f8fa;
+  /* GitHub Light Theme Colors - Sky blue tint */
+  --color-bg-primary: #eef5fc;
+  --color-bg-secondary: #e4eef8;
+  --color-bg-tertiary: #d6e4f0;
+  --color-bg-canvas: #eef5fc;
+  --color-bg-overlay: #e4eef8;
 
   --color-border-default: #d0d7de;
   --color-border-muted: #d8dee4;
