@@ -1,2 +1,2 @@
 import { createContext } from 'react';
-export const NavigationContext = createContext(1);
+export const NavigationContext = createContext({ direction: 1, isFirstLoad: true });

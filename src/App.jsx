@@ -16,16 +16,18 @@ function AnimatedRoutes() {
   const location = useLocation();
   const prevPath = useRef(location.pathname);
   const direction = useRef(1);
+  const isFirstLoad = useRef(true);
 
   if (prevPath.current !== location.pathname) {
     const prev = PAGE_ORDER[prevPath.current] ?? 0;
     const curr = PAGE_ORDER[location.pathname] ?? 0;
     direction.current = curr >= prev ? 1 : -1;
     prevPath.current = location.pathname;
+    isFirstLoad.current = false;
   }
 
   return (
-    <NavigationContext.Provider value={direction.current}>
+    <NavigationContext.Provider value={{ direction: direction.current, isFirstLoad: isFirstLoad.current }}>
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
