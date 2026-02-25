@@ -43,7 +43,7 @@ function AnimatedRoutes() {
 function App() {
   return (
     <ThemeProvider>
-      <Router basename="/PortifolioSite">
+      <Router basename={import.meta.env.BASE_URL}>
         <AnimatedRoutes />
       </Router>
     </ThemeProvider>
