@@ -6,9 +6,9 @@
     "projects": "All Projects"
   },
   "home": {
-    "title": "Gustavo Henrique | Developer",
-    "description1": "Backend developer with 3 years of focused study in Java and Spring Boot, pursuing a Computer Science degree at UFG (Federal University of Goiás). I build APIs that solve real problems — from dynamic grade calculation using the Shunting Yard algorithm to banking integration via Open Finance with GraphQL and Kafka. I also reimplemented the same projects in .NET and Node.js to master the concepts beyond a single stack.",
-    "description2": "Here are some of my projects. Each one was born from a real problem in my daily life and was built with tests, documentation and software engineering best practices.",
+    "title": "Gustavo Henrique | Full Stack Developer",
+    "description1": "Full stack developer pursuing a Computer Science degree at UFG. Back-end with Java and Spring Boot, front-end with Angular — from API design to the final interface. I work with JWT authentication, Kafka messaging, Open Finance integration and deployment with Docker, CI/CD via GitHub Actions and a self-hosted server. I also explored .NET and Node.js to solidify the concepts beyond a single stack.",
+    "description2": "On the side are some of my projects. Each one was born from a real problem and delivered with tests, documentation and software engineering best practices.",
     "techTitle": "Technologies"
   },
   "allProjects": {

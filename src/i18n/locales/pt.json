@@ -6,9 +6,9 @@
     "projects": "Todos os Projetos"
   },
   "home": {
-    "title": "Gustavo Henrique | Desenvolvedor",
-    "description1": "Desenvolvedor back-end com 3 anos de estudo focado em Java e Spring Boot, cursando Ciência da Computação na UFG. Construo APIs que resolvem problemas reais — desde cálculo dinâmico de médias acadêmicas com o algoritmo Shunting Yard até integração bancária via Open Finance com GraphQL e Kafka. Também reimplementei os mesmos projetos em .NET e Node.js para dominar os conceitos além de uma única stack.",
-    "description2": "Ao lado estão alguns dos meus projetos. Cada um nasceu de um problema concreto do meu dia a dia e foi estruturado com testes, documentação e boas práticas de engenharia de software.",
+    "title": "Gustavo Henrique | Desenvolvedor Full Stack",
+    "description1": "Desenvolvedor full stack cursando Ciência da Computação na UFG. Back-end com Java e Spring Boot, front-end com Angular — do design da API à interface final. Trabalho com autenticação JWT, mensageria Kafka, integração via Open Finance e deploy com Docker, CI/CD via GitHub Actions e servidor próprio. Também explorei .NET e Node.js para solidificar os conceitos além de uma única stack.",
+    "description2": "Ao lado estão alguns dos meus projetos. Cada um nasceu de um problema real e foi entregue com testes, documentação e boas práticas de engenharia de software.",
     "techTitle": "Tecnologias"
   },
   "allProjects": {
