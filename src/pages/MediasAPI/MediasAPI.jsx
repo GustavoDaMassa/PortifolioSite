@@ -23,7 +23,8 @@ export const MediasAPI = () => {
   const endpoints = t('mediasAPI.endpoints', { returnObjects: true });
 
   const heroLinks = [
-    { label: 'GitHub', href: 'https://github.com/GustavoDaMassa/MediasAPI', primary: false }
+    { label: 'GitHub', href: 'https://github.com/GustavoDaMassa/MediasAPI', primary: false },
+    { label: 'Site Oficial', href: 'https://MediasAPI.GustavoHDev.com.br', primary: true }
   ];
 
   const heroTags = ['Spring Boot', 'JWT', 'OpenAPI 3', 'Docker', 'MySQL', 'JUnit'];
