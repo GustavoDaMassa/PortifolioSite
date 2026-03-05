@@ -5,7 +5,9 @@ import { getAssetPath } from '../../utils/paths';
 import styles from './Curriculo.module.css';
 
 export const Curriculo = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const pdfFile = i18n.language === 'en' ? 'assets/images/GustavoHDevEn.pdf' : 'assets/images/GustavoHDev.pdf';
+  const pdfDownloadName = i18n.language === 'en' ? 'GustavoHDevEn.pdf' : 'GustavoHDev.pdf';
 
   return (
     <Layout>
@@ -15,8 +17,8 @@ export const Curriculo = () => {
         <div className={styles.topBar}>
           <h2 className={styles.pageTitle}>{t('curriculo.pageTitle')}</h2>
           <a
-            href={getAssetPath('assets/images/GustavoHDev.pdf')}
-            download="GustavoHDev.pdf"
+            href={getAssetPath(pdfFile)}
+            download={pdfDownloadName}
             className={styles.downloadBtn}
           >
             {t('curriculo.download')}
@@ -27,7 +29,7 @@ export const Curriculo = () => {
 
           <div className={styles.resumeHeader}>
             <h1>Gustavo Henrique Pereira da Silva</h1>
-            <p className={styles.resumeTitle}>Desenvolvedor Fullstack | Java · Spring Boot · Angular</p>
+            <p className={styles.resumeTitle}>{t('curriculo.subtitle')}</p>
             <p className={styles.resumeContact}>
               (62) 99128-1661 &nbsp;·&nbsp; gustavohenrique3gb@gmail.com &nbsp;·&nbsp;
               <a href="https://linkedin.com/in/gustavohpereiradev" target="_blank" rel="noopener noreferrer">
@@ -86,7 +88,7 @@ export const Curriculo = () => {
 
             <div className={styles.jobBlock}>
               <div className={styles.jobHeader}>
-                <span className={styles.jobTitle}>Desenvolvedor Fullstack Independente — FinanceAPI</span>
+                <span className={styles.jobTitle}>{t('curriculo.jobTitleFinance')}</span>
                 <span className={styles.jobDate}>2024 – {t('curriculo.present')}</span>
               </div>
               <p className={styles.jobStack}>Java · Spring Boot · GraphQL · Apache Kafka · PostgreSQL · Docker · Angular</p>
@@ -111,7 +113,7 @@ export const Curriculo = () => {
 
             <div className={styles.jobBlock}>
               <div className={styles.jobHeader}>
-                <span className={styles.jobTitle}>Desenvolvedor Fullstack Independente — MédiasAPI</span>
+                <span className={styles.jobTitle}>{t('curriculo.jobTitleMedias')}</span>
                 <span className={styles.jobDate}>2023 – {t('curriculo.present')}</span>
               </div>
               <p className={styles.jobStack}>Java · Spring Boot · JWT · MySQL · Docker · Swagger · Angular · Terraform</p>

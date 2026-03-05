@@ -10,6 +10,9 @@
     "pageTitle": "Resume",
     "download": "Download PDF",
     "present": "present",
+    "subtitle": "Fullstack Developer | Java · Spring Boot · Angular",
+    "jobTitleFinance": "Independent Fullstack Developer — FinanceAPI",
+    "jobTitleMedias": "Independent Fullstack Developer — MédiasAPI",
     "sobre": {
       "title": "About",
       "text": "Developer with 3 years of continuous practice building APIs and web interfaces focused on architecture and code quality. Production projects with Open Finance integration, async processing with Kafka, Angular interfaces and infrastructure as code with Terraform. Computer Science degree at UFG. Working across multiple ecosystems (Java, .NET, Node.js) with emphasis on concepts over tools."

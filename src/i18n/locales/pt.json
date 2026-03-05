@@ -10,6 +10,9 @@
     "pageTitle": "Currículo",
     "download": "Baixar PDF",
     "present": "presente",
+    "subtitle": "Desenvolvedor Fullstack | Java · Spring Boot · Angular",
+    "jobTitleFinance": "Desenvolvedor Fullstack Independente — FinanceAPI",
+    "jobTitleMedias": "Desenvolvedor Fullstack Independente — MédiasAPI",
     "sobre": {
       "title": "Sobre",
       "text": "Desenvolvedor com 3 anos de prática contínua construindo APIs e interfaces web com foco em arquitetura e qualidade de código. Projetos em produção com integração Open Finance, processamento assíncrono com Kafka, interfaces Angular e infraestrutura como código com Terraform. Formação em Ciência da Computação na UFG. Trabalho em múltiplos ecossistemas (Java, .NET, Node.js) com ênfase em conceitos, não em ferramentas."
