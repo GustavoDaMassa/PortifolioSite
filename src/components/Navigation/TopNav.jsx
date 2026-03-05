@@ -2,6 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ThemeToggle } from '../ThemeToggle/ThemeToggle';
 import { LanguageSelector } from '../LanguageSelector/LanguageSelector';
+import { getAssetPath } from '../../utils/paths';
 import styles from './Navigation.module.css';
 
 export const TopNav = () => {
@@ -13,6 +14,13 @@ export const TopNav = () => {
       <div className={styles.controls}>
         <ThemeToggle />
         <LanguageSelector />
+        <Link
+          to="/curriculo"
+          className={`${styles.curriculoBtn} ${location.pathname === '/curriculo' ? styles.curriculoBtnActive : ''}`}
+          title={t('nav.curriculo')}
+        >
+          <img src={getAssetPath('assets/images/icons/curriculoicon.png')} alt={t('nav.curriculo')} />
+        </Link>
       </div>
       <div className={styles.links}>
         <Link to="/" className={location.pathname === '/' ? styles.active : ''}>

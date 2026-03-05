@@ -1,15 +1,70 @@
 {
   "nav": {
+    "curriculo": "Currículo",
     "home": "Início",
     "medias": "MediasAPI",
     "finance": "FinanceAPI",
     "projects": "Todos os Projetos"
   },
+  "curriculo": {
+    "pageTitle": "Currículo",
+    "download": "Baixar PDF",
+    "present": "presente",
+    "sobre": {
+      "title": "Sobre",
+      "text": "Desenvolvedor com 3 anos de prática contínua construindo APIs e interfaces web com foco em arquitetura e qualidade de código. Projetos em produção com integração Open Finance, processamento assíncrono com Kafka, interfaces Angular e infraestrutura como código com Terraform. Formação em Ciência da Computação na UFG. Trabalho em múltiplos ecossistemas (Java, .NET, Node.js) com ênfase em conceitos, não em ferramentas."
+    },
+    "habilidades": {
+      "title": "Habilidades Técnicas",
+      "databases": "Bancos de Dados",
+      "infra": "Infraestrutura",
+      "tools": "Ferramentas",
+      "practices": "Práticas",
+      "tests": "Testes Automatizados"
+    },
+    "experiencia": {
+      "title": "Experiência",
+      "finance": {
+        "item1": "Construí aplicação GraphQL que integra com agregadores financeiros (Pluggy) para capturar e classificar transações bancárias automaticamente",
+        "item2": "Implementei processamento assíncrono de webhooks com Apache Kafka",
+        "item3": "Desenvolvi interface web responsiva com Angular",
+        "item4": "Estruturei em Clean Architecture com autenticação via X-API-KEY e tratamento padronizado de erros",
+        "item5": "Deploy em produção com CI/CD automatizado (GitHub Actions → Docker Hub → servidor próprio)",
+        "item6": "Reimplementado em .NET/ASP.NET Core como exercício de versatilidade tecnológica"
+      },
+      "medias": {
+        "item1": "Construí API REST para calcular médias acadêmicas com fórmulas dinâmicas, usando interpretador baseado no algoritmo Shunting Yard",
+        "item2": "Implementei projeção de notas e simulação de cenários acadêmicos",
+        "item3": "Desenvolvi interface web com Angular e autenticação JWT",
+        "item4": "Deploy em produção com infraestrutura como código (Terraform) e CI/CD automatizado",
+        "item5": "Reimplementado em .NET (C#) e Node.js (NestJS/TypeScript)"
+      }
+    },
+    "formacao": {
+      "title": "Formação Acadêmica",
+      "degree": "Bacharelado em Ciência da Computação",
+      "item1": "Base em estruturas de dados, algoritmos, arquitetura de software e bancos de dados",
+      "item2": "Compilador completo para linguagem Goianinha: análise léxica, sintática, semântica e geração de código Assembly (C)"
+    },
+    "outros": {
+      "title": "Outros Projetos",
+      "col": {
+        "project": "Projeto",
+        "tech": "Tecnologia",
+        "desc": "Descrição"
+      },
+      "goianinha": "Compilador completo com geração de código Assembly",
+      "wallet": "Sistema de transferências entre usuários com regras de negócio",
+      "agenda": "API CRUD de gestão de tarefas (desafio técnico Simplify)",
+      "codinome": "Processamento de XML/JSON com persistência em memória e arquivo"
+    }
+  },
   "home": {
     "title": "Gustavo Henrique | Desenvolvedor Full Stack",
     "description1": "Desenvolvedor full stack cursando Ciência da Computação na UFG. Back-end com Java e Spring Boot, front-end com Angular — do design da API à interface final. Trabalho com autenticação JWT, mensageria Kafka, integração via Open Finance e deploy com Docker, CI/CD via GitHub Actions e servidor próprio. Também explorei .NET e Node.js para solidificar os conceitos além de uma única stack.",
     "description2": "Ao lado estão alguns dos meus projetos. Cada um nasceu de um problema real e foi entregue com testes, documentação e boas práticas de engenharia de software.",
-    "techTitle": "Tecnologias"
+    "techTitle": "Tecnologias",
+    "curriculoHint": "Currículo disponível ao lado"
   },
   "allProjects": {
     "title": "Todos os Projetos"

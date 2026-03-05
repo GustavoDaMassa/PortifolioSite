@@ -1,15 +1,70 @@
 {
   "nav": {
+    "curriculo": "Resume",
     "home": "Home",
     "medias": "MediasAPI",
     "finance": "FinanceAPI",
     "projects": "All Projects"
   },
+  "curriculo": {
+    "pageTitle": "Resume",
+    "download": "Download PDF",
+    "present": "present",
+    "sobre": {
+      "title": "About",
+      "text": "Developer with 3 years of continuous practice building APIs and web interfaces focused on architecture and code quality. Production projects with Open Finance integration, async processing with Kafka, Angular interfaces and infrastructure as code with Terraform. Computer Science degree at UFG. Working across multiple ecosystems (Java, .NET, Node.js) with emphasis on concepts over tools."
+    },
+    "habilidades": {
+      "title": "Technical Skills",
+      "databases": "Databases",
+      "infra": "Infrastructure",
+      "tools": "Tools",
+      "practices": "Practices",
+      "tests": "Automated Testing"
+    },
+    "experiencia": {
+      "title": "Experience",
+      "finance": {
+        "item1": "Built a GraphQL application integrating with financial aggregators (Pluggy) to automatically capture and classify bank transactions",
+        "item2": "Implemented asynchronous webhook processing with Apache Kafka",
+        "item3": "Developed responsive web interface with Angular",
+        "item4": "Structured with Clean Architecture, X-API-KEY authentication and standardized error handling",
+        "item5": "Production deploy with automated CI/CD (GitHub Actions → Docker Hub → self-hosted server)",
+        "item6": "Reimplemented in .NET/ASP.NET Core as a technological versatility exercise"
+      },
+      "medias": {
+        "item1": "Built a REST API to calculate academic grades with dynamic formulas using an interpreter based on the Shunting Yard algorithm",
+        "item2": "Implemented grade projection and academic scenario simulation",
+        "item3": "Developed web interface with Angular and JWT authentication",
+        "item4": "Production deploy with infrastructure as code (Terraform) and automated CI/CD",
+        "item5": "Reimplemented in .NET (C#) and Node.js (NestJS/TypeScript)"
+      }
+    },
+    "formacao": {
+      "title": "Education",
+      "degree": "Bachelor's in Computer Science",
+      "item1": "Solid foundation in data structures, algorithms, software architecture and databases",
+      "item2": "Full compiler for the Goianinha language: lexical, syntactic, semantic analysis and Assembly code generation (C)"
+    },
+    "outros": {
+      "title": "Other Projects",
+      "col": {
+        "project": "Project",
+        "tech": "Technology",
+        "desc": "Description"
+      },
+      "goianinha": "Full compiler with Assembly code generation",
+      "wallet": "User transfer system with business rules",
+      "agenda": "Task management CRUD API (Simplify technical challenge)",
+      "codinome": "XML/JSON processing with in-memory and file persistence"
+    }
+  },
   "home": {
     "title": "Gustavo Henrique | Full Stack Developer",
     "description1": "Full stack developer pursuing a Computer Science degree at UFG. Back-end with Java and Spring Boot, front-end with Angular — from API design to the final interface. I work with JWT authentication, Kafka messaging, Open Finance integration and deployment with Docker, CI/CD via GitHub Actions and a self-hosted server. I also explored .NET and Node.js to solidify the concepts beyond a single stack.",
     "description2": "On the side are some of my projects. Each one was born from a real problem and delivered with tests, documentation and software engineering best practices.",
-    "techTitle": "Technologies"
+    "techTitle": "Technologies",
+    "curriculoHint": "Resume available on the left"
   },
   "allProjects": {
     "title": "All Projects"

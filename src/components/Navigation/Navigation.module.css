@@ -14,6 +14,43 @@
   backdrop-filter: blur(8px);
 }
 
+.curriculoBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--border-radius-sm);
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.curriculoBtn img {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) saturate(100%) invert(79%) sepia(11%) saturate(293%) hue-rotate(178deg) brightness(93%) contrast(88%);
+}
+
+.curriculoBtn:hover {
+  background: var(--color-bg-tertiary);
+  border-color: var(--color-accent-primary);
+  transform: scale(1.05);
+}
+
+.curriculoBtn:hover img {
+  filter: brightness(0) saturate(100%) invert(61%) sepia(89%) saturate(2798%) hue-rotate(197deg) brightness(103%) contrast(101%);
+}
+
+.curriculoBtnActive {
+  border-color: var(--color-accent-primary);
+}
+
+.curriculoBtnActive img {
+  filter: brightness(0) saturate(100%) invert(61%) sepia(89%) saturate(2798%) hue-rotate(197deg) brightness(103%) contrast(101%);
+}
+
 .controls {
   display: flex;
   align-items: center;

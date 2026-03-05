@@ -4,13 +4,14 @@ import { AnimatePresence } from 'framer-motion';
 import { ThemeProvider } from './context/ThemeContext';
 import { NavigationContext } from './context/NavigationContext';
 import { Home } from './pages/Home/Home';
+import { Curriculo } from './pages/Curriculo/Curriculo';
 import { MediasAPI } from './pages/MediasAPI/MediasAPI';
 import { FinanceAPI } from './pages/FinanceAPI/FinanceAPI';
 import { AllProjects } from './pages/AllProjects/AllProjects';
 import './i18n/config';
 import './styles/global.css';
 
-const PAGE_ORDER = { '/': 0, '/medias': 1, '/finance': 2, '/projetos': 3 };
+const PAGE_ORDER = { '/curriculo': -1, '/': 0, '/medias': 1, '/finance': 2, '/projetos': 3 };
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -30,6 +31,7 @@ function AnimatedRoutes() {
     <NavigationContext.Provider value={{ direction: direction.current, isFirstLoad: isFirstLoad.current }}>
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
+          <Route path="/curriculo" element={<Curriculo />} />
           <Route path="/" element={<Home />} />
           <Route path="/medias" element={<MediasAPI />} />
           <Route path="/finance" element={<FinanceAPI />} />
