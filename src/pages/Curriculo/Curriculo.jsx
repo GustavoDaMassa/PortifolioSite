@@ -94,7 +94,7 @@ export const Curriculo = () => {
                 <a href="https://github.com/GustavoDaMassa/FinanceAPI" target="_blank" rel="noopener noreferrer">
                   github.com/GustavoDaMassa/FinanceAPI
                 </a>
-                &nbsp;·&nbsp;
+                <span className={styles.linkSep}>&nbsp;·&nbsp;</span>
                 <a href="https://financeapi.com.br" target="_blank" rel="noopener noreferrer">
                   FinanceAPI.com.br
                 </a>
@@ -119,7 +119,7 @@ export const Curriculo = () => {
                 <a href="https://github.com/GustavoDaMassa/MediasAPI" target="_blank" rel="noopener noreferrer">
                   github.com/GustavoDaMassa/MediasAPI
                 </a>
-                &nbsp;·&nbsp;
+                <span className={styles.linkSep}>&nbsp;·&nbsp;</span>
                 <a href="https://mediasapi.gustavohdev.com.br" target="_blank" rel="noopener noreferrer">
                   MediasAPI.GustavoHDev.com.br
                 </a>

@@ -70,7 +70,8 @@
   font-size: 12px;
   color: var(--color-text-tertiary);
   line-height: 1.6;
-  flex-wrap: wrap;
+  word-break: break-all;
+  overflow-wrap: anywhere;
 }
 
 .resumeContact a {
@@ -256,6 +257,16 @@
   .jobHeader {
     flex-direction: column;
     gap: 2px;
+  }
+
+  .jobLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .linkSep {
+    display: none;
   }
 
   .table th:nth-child(2),
