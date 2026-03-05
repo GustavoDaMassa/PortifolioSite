@@ -150,18 +150,12 @@
     padding: var(--spacing-xs);
   }
 
+  .curriculoBtn {
+    display: none;
+  }
+
   .navArrow {
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-  }
-
-  .navArrow.right {
-    right: var(--spacing-md);
-  }
-
-  .navArrow.left {
-    left: var(--spacing-md);
+    display: none;
   }
 }
 
@@ -172,19 +166,5 @@
 
   .links a {
     font-size: 11px;
-  }
-
-  .navArrow {
-    width: 36px;
-    height: 36px;
-    font-size: 16px;
-  }
-
-  .navArrow.right {
-    right: var(--spacing-sm);
-  }
-
-  .navArrow.left {
-    left: var(--spacing-sm);
   }
 }

@@ -175,6 +175,8 @@
 .jobLinks {
   font-size: 12px;
   margin-bottom: var(--spacing-sm);
+  word-break: break-all;
+  overflow-wrap: anywhere;
 }
 
 .jobLinks a {
