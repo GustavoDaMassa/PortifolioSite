@@ -373,6 +373,18 @@
     "devbrain": {
       "title": "DevBrain",
       "description": "Base de conhecimento pessoal com 100+ documentos sobre engenharia de software, System Design, segurança, testes e preparação para entrevistas."
+    },
+    "classview": {
+      "title": "ClassView",
+      "description": "Aplicação web frontend que analisa e visualiza as relações entre classes de um projeto em forma de grafo, com suporte a múltiplas linguagens."
+    },
+    "msfinanceapi": {
+      "title": "MSFinanceApi",
+      "description": "Reimplementação da FinanceAPI como sistema de microsserviços em .NET 9, com serviços isolados de Gateway, Identity, Finance e Webhook comunicando via Kafka."
+    },
+    "homeserver": {
+      "title": "Home Server",
+      "description": "Servidor doméstico configurado do zero com Ubuntu, Docker e Cloudflare Tunnel para hospedar aplicações em produção sem depender de infraestrutura em nuvem."
     }
   }
 }

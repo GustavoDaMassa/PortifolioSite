@@ -49,5 +49,20 @@ export const projects = [
     id: 'devbrain',
     image: getAssetPath('assets/images/devbraincard.png'),
     github: 'https://github.com/GustavoDaMassa/DevBrain'
+  },
+  {
+    id: 'classview',
+    image: getAssetPath('assets/images/classViewcard.png'),
+    github: 'https://github.com/GustavoDaMassa/ClassView'
+  },
+  {
+    id: 'msfinanceapi',
+    image: getAssetPath('assets/images/finAPIcard.png'),
+    github: 'https://github.com/GustavoDaMassa/FinAPIMS'
+  },
+  {
+    id: 'homeserver',
+    image: getAssetPath('assets/images/homecard.png'),
+    github: 'https://github.com/GustavoDaMassa/HomeServer'
   }
 ];
