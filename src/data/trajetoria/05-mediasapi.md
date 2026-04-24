@@ -4,6 +4,7 @@ date: "2025-02"
 dateEnd: "2026-04"
 title: "MediasAPI"
 subtitle: "Primeiro grande projeto — resolvendo uma dor real"
+subtitle_en: "First major project — solving a real pain point"
 type: "projeto"
 tags: ["Java 17", "Spring Boot", "Clean Architecture", "JWT", "Flyway", "MySQL", "Docker", "CI/CD", "Swagger"]
 parallel: []
@@ -25,3 +26,19 @@ API REST em Java 17 com Spring Boot. Arquitetura em camadas com separação clar
 O diferencial técnico está no motor de cálculo: expressões matemáticas arbitrárias são validadas com Regex (conceito de LFA) e avaliadas com o algoritmo Shunting Yard + notação polonesa reversa (RPN) — aplicação direta de teoria de autômatos e pilhas estudada nas disciplinas de FMC e LFA na UFG.
 
 Deploy com Docker + Nginx em produção, CI/CD com GitHub Actions → Docker Hub → Watchtower (auto-deploy). Documentação com Swagger/OpenAPI. Projeto disponível em produção.
+
+<!-- NARRATIVA_EN -->
+MediasAPI was born from a real pain point: calculating grade averages and simulating scores to know what I needed on final exams. A problem every student knows, but one I solved the way a developer solves things — by building an API.
+
+What I'm proud of in this project isn't just what it does, but how it was built. Before writing a single line of code, I was both the client and the engineer: I gathered requirements as a stakeholder and designed the solution as a developer. Every line of code was written by hand, without AI — each detail debugged and understood.
+
+For the algorithm that evaluates arbitrary mathematical expressions, I applied concepts from Formal Languages and Automata (FLA) and Mathematical Foundations of Computing that I was studying in parallel at university: Regex for validation and the Shunting Yard algorithm with RPN notation to evaluate the formulas.
+
+This was the project where I became a software engineer in practice.
+
+<!-- TECNICO_EN -->
+REST API in Java 17 with Spring Boot. Layered architecture with clear separation of responsibilities: Controller → Service → Repository. JWT authentication with ADMIN/USER roles and Form Login support. Migrations with Flyway, MySQL in production and H2 for tests.
+
+The technical highlight is the calculation engine: arbitrary mathematical expressions are validated with Regex (FLA concept) and evaluated with the Shunting Yard algorithm + Reverse Polish Notation (RPN) — a direct application of automata theory and stack data structures studied in the FMC and FLA courses at UFG.
+
+Deployed with Docker + Nginx in production, CI/CD with GitHub Actions → Docker Hub → Watchtower (auto-deploy). Documentation with Swagger/OpenAPI. Project available in production.

@@ -24,12 +24,16 @@ export function parseMd(raw) {
   const frontmatter = parseYaml(fmMatch[1]);
   const body = fmMatch[2];
 
-  const narrativaMatch = body.match(/<!-- NARRATIVA -->\r?\n([\s\S]*?)(?=<!-- TECNICO -->|$)/);
-  const tecnicoMatch = body.match(/<!-- TECNICO -->\r?\n([\s\S]*)$/);
+  const narrativaMatch = body.match(/<!-- NARRATIVA -->\r?\n([\s\S]*?)(?=<!-- TECNICO -->|<!-- NARRATIVA_EN -->|<!-- TECNICO_EN -->|$)/);
+  const tecnicoMatch = body.match(/<!-- TECNICO -->\r?\n([\s\S]*?)(?=<!-- NARRATIVA_EN -->|<!-- TECNICO_EN -->|$)/);
+  const narrativaEnMatch = body.match(/<!-- NARRATIVA_EN -->\r?\n([\s\S]*?)(?=<!-- TECNICO_EN -->|$)/);
+  const tecnicoEnMatch = body.match(/<!-- TECNICO_EN -->\r?\n([\s\S]*)$/);
 
   return {
     frontmatter,
     narrativa: narrativaMatch ? narrativaMatch[1].trim() : '',
     tecnico: tecnicoMatch ? tecnicoMatch[1].trim() : '',
+    narrativa_en: narrativaEnMatch ? narrativaEnMatch[1].trim() : '',
+    tecnico_en: tecnicoEnMatch ? tecnicoEnMatch[1].trim() : '',
   };
 }

@@ -5,7 +5,7 @@ const modules = import.meta.glob('./*.md', { query: '?raw', import: 'default', e
 export const entries = Object.entries(modules)
   .map(([path, raw]) => {
     const filename = path.replace('./', '').replace('.md', '');
-    const { frontmatter, narrativa, tecnico } = parseMd(raw);
-    return { filename, narrativa, tecnico, ...frontmatter };
+    const { frontmatter, narrativa, tecnico, narrativa_en, tecnico_en } = parseMd(raw);
+    return { filename, narrativa, tecnico, narrativa_en, tecnico_en, ...frontmatter };
   })
   .sort((a, b) => a.filename.localeCompare(b.filename));
