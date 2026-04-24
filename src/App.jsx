@@ -8,10 +8,13 @@ import { Curriculo } from './pages/Curriculo/Curriculo';
 import { MediasAPI } from './pages/MediasAPI/MediasAPI';
 import { FinanceAPI } from './pages/FinanceAPI/FinanceAPI';
 import { AllProjects } from './pages/AllProjects/AllProjects';
+import { Trajetoria } from './pages/Trajetoria/Trajetoria';
+import { Blog } from './pages/Blog/Blog';
+import { BlogPost } from './pages/Blog/BlogPost';
 import './i18n/config';
 import './styles/global.css';
 
-const PAGE_ORDER = { '/curriculo': -1, '/': 0, '/medias': 1, '/finance': 2, '/projetos': 3 };
+const PAGE_ORDER = { '/curriculo': -1, '/': 0, '/medias': 1, '/finance': 2, '/projetos': 3, '/trajetoria': 4, '/blog': 5 };
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -36,6 +39,9 @@ function AnimatedRoutes() {
           <Route path="/medias" element={<MediasAPI />} />
           <Route path="/finance" element={<FinanceAPI />} />
           <Route path="/projetos" element={<AllProjects />} />
+          <Route path="/trajetoria" element={<Trajetoria />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
         </Routes>
       </AnimatePresence>
     </NavigationContext.Provider>

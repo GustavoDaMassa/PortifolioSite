@@ -26,14 +26,14 @@ export const TopNav = () => {
         <Link to="/" className={location.pathname === '/' ? styles.active : ''}>
           {t('nav.home')}
         </Link>
-        <Link to="/medias" className={location.pathname === '/medias' ? styles.active : ''}>
-          {t('nav.medias')}
-        </Link>
-        <Link to="/finance" className={location.pathname === '/finance' ? styles.active : ''}>
-          {t('nav.finance')}
-        </Link>
-        <Link to="/projetos" className={location.pathname === '/projetos' ? styles.active : ''}>
+        <Link to="/projetos" className={location.pathname === '/projetos' || location.pathname === '/medias' || location.pathname === '/finance' ? styles.active : ''}>
           {t('nav.projects')}
+        </Link>
+        <Link to="/trajetoria" className={location.pathname === '/trajetoria' ? styles.active : ''}>
+          {t('nav.trajetoria')}
+        </Link>
+        <Link to="/blog" className={location.pathname.startsWith('/blog') ? styles.active : ''}>
+          {t('nav.blog')}
         </Link>
       </div>
     </nav>
