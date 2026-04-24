@@ -36,9 +36,14 @@ export const ProfileSection = () => {
         {t('home.description2')}
       </p>
 
-      <Link to="/curriculo" className={styles.curriculoHint}>
-        ← {t('home.curriculoHint')}
-      </Link>
+      <div className={styles.hints}>
+        <Link to="/curriculo" className={styles.curriculoHint}>
+          ← {t('home.curriculoHint')}
+        </Link>
+        <Link to="/blog" className={styles.blogHint}>
+          {t('home.blogHint')} →
+        </Link>
+      </div>
     </div>
   );
 };
