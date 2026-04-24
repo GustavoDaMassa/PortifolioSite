@@ -1,14 +1,18 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import styles from './PostCard.module.css';
 
-function formatDate(dateStr) {
-  if (!dateStr) return '';
-  const [year, month, day] = dateStr.split('-');
-  const months = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
-  return `${day ? day + ' ' : ''}${months[parseInt(month, 10) - 1]} ${year}`;
-}
+export const PostCard = ({ post }) => {
+  const { t } = useTranslation();
 
-export const PostCard = ({ post }) => (
+  function formatDate(dateStr) {
+    if (!dateStr) return '';
+    const [year, month, day] = dateStr.split('-');
+    const months = t('blog.monthsShort', { returnObjects: true });
+    return `${day ? day + ' ' : ''}${months[parseInt(month, 10) - 1]} ${year}`;
+  }
+
+  return (
   <Link to={`/blog/${post.slug}`} className={styles.card}>
     <div className={styles.meta}>
       <span className={styles.date}>{formatDate(post.date)}</span>
@@ -23,4 +27,5 @@ export const PostCard = ({ post }) => (
       </div>
     )}
   </Link>
-);
+  );
+};

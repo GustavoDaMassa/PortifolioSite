@@ -1,27 +1,33 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import ReactMarkdown from 'react-markdown';
 import { Layout } from '../../components/Layout/Layout';
 import { getPost } from '../../data/blog/index';
 import styles from './BlogPost.module.css';
 
-function formatDate(dateStr) {
-  if (!dateStr) return '';
-  const [year, month, day] = dateStr.split('-');
-  const months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
-  return `${day ? day + ' de ' : ''}${months[parseInt(month, 10) - 1]} de ${year}`;
-}
-
 export const BlogPost = () => {
+  const { t, i18n } = useTranslation();
   const { slug } = useParams();
   const navigate = useNavigate();
   const post = getPost(slug);
+
+  function formatDate(dateStr) {
+    if (!dateStr) return '';
+    const [year, month, day] = dateStr.split('-');
+    const months = t('blog.monthsLong', { returnObjects: true });
+    const monthName = months[parseInt(month, 10) - 1];
+    if (i18n.language.startsWith('en')) {
+      return `${monthName}${day ? ' ' + parseInt(day, 10) + ',' : ''} ${year}`;
+    }
+    return `${day ? day + ' de ' : ''}${monthName} de ${year}`;
+  }
 
   if (!post) {
     return (
       <Layout>
         <main className={styles.page}>
-          <p className={styles.notFound}>Post não encontrado.</p>
-          <Link to="/blog" className={styles.back}>← Voltar ao blog</Link>
+          <p className={styles.notFound}>{t('blog.notFound')}</p>
+          <Link to="/blog" className={styles.back}>{t('blog.back')}</Link>
         </main>
       </Layout>
     );
@@ -32,7 +38,7 @@ export const BlogPost = () => {
       <main className={styles.page}>
         <div className={styles.breadcrumb}>
           <button onClick={() => navigate('/blog')} className={styles.backBtn}>
-            ← Blog
+            {t('blog.backBtn')}
           </button>
         </div>
 
