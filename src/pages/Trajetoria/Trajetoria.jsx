@@ -6,20 +6,20 @@ import { TimelineEntry } from '../../components/Timeline/TimelineEntry';
 import { entries } from '../../data/trajetoria/index';
 import styles from './Trajetoria.module.css';
 
-function getPeriodKey(dateStr) {
+function getPeriodKey(dateStr, t) {
   if (!dateStr) return '';
   const [year, month] = dateStr.split('-');
   if (!month) return year;
   const q = Math.ceil(parseInt(month, 10) / 3);
-  return `${year} · Q${q}`;
+  return `${year} · ${t('trajetoria.quarter', { count: q })}`;
 }
 
-function groupByPeriod(entries) {
+function groupByPeriod(entries, t) {
   const groups = [];
   let current = null;
 
   for (const entry of entries) {
-    const key = getPeriodKey(entry.date);
+    const key = getPeriodKey(entry.date, t);
     if (!current || current.key !== key) {
       current = { key, entries: [] };
       groups.push(current);
@@ -39,7 +39,7 @@ export const Trajetoria = () => {
     localStorage.setItem('trajetoria-mode', newMode);
   };
 
-  const groups = groupByPeriod(entries);
+  const groups = groupByPeriod(entries, t);
 
   return (
     <Layout>

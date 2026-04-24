@@ -1,6 +1,6 @@
 ---
 id: "java-poo"
-date: "2022-06"
+date: "2022-09"
 title: "Descoberta do Java — POO e estudo autodidata"
 title_en: "Discovering Java — OOP and Self-Taught Study"
 type: "aprendizado"

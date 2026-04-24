@@ -4,7 +4,7 @@ date: "2023-01"
 title: "Projetos em equipe — TioBolas e HashTable"
 title_en: "Team Projects — TioBolas and HashTable"
 type: "projeto"
-tags: ["C", "C++", "Estruturas de Dados", "Trabalho em equipe"]
+tags: ["C", "C++", "Estruturas de Dados", "Trabalho em equipe", "Scrum"]
 parallel: []
 github: ""
 ---

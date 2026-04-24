@@ -1,6 +1,6 @@
 ---
 id: "fundacoes-c"
-date: "2022-01"
+date: "2022-05"
 title: "Fundações em C — UFG"
 title_en: "C Foundations — UFG"
 type: "marco"
