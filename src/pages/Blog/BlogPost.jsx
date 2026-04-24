@@ -36,6 +36,9 @@ export const BlogPost = () => {
 
   const title = isEn && post.title_en ? post.title_en : post.title;
   const content = isEn && post.content_en ? post.content_en : post.content;
+  const baseUrl = import.meta.env.BASE_URL.endsWith('/')
+    ? import.meta.env.BASE_URL.slice(0, -1)
+    : import.meta.env.BASE_URL;
 
   return (
     <Layout>
@@ -62,7 +65,39 @@ export const BlogPost = () => {
           </header>
 
           <div className={styles.content}>
-            <ReactMarkdown>{content}</ReactMarkdown>
+            <ReactMarkdown
+              components={{
+                img: ({ src = '', alt = '' }) => {
+                  const resolvedSrc = src.startsWith('/assets/')
+                    ? `${baseUrl}${src}`
+                    : src;
+
+                  return <img src={resolvedSrc} alt={alt} loading="lazy" />;
+                },
+                a: ({ href = '', children }) => {
+                  const resolvedHref = href.startsWith('/assets/')
+                    ? `${baseUrl}${href}`
+                    : href;
+
+                  if (href.endsWith('.mp4')) {
+                    return (
+                      <video controls preload="metadata">
+                        <source src={resolvedHref} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    );
+                  }
+
+                  return (
+                    <a href={resolvedHref} target="_blank" rel="noopener noreferrer">
+                      {children}
+                    </a>
+                  );
+                },
+              }}
+            >
+              {content}
+            </ReactMarkdown>
           </div>
         </article>
       </main>
