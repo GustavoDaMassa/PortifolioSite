@@ -1,16 +1,31 @@
-.header {
-  padding: 80px var(--spacing-xl) var(--spacing-2xl);
+.hero {
+  text-align: center;
+  padding: 80px var(--spacing-xl) var(--spacing-xl);
+  border-bottom: 1px solid var(--color-border-default);
+  margin-bottom: var(--spacing-xl);
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.sectionHeader {
+  padding: var(--spacing-lg) var(--spacing-xl) var(--spacing-md);
   max-width: 1280px;
   margin: 0 auto;
 }
 
-.header span {
-  font-size: 32px;
+.sectionHeader span {
+  font-size: 20px;
   font-weight: 600;
-  color: var(--color-text-primary);
-  display: block;
-  padding-bottom: var(--spacing-md);
-  border-bottom: 1px solid var(--color-border-default);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .cards {
@@ -23,12 +38,16 @@
 }
 
 @media (max-width: 768px) {
-  .header {
+  .hero {
     padding: 80px var(--spacing-md) var(--spacing-lg);
   }
 
-  .header span {
-    font-size: 26px;
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .sectionHeader {
+    padding: var(--spacing-md) var(--spacing-md) var(--spacing-sm);
   }
 
   .cards {
@@ -39,12 +58,16 @@
 }
 
 @media (max-width: 480px) {
-  .header {
+  .hero {
     padding: 70px var(--spacing-sm) var(--spacing-md);
   }
 
-  .header span {
-    font-size: 22px;
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .sectionHeader {
+    padding: var(--spacing-md) var(--spacing-sm) var(--spacing-sm);
   }
 
   .cards {

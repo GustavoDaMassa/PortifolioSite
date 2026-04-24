@@ -1,5 +1,20 @@
 import { getAssetPath } from '../utils/paths';
 
+export const featuredProjects = [
+  {
+    id: 'mediasapi',
+    image: getAssetPath('assets/images/capamedias.png'),
+    route: '/medias',
+    featured: true
+  },
+  {
+    id: 'financeapi',
+    image: getAssetPath('assets/images/capafinance.png'),
+    route: '/finance',
+    featured: true
+  }
+];
+
 export const projects = [
   {
     id: 'tiobolas',
