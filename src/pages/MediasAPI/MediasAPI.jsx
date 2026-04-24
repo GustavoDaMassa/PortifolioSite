@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Layout } from '../../components/Layout/Layout';
+import { NavArrows } from '../../components/Navigation/NavArrows';
 import { SideMenu } from '../../components/SideMenu/SideMenu';
 import { VideoPlayer } from '../../components/VideoPlayer/VideoPlayer';
 import { HeroSection } from '../../components/HeroSection/HeroSection';
@@ -31,6 +32,7 @@ export const MediasAPI = () => {
 
   return (
     <Layout>
+      <NavArrows rightPath="/projetos" />
       <main className={styles.content}>
         <div className={styles.contentHeader}>
           <span className={styles.projectTitle}>MediasAPI</span>
@@ -38,7 +40,7 @@ export const MediasAPI = () => {
         </div>
 
         <VideoPlayer
-          videoSrc="https://youtu.be/dcPSl0qejQk"
+          videoSrc="https://youtu.be/kTjKfrstqTE?si=Dy6AfaIWbH2jFyVE"
           posterSrc={getAssetPath('assets/images/capamedias.png')}
         />
 

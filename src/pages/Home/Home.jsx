@@ -7,7 +7,7 @@ import styles from './Home.module.css';
 export const Home = () => {
   return (
     <Layout>
-      <NavArrows leftPath="/curriculo" rightPath="/medias" />
+      <NavArrows leftPath="/curriculo" rightPath="/projetos" />
       <main className={styles.hero}>
         <ProfileSection />
         <TechStack />

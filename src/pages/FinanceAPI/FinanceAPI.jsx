@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Layout } from '../../components/Layout/Layout';
+import { NavArrows } from '../../components/Navigation/NavArrows';
 import { SideMenu } from '../../components/SideMenu/SideMenu';
 import { VideoPlayer } from '../../components/VideoPlayer/VideoPlayer';
 import { HeroSection } from '../../components/HeroSection/HeroSection';
@@ -31,6 +32,7 @@ export const FinanceAPI = () => {
 
   return (
     <Layout>
+      <NavArrows rightPath="/projetos" />
       <main className={styles.content}>
         <div className={styles.contentHeader}>
           <span className={styles.projectTitle}>FinanceAPI</span>
@@ -38,7 +40,7 @@ export const FinanceAPI = () => {
         </div>
 
         <VideoPlayer
-          videoSrc="https://youtu.be/WVfYWVNJeOM"
+          videoSrc="https://youtu.be/F6fvKmKf_W0?si=Z731Ws7CXn4LJ1PX"
           posterSrc={getAssetPath('assets/images/capafinance.png')}
         />
 
