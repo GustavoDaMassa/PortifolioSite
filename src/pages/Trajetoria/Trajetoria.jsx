@@ -1,7 +1,7 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Layout } from '../../components/Layout/Layout';
 import { ModeToggle } from '../../components/Timeline/ModeToggle';
-import { ContextoBanner } from '../../components/Timeline/ContextoBanner';
 import { TimelineEntry } from '../../components/Timeline/TimelineEntry';
 import { entries } from '../../data/trajetoria/index';
 import styles from './Trajetoria.module.css';
@@ -31,6 +31,7 @@ function groupByPeriod(entries) {
 }
 
 export const Trajetoria = () => {
+  const { t } = useTranslation();
   const [mode, setMode] = useState(() => localStorage.getItem('trajetoria-mode') || 'narrativo');
 
   const handleModeChange = (newMode) => {
@@ -44,12 +45,8 @@ export const Trajetoria = () => {
     <Layout>
       <main className={styles.page}>
         <div className={styles.hero}>
-          <h1 className={styles.title}>Trajetória</h1>
-          <p className={styles.description}>
-            Quatro anos de desenvolvimento, dois projetos em produção, uma infraestrutura própria
-            e código em quatro stacks diferentes — construído do zero, conciliando faculdade e
-            estudo autodidata.
-          </p>
+          <h1 className={styles.title}>{t('trajetoria.title')}</h1>
+          <p className={styles.description}>{t('trajetoria.description')}</p>
         </div>
 
         <div className={styles.toggleBar}>
@@ -57,8 +54,6 @@ export const Trajetoria = () => {
         </div>
 
         <div className={styles.timelineContainer}>
-          <ContextoBanner />
-
           <div className={styles.timeline}>
             {groups.map((group) => {
               const hasMarco = group.entries.some(e => e.type === 'marco');

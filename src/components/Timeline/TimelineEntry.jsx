@@ -1,24 +1,25 @@
+import { useTranslation } from 'react-i18next';
 import ReactMarkdown from 'react-markdown';
 import styles from './TimelineEntry.module.css';
 
-const TYPE_LABEL = {
-  marco: 'Marco',
-  projeto: 'Projeto',
-  aprendizado: 'Aprendizado',
-  infra: 'Infraestrutura',
-};
-
-function formatDate(dateStr) {
-  if (!dateStr) return '';
-  const [year, month] = dateStr.split('-');
-  if (!month) return year;
-  const months = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
-  return `${months[parseInt(month, 10) - 1]}/${year}`;
-}
-
 export const TimelineEntry = ({ entry, mode }) => {
+  const { t, i18n } = useTranslation();
+  const isEn = i18n.language.startsWith('en');
   const isMarco = entry.type === 'marco';
-  const content = mode === 'tecnico' ? entry.tecnico : entry.narrativa;
+
+  const title = isEn && entry.title_en ? entry.title_en : entry.title;
+  const subtitle = isEn && entry.subtitle_en ? entry.subtitle_en : entry.subtitle;
+  const content = mode === 'tecnico'
+    ? (isEn && entry.tecnico_en ? entry.tecnico_en : entry.tecnico)
+    : (isEn && entry.narrativa_en ? entry.narrativa_en : entry.narrativa);
+
+  function formatDate(dateStr) {
+    if (!dateStr) return '';
+    const [year, month] = dateStr.split('-');
+    if (!month) return year;
+    const months = t('trajetoria.months', { returnObjects: true });
+    return `${months[parseInt(month, 10) - 1]}/${year}`;
+  }
 
   return (
     <div className={`${styles.wrapper} ${isMarco ? styles.marco : ''}`}>
@@ -30,11 +31,11 @@ export const TimelineEntry = ({ entry, mode }) => {
               {entry.dateEnd ? ` → ${formatDate(entry.dateEnd)}` : ''}
             </span>
             <span className={`${styles.typeBadge} ${styles[entry.type]}`}>
-              {TYPE_LABEL[entry.type] ?? entry.type}
+              {t(`trajetoria.types.${entry.type}`, entry.type)}
             </span>
           </div>
-          <h3 className={styles.title}>{entry.title}</h3>
-          {entry.subtitle && <p className={styles.subtitle}>{entry.subtitle}</p>}
+          <h3 className={styles.title}>{title}</h3>
+          {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
         </div>
 
         <div className={styles.content}>
@@ -56,7 +57,7 @@ export const TimelineEntry = ({ entry, mode }) => {
             rel="noopener noreferrer"
             className={styles.githubLink}
           >
-            Ver no GitHub →
+            {t('trajetoria.viewGithub')} →
           </a>
         )}
       </div>
