@@ -93,11 +93,12 @@
       "infra": "Infraestrutura"
     },
     "months": ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"],
+    "quarter": "T{{count}}",
     "viewGithub": "Ver no GitHub"
   },
   "blog": {
     "title": "Blog",
-    "description": "Conteúdo técnico aprofundado — o que não cabe num post do LinkedIn.",
+    "description": "Conteúdo técnico aprofundado",
     "empty": "Nenhum post encontrado para essa tag.",
     "allTags": "Todos",
     "notFound": "Post não encontrado.",
@@ -105,6 +106,23 @@
     "backBtn": "← Blog",
     "monthsShort": ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"],
     "monthsLong": ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
+  },
+  "ui": {
+    "changeLanguage": "Trocar idioma",
+    "toggleTheme": "Alternar tema"
+  },
+  "meta": {
+    "pageTitle": {
+      "default": "Portfólio | Gustavo Henrique",
+      "home": "Início | Gustavo Henrique",
+      "curriculo": "Currículo | Gustavo Henrique",
+      "medias": "MediasAPI | Gustavo Henrique",
+      "finance": "FinanceAPI | Gustavo Henrique",
+      "projects": "Projetos | Gustavo Henrique",
+      "trajetoria": "Trajetória | Gustavo Henrique",
+      "blog": "Blog | Gustavo Henrique",
+      "blogPost": "Post do Blog | Gustavo Henrique"
+    }
   },
   "mediasAPI": {
     "menu": {

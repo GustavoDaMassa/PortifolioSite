@@ -10,16 +10,17 @@ export const BlogPost = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
   const post = getPost(slug);
+  const isEn = i18n.language.startsWith('en');
+  const locale = isEn ? 'en-US' : 'pt-BR';
 
   function formatDate(dateStr) {
     if (!dateStr) return '';
-    const [year, month, day] = dateStr.split('-');
-    const months = t('blog.monthsLong', { returnObjects: true });
-    const monthName = months[parseInt(month, 10) - 1];
-    if (i18n.language.startsWith('en')) {
-      return `${monthName}${day ? ' ' + parseInt(day, 10) + ',' : ''} ${year}`;
-    }
-    return `${day ? day + ' de ' : ''}${monthName} de ${year}`;
+    const [year, month, day] = dateStr.split('-').map(Number);
+    return new Intl.DateTimeFormat(locale, {
+      day: day ? '2-digit' : undefined,
+      month: 'long',
+      year: 'numeric',
+    }).format(new Date(year, month - 1, day || 1));
   }
 
   if (!post) {
@@ -32,6 +33,9 @@ export const BlogPost = () => {
       </Layout>
     );
   }
+
+  const title = isEn && post.title_en ? post.title_en : post.title;
+  const content = isEn && post.content_en ? post.content_en : post.content;
 
   return (
     <Layout>
@@ -47,7 +51,7 @@ export const BlogPost = () => {
             <div className={styles.meta}>
               <span className={styles.date}>{formatDate(post.date)}</span>
             </div>
-            <h1 className={styles.title}>{post.title}</h1>
+            <h1 className={styles.title}>{title}</h1>
             {post.tags?.length > 0 && (
               <div className={styles.tags}>
                 {post.tags.map(tag => (
@@ -58,7 +62,7 @@ export const BlogPost = () => {
           </header>
 
           <div className={styles.content}>
-            <ReactMarkdown>{post.content}</ReactMarkdown>
+            <ReactMarkdown>{content}</ReactMarkdown>
           </div>
         </article>
       </main>

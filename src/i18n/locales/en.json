@@ -93,11 +93,12 @@
       "infra": "Infrastructure"
     },
     "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    "quarter": "Q{{count}}",
     "viewGithub": "View on GitHub"
   },
   "blog": {
     "title": "Blog",
-    "description": "In-depth technical content — what doesn't fit in a LinkedIn post.",
+    "description": "In-depth technical content",
     "empty": "No posts found for this tag.",
     "allTags": "All",
     "notFound": "Post not found.",
@@ -105,6 +106,23 @@
     "backBtn": "← Blog",
     "monthsShort": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
     "monthsLong": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+  },
+  "ui": {
+    "changeLanguage": "Change language",
+    "toggleTheme": "Toggle theme"
+  },
+  "meta": {
+    "pageTitle": {
+      "default": "Portfolio | Gustavo Henrique",
+      "home": "Home | Gustavo Henrique",
+      "curriculo": "Resume | Gustavo Henrique",
+      "medias": "MediasAPI | Gustavo Henrique",
+      "finance": "FinanceAPI | Gustavo Henrique",
+      "projects": "Projects | Gustavo Henrique",
+      "trajetoria": "Journey | Gustavo Henrique",
+      "blog": "Blog | Gustavo Henrique",
+      "blogPost": "Blog Post | Gustavo Henrique"
+    }
   },
   "mediasAPI": {
     "menu": {

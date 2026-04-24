@@ -5,7 +5,7 @@ import { getAssetPath } from '../../utils/paths';
 import styles from './ProfileSection.module.css';
 
 export const ProfileSection = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div className={styles.profileSection}>

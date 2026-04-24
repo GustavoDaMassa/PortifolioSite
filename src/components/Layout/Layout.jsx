@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import { TopNav } from '../Navigation/TopNav';
 import { NavigationContext } from '../../context/NavigationContext';
 import styles from './Layout.module.css';
@@ -24,7 +24,7 @@ export const Layout = ({ children, showTopNav = true }) => {
   const { direction, isFirstLoad } = useContext(NavigationContext);
 
   return (
-    <motion.div
+    <Motion.div
       className={styles.layout}
       custom={{ direction, isFirstLoad }}
       variants={pageVariants}
@@ -35,6 +35,6 @@ export const Layout = ({ children, showTopNav = true }) => {
     >
       {showTopNav && <TopNav />}
       {children}
-    </motion.div>
+    </Motion.div>
   );
 };
