@@ -69,7 +69,8 @@
     "description1": "Full stack developer pursuing a Computer Science degree at UFG. Back-end with Java and Spring Boot, front-end with Angular — from API design to the final interface. I work with JWT authentication, Kafka messaging, Open Finance integration and deployment with Docker, CI/CD via GitHub Actions and a self-hosted server. I also explored .NET and Node.js to solidify the concepts beyond a single stack.",
     "description2": "On the side are some of my projects. Each one was born from a real problem and delivered with tests, documentation and software engineering best practices.",
     "techTitle": "Technologies",
-    "curriculoHint": "Resume available on the left"
+    "curriculoHint": "Resume available on the left",
+    "blogHint": "Check out the blog"
   },
   "allProjects": {
     "title": "Projects",
@@ -77,6 +78,33 @@
     "all": "All",
     "viewProject": "View project",
     "viewGithub": "View on GitHub"
+  },
+  "trajetoria": {
+    "title": "Journey",
+    "description": "Four years of development, two projects in production, self-owned infrastructure and code in four different stacks — built from scratch, balancing university and self-taught study.",
+    "toggle": {
+      "narrativo": "Narrative",
+      "tecnico": "Technical"
+    },
+    "types": {
+      "marco": "Milestone",
+      "projeto": "Project",
+      "aprendizado": "Learning",
+      "infra": "Infrastructure"
+    },
+    "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    "viewGithub": "View on GitHub"
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "In-depth technical content — what doesn't fit in a LinkedIn post.",
+    "empty": "No posts found for this tag.",
+    "allTags": "All",
+    "notFound": "Post not found.",
+    "back": "← Back to blog",
+    "backBtn": "← Blog",
+    "monthsShort": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    "monthsLong": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
   },
   "mediasAPI": {
     "menu": {
