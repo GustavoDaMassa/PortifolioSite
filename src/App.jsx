@@ -4,6 +4,7 @@ import { AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { ThemeProvider } from './context/ThemeContext';
 import { NavigationContext } from './context/NavigationContext';
+import { TopNav } from './components/Navigation/TopNav';
 import { Home } from './pages/Home/Home';
 import { Curriculo } from './pages/Curriculo/Curriculo';
 import { MediasAPI } from './pages/MediasAPI/MediasAPI';
@@ -85,6 +86,7 @@ function App() {
     <ThemeProvider>
       <Router basename={import.meta.env.BASE_URL}>
         <DocumentI18nSync />
+        <TopNav />
         <AnimatedRoutes />
       </Router>
     </ThemeProvider>
