@@ -41,7 +41,7 @@ export const ProfileSection = () => {
           ← {t('home.curriculoHint')}
         </Link>
         <Link to="/blog" className={styles.blogHint}>
-          {t('home.blogHint')} →
+          {t('home.blogHint')}
         </Link>
       </div>
     </div>
