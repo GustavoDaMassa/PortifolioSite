@@ -19,6 +19,10 @@ export const MainFlow = () => {
   const navigate = useNavigate();
   const sectionRefs = useRef(new Map());
   const syncingRef = useRef(false);
+  const pathnameRef = useRef(location.pathname);
+  const scrollNavRef = useRef(false);
+
+  pathnameRef.current = location.pathname;
 
   const setSectionRef = useEffectEvent((path, node) => {
     if (node) {
@@ -29,6 +33,11 @@ export const MainFlow = () => {
   });
 
   useEffect(() => {
+    if (scrollNavRef.current) {
+      scrollNavRef.current = false;
+      return;
+    }
+
     const currentSection = sectionRefs.current.get(location.pathname);
     if (!currentSection) {
       return;
@@ -52,39 +61,38 @@ export const MainFlow = () => {
   }, [location.pathname]);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (syncingRef.current) {
-          return;
+    let rafId = null;
+
+    const handleScroll = () => {
+      if (rafId) return;
+      rafId = requestAnimationFrame(() => {
+        rafId = null;
+        if (syncingRef.current) return;
+
+        let activeSection = null;
+        const mid = window.innerHeight / 2;
+
+        sectionRefs.current.forEach((section, path) => {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= mid) {
+            activeSection = path;
+          }
+        });
+
+        if (activeSection && activeSection !== pathnameRef.current) {
+          scrollNavRef.current = true;
+          navigate(activeSection, { replace: true });
         }
-
-        const visibleEntry = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-
-        if (!visibleEntry) {
-          return;
-        }
-
-        const nextPath = visibleEntry.target.getAttribute('data-path');
-        if (nextPath && nextPath !== location.pathname) {
-          navigate(nextPath, { replace: true });
-        }
-      },
-      {
-        threshold: [0.35, 0.6, 0.85],
-        rootMargin: '-20% 0px -20% 0px',
-      }
-    );
-
-    const sections = [...sectionRefs.current.values()];
-    sections.forEach((section) => observer.observe(section));
-
-    return () => {
-      sections.forEach((section) => observer.unobserve(section));
-      observer.disconnect();
+      });
     };
-  }, [location.pathname, navigate]);
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (rafId) cancelAnimationFrame(rafId);
+    };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <Layout>
