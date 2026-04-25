@@ -30,7 +30,7 @@ function groupByPeriod(entries, t) {
   return groups;
 }
 
-export const Trajetoria = () => {
+export const TrajetoriaContent = () => {
   const { t } = useTranslation();
   const [mode, setMode] = useState(() => localStorage.getItem('trajetoria-mode') || 'narrativo');
 
@@ -42,38 +42,44 @@ export const Trajetoria = () => {
   const groups = groupByPeriod(entries, t);
 
   return (
-    <Layout>
-      <main className={styles.page}>
-        <div className={styles.hero}>
-          <h1 className={styles.title}>{t('trajetoria.title')}</h1>
-          <p className={styles.description}>{t('trajetoria.description')}</p>
-        </div>
+    <main className={styles.page}>
+      <div className={styles.hero}>
+        <h1 className={styles.title}>{t('trajetoria.title')}</h1>
+        <p className={styles.description}>{t('trajetoria.description')}</p>
+      </div>
 
-        <div className={styles.toggleBar}>
-          <ModeToggle mode={mode} onChange={handleModeChange} />
-        </div>
+      <div className={styles.toggleBar}>
+        <ModeToggle mode={mode} onChange={handleModeChange} />
+      </div>
 
-        <div className={styles.timelineContainer}>
-          <div className={styles.timeline}>
-            {groups.map((group) => {
-              const hasMarco = group.entries.some(e => e.type === 'marco');
-              return (
-                <div key={group.key} className={styles.periodGroup}>
-                  <div className={`${styles.periodDot} ${hasMarco ? styles.periodDotMarco : ''}`} />
-                  <div className={styles.periodHeader}>
-                    <span className={styles.periodLabel}>{group.key}</span>
-                  </div>
-                  <div className={styles.periodEntries}>
-                    {group.entries.map((entry) => (
-                      <TimelineEntry key={entry.id} entry={entry} mode={mode} />
-                    ))}
-                  </div>
+      <div className={styles.timelineContainer}>
+        <div className={styles.timeline}>
+          {groups.map((group) => {
+            const hasMarco = group.entries.some(e => e.type === 'marco');
+            return (
+              <div key={group.key} className={styles.periodGroup}>
+                <div className={`${styles.periodDot} ${hasMarco ? styles.periodDotMarco : ''}`} />
+                <div className={styles.periodHeader}>
+                  <span className={styles.periodLabel}>{group.key}</span>
                 </div>
-              );
-            })}
-          </div>
+                <div className={styles.periodEntries}>
+                  {group.entries.map((entry) => (
+                    <TimelineEntry key={entry.id} entry={entry} mode={mode} />
+                  ))}
+                </div>
+              </div>
+            );
+          })}
         </div>
-      </main>
+      </div>
+    </main>
+  );
+};
+
+export const Trajetoria = () => {
+  return (
+    <Layout>
+      <TrajetoriaContent />
     </Layout>
   );
 };

@@ -4,11 +4,11 @@ import { ProjectCard } from '../../components/ProjectCard/ProjectCard';
 import { featuredProjects, projects } from '../../data/projects';
 import styles from './AllProjects.module.css';
 
-export const AllProjects = () => {
+export const AllProjectsContent = () => {
   const { t } = useTranslation();
 
   return (
-    <Layout>
+    <>
       <div className={styles.hero}>
         <h1 className={styles.title}>{t('allProjects.title')}</h1>
       </div>
@@ -28,6 +28,14 @@ export const AllProjects = () => {
           <ProjectCard key={project.id} project={project} />
         ))}
       </main>
+    </>
+  );
+};
+
+export const AllProjects = () => {
+  return (
+    <Layout>
+      <AllProjectsContent />
     </Layout>
   );
 };

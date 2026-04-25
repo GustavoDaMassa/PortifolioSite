@@ -12,9 +12,11 @@ import { AllProjects } from './pages/AllProjects/AllProjects';
 import { Trajetoria } from './pages/Trajetoria/Trajetoria';
 import { Blog } from './pages/Blog/Blog';
 import { BlogPost } from './pages/Blog/BlogPost';
+import { MainFlow } from './pages/MainFlow/MainFlow';
 import './i18n/config';
 import './styles/global.css';
 
+const MAIN_FLOW_PATHS = ['/', '/projetos', '/trajetoria', '/blog'];
 const PAGE_ORDER = { '/curriculo': -1, '/': 0, '/medias': 1, '/finance': 2, '/projetos': 3, '/trajetoria': 4, '/blog': 5 };
 const TITLE_KEY_BY_PATH = {
   '/': 'meta.pageTitle.home',
@@ -63,14 +65,14 @@ function AnimatedRoutes() {
     // eslint-disable-next-line react-hooks/refs
     <NavigationContext.Provider value={{ direction: direction.current, isFirstLoad: isFirstLoad.current }}>
       <AnimatePresence mode="wait">
-        <Routes location={location} key={location.pathname}>
+        <Routes location={location} key={MAIN_FLOW_PATHS.includes(location.pathname) ? '__mainflow__' : location.pathname}>
           <Route path="/curriculo" element={<Curriculo />} />
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<MainFlow />} />
           <Route path="/medias" element={<MediasAPI />} />
           <Route path="/finance" element={<FinanceAPI />} />
-          <Route path="/projetos" element={<AllProjects />} />
-          <Route path="/trajetoria" element={<Trajetoria />} />
-          <Route path="/blog" element={<Blog />} />
+          <Route path="/projetos" element={<MainFlow />} />
+          <Route path="/trajetoria" element={<MainFlow />} />
+          <Route path="/blog" element={<MainFlow />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
         </Routes>
       </AnimatePresence>

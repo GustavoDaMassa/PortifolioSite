@@ -4,14 +4,22 @@ import { ProfileSection } from '../../components/ProfileSection/ProfileSection';
 import { TechStack } from '../../components/TechStack/TechStack';
 import styles from './Home.module.css';
 
-export const Home = () => {
+export const HomeContent = ({ showNavArrows = true }) => {
   return (
-    <Layout>
-      <NavArrows leftPath="/curriculo" rightPath="/projetos" />
+    <>
+      {showNavArrows && <NavArrows leftPath="/curriculo" rightPath="/projetos" />}
       <main className={styles.hero}>
         <ProfileSection />
         <TechStack />
       </main>
+    </>
+  );
+};
+
+export const Home = () => {
+  return (
+    <Layout>
+      <HomeContent />
     </Layout>
   );
 };
