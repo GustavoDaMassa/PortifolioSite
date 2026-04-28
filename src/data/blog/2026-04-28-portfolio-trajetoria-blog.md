@@ -40,10 +40,10 @@ parallel: ["outro-projeto"]
 github: "https://github.com/..."
 ---
 
-<!-- NARRATIVA -->
+[NARRATIVA]
 Texto em prosa sobre o contexto e motivação.
 
-<!-- TECNICO -->
+[TECNICO]
 Detalhes de arquitetura, decisões e trade-offs.
 ```
 
