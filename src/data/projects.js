@@ -5,13 +5,15 @@ export const featuredProjects = [
     id: 'mediasapi',
     image: getAssetPath('assets/images/capamedias.png'),
     route: '/medias',
-    featured: true
+    featured: true,
+    video: 'https://www.youtube.com/embed/kTjKfrstqTE?autoplay=1&mute=1&controls=0&loop=1&playlist=kTjKfrstqTE'
   },
   {
     id: 'financeapi',
     image: getAssetPath('assets/images/capafinance.png'),
     route: '/finance',
-    featured: true
+    featured: true,
+    video: 'https://www.youtube.com/embed/F6fvKmKf_W0?autoplay=1&mute=1&controls=0&loop=1&playlist=F6fvKmKf_W0'
   }
 ];
 

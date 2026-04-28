@@ -1,13 +1,31 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import styles from './ProjectCard.module.css';
 
 export const ProjectCard = ({ project }) => {
   const { t } = useTranslation();
+  const [isHovered, setIsHovered] = useState(false);
+
+  const mediaArea = project.featured ? (
+    <div className={styles.mediaWrapper}>
+      <img src={project.image} alt={t(`projects.${project.id}.title`)} />
+      {project.video && isHovered && (
+        <iframe
+          src={project.video}
+          className={styles.videoPreview}
+          allow="autoplay; encrypted-media"
+          title={t(`projects.${project.id}.title`)}
+        />
+      )}
+    </div>
+  ) : (
+    <img src={project.image} alt={t(`projects.${project.id}.title`)} />
+  );
 
   const cardContent = (
     <>
-      <img src={project.image} alt={t(`projects.${project.id}.title`)} />
+      {mediaArea}
       <div className={styles.content}>
         <h1>{t(`projects.${project.id}.title`)}</h1>
         <p>{t(`projects.${project.id}.description`)}</p>
@@ -35,7 +53,12 @@ export const ProjectCard = ({ project }) => {
 
   if (project.featured) {
     return (
-      <Link to={project.route} className={`${styles.projectCard} ${styles.featured}`}>
+      <Link
+        to={project.route}
+        className={`${styles.projectCard} ${styles.featured}`}
+        onMouseEnter={() => project.video && setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
         {cardContent}
       </Link>
     );

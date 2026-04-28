@@ -58,13 +58,40 @@
   margin-bottom: 0;
 }
 
+.mediaWrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.featured .mediaWrapper {
+  width: 100%;
+  height: 200px;
+}
+
+.featured .mediaWrapper img {
+  height: 100%;
+}
+
+.videoPreview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  pointer-events: none;
+}
+
 .featured .content {
   padding: var(--spacing-xl);
 }
 
-.featured .content h1,
-.featured .content p {
+.featured .content h1 {
   color: inherit;
+}
+
+.featured .content p {
+  color: #ffffff;
 }
 
 .viewHint {
@@ -143,7 +170,8 @@
     height: 60px;
   }
 
-  .featured img {
+  .featured img,
+  .featured .mediaWrapper {
     height: 160px;
   }
 
@@ -167,7 +195,8 @@
     margin-bottom: var(--spacing-md);
   }
 
-  .featured img {
+  .featured img,
+  .featured .mediaWrapper {
     height: 130px;
   }
 
