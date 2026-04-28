@@ -15,7 +15,7 @@ export const AllProjectsContent = () => {
       <div className={styles.sectionHeader}>
         <span>{t('allProjects.featured')}</span>
       </div>
-      <main className={styles.cards}>
+      <main className={styles.featuredCards}>
         {featuredProjects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
