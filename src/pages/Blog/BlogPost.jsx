@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import ReactMarkdown from 'react-markdown';
 import { Layout } from '../../components/Layout/Layout';
 import { getPost } from '../../data/blog/index';
+import { readingTime } from '../../utils/readingTime';
 import styles from './BlogPost.module.css';
 
 export const BlogPost = () => {
@@ -53,6 +54,7 @@ export const BlogPost = () => {
           <header className={styles.header}>
             <div className={styles.meta}>
               <span className={styles.date}>{formatDate(post.date)}</span>
+              <span className={styles.readingTime}>{readingTime(content)} min</span>
             </div>
             <h1 className={styles.title}>{title}</h1>
             {post.tags?.length > 0 && (

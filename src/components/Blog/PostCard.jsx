@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { readingTime } from '../../utils/readingTime';
 import styles from './PostCard.module.css';
 
 export const PostCard = ({ post }) => {
@@ -21,6 +22,9 @@ export const PostCard = ({ post }) => {
     <Link to={`/blog/${post.slug}`} className={styles.card}>
       <div className={styles.meta}>
         <span className={styles.date}>{formatDate(post.date)}</span>
+        <span className={styles.readingTime}>
+          {readingTime(isEn && post.content_en ? post.content_en : post.content)} min
+        </span>
       </div>
       <h2 className={styles.title}>{isEn && post.title_en ? post.title_en : post.title}</h2>
       {(isEn && post.excerpt_en ? post.excerpt_en : post.excerpt) && (
