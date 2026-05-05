@@ -91,7 +91,7 @@
 }
 
 .featured .content p {
-  color: #ffffff;
+  color: var(--color-text-secondary);
 }
 
 .viewHint {
