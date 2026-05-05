@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import styles from './TagFilter.module.css';
 
-export const TagFilter = ({ tags, active, onChange }) => {
+export const TagFilter = ({ tags, counts = {}, active, onChange }) => {
   const { t } = useTranslation();
 
   return (
@@ -19,6 +19,9 @@ export const TagFilter = ({ tags, active, onChange }) => {
         onClick={() => onChange(tag)}
       >
         {tag}
+        {counts[tag] !== undefined && (
+          <span className={styles.count}>{counts[tag]}</span>
+        )}
       </button>
     ))}
   </div>

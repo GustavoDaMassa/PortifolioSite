@@ -104,6 +104,8 @@
     "notFound": "Post not found.",
     "back": "← Back to blog",
     "backBtn": "← Blog",
+    "prevPost": "Previous post",
+    "nextPost": "Next post",
     "monthsShort": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
     "monthsLong": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
   },

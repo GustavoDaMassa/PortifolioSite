@@ -8,5 +8,10 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [react()],
     base: env.GITHUB_PAGES === 'true' ? '/PortifolioSite/' : '/',
+    test: {
+      environment: 'jsdom',
+      globals: true,
+      setupFiles: './src/test/setup.js',
+    },
   }
 })

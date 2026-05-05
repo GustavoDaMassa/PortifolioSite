@@ -27,3 +27,24 @@
   border-color: var(--color-accent-primary);
   color: #fff;
 }
+
+.count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6px;
+  padding: 0 5px;
+  min-width: 18px;
+  height: 16px;
+  background: var(--color-bg-tertiary);
+  border-radius: 8px;
+  font-size: 10px;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  line-height: 1;
+}
+
+.tag.active .count {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}

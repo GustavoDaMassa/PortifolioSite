@@ -4,12 +4,14 @@ import { Layout } from '../../components/Layout/Layout';
 import { TagFilter } from '../../components/Blog/TagFilter';
 import { PostCard } from '../../components/Blog/PostCard';
 import { posts, getAllTags } from '../../data/blog/index';
+import { getTagCounts } from '../../utils/tagCounts';
 import styles from './Blog.module.css';
 
 export const BlogContent = () => {
   const { t } = useTranslation();
   const [activeTag, setActiveTag] = useState(null);
   const tags = getAllTags();
+  const tagCounts = getTagCounts(posts);
   const filtered = activeTag ? posts.filter(p => p.tags?.includes(activeTag)) : posts;
 
   return (
@@ -20,7 +22,7 @@ export const BlogContent = () => {
       </div>
 
       <div className={styles.filter}>
-        <TagFilter tags={tags} active={activeTag} onChange={setActiveTag} />
+        <TagFilter tags={tags} counts={tagCounts} active={activeTag} onChange={setActiveTag} />
       </div>
 
       {filtered.length === 0 ? (

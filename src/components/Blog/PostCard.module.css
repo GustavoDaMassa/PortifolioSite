@@ -1,19 +1,42 @@
 .card {
   display: block;
+  position: relative;
   background: var(--color-bg-secondary);
   border: 1px solid var(--color-border-default);
   border-radius: var(--border-radius-md);
   padding: var(--spacing-lg);
+  padding-right: calc(var(--spacing-lg) + 20px);
   text-decoration: none;
-  transition: border-color 0.2s, transform 0.15s;
+  transition: border-color 0.2s, transform 0.15s, background 0.2s;
+}
+
+.card::after {
+  content: '→';
+  position: absolute;
+  right: var(--spacing-lg);
+  top: 50%;
+  transform: translateY(-50%) translateX(-4px);
+  color: var(--color-accent-primary);
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.2s, transform 0.2s;
 }
 
 .card:hover {
   border-color: var(--color-accent-primary);
-  transform: translateY(-1px);
+  background: var(--color-bg-tertiary);
+  transform: translateY(-2px);
+}
+
+.card:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
 }
 
 .meta {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
   margin-bottom: var(--spacing-xs);
 }
 
@@ -21,6 +44,18 @@
   font-size: 12px;
   color: var(--color-text-secondary);
   font-family: var(--font-mono);
+}
+
+.readingTime {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  opacity: 0.7;
+}
+
+.readingTime::before {
+  content: '·';
+  margin-right: var(--spacing-xs);
 }
 
 .title {
