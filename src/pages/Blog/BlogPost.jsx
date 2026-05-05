@@ -2,8 +2,9 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import ReactMarkdown from 'react-markdown';
 import { Layout } from '../../components/Layout/Layout';
-import { getPost } from '../../data/blog/index';
+import { getPost, posts } from '../../data/blog/index';
 import { readingTime } from '../../utils/readingTime';
+import { getAdjacentPosts } from '../../utils/adjacentPosts';
 import styles from './BlogPost.module.css';
 
 export const BlogPost = () => {
@@ -37,6 +38,7 @@ export const BlogPost = () => {
 
   const title = isEn && post.title_en ? post.title_en : post.title;
   const content = isEn && post.content_en ? post.content_en : post.content;
+  const { prev, next } = getAdjacentPosts(slug, posts);
   const baseUrl = import.meta.env.BASE_URL.endsWith('/')
     ? import.meta.env.BASE_URL.slice(0, -1)
     : import.meta.env.BASE_URL;
@@ -102,6 +104,31 @@ export const BlogPost = () => {
             </ReactMarkdown>
           </div>
         </article>
+
+        {(prev || next) && (
+          <nav className={styles.postNav}>
+            <div className={styles.postNavItem}>
+              {prev && (
+                <Link to={`/blog/${prev.slug}`} className={styles.postNavLink}>
+                  <span className={styles.postNavLabel}>← {t('blog.prevPost')}</span>
+                  <span className={styles.postNavTitle}>
+                    {isEn && prev.title_en ? prev.title_en : prev.title}
+                  </span>
+                </Link>
+              )}
+            </div>
+            <div className={`${styles.postNavItem} ${styles.postNavNext}`}>
+              {next && (
+                <Link to={`/blog/${next.slug}`} className={styles.postNavLink}>
+                  <span className={styles.postNavLabel}>{t('blog.nextPost')} →</span>
+                  <span className={styles.postNavTitle}>
+                    {isEn && next.title_en ? next.title_en : next.title}
+                  </span>
+                </Link>
+              )}
+            </div>
+          </nav>
+        )}
       </main>
     </Layout>
   );
