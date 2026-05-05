@@ -5,6 +5,7 @@ import { Layout } from '../../components/Layout/Layout';
 import { getPost, posts } from '../../data/blog/index';
 import { readingTime } from '../../utils/readingTime';
 import { getAdjacentPosts } from '../../utils/adjacentPosts';
+import { ReadingProgress } from '../../components/Blog/ReadingProgress';
 import styles from './BlogPost.module.css';
 
 export const BlogPost = () => {
@@ -45,6 +46,7 @@ export const BlogPost = () => {
 
   return (
     <Layout>
+      <ReadingProgress />
       <main className={styles.page}>
         <div className={styles.breadcrumb}>
           <button onClick={() => navigate('/blog')} className={styles.backBtn}>
