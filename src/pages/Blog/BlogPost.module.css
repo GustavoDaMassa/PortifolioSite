@@ -91,7 +91,7 @@
   background: var(--color-bg-primary);
   font-size: 15px;
   line-height: 1.75;
-  color: var(--color-text-secondary);
+  color: var(--color-text-primary);
 }
 
 .content h2 {
