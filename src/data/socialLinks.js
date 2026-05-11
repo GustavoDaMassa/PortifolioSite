@@ -16,6 +16,13 @@ export const socialLinks = [
     alt: 'LinkedIn'
   },
   {
+    id: 'whatsapp',
+    name: 'WhatsApp',
+    url: 'https://wa.me/5562991281661',
+    icon: getAssetPath('assets/images/icons/whatsappicon.svg'),
+    alt: 'WhatsApp'
+  },
+  {
     id: 'email',
     name: 'E-mail',
     url: 'mailto:gustavo.pereira@discente.ufg.br',
