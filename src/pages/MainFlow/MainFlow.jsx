@@ -5,6 +5,7 @@ import { HomeContent } from '../Home/Home';
 import { AllProjectsContent } from '../AllProjects/AllProjects';
 import { TrajetoriaContent } from '../Trajetoria/Trajetoria';
 import { BlogContent } from '../Blog/Blog';
+import { Footer } from '../../components/Footer/Footer';
 import styles from './MainFlow.module.css';
 
 const FLOW_SECTIONS = [
@@ -107,6 +108,7 @@ export const MainFlow = () => {
             {section.component}
           </section>
         ))}
+        <Footer />
       </div>
     </Layout>
   );
