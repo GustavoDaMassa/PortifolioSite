@@ -8,7 +8,7 @@ export const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.inner}>
         <p className={styles.name}>Gustavo Henrique</p>
-        <p className={styles.tagline}>Desenvolvedor Back-end</p>
+        <p className={styles.tagline}>Desenvolvedor de Software</p>
 
         <div className={styles.socials}>
           {contactLinks.map((link) => (

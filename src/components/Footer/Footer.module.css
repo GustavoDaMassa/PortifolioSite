@@ -1,5 +1,5 @@
 .footer {
-  border-top: 1px solid var(--color-border-default);
+  border-top: 1px solid var(--color-accent-primary);
   padding: var(--spacing-2xl) var(--spacing-lg);
   background: var(--color-bg-canvas);
 }
