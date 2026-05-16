@@ -17,7 +17,7 @@ export const featuredProjects = [
   },
   {
     id: 'pricewatch',
-    image: 'https://raw.githubusercontent.com/GustavoDaMassa/PriceWatchExtension/main/marquee-1400x560.png',
+    image: 'https://raw.githubusercontent.com/GustavoDaMassa/PriceWatchExtension/main/icons/128.png',
     route: '/pricewatch',
     featured: true,
     video: 'https://www.youtube.com/embed/y6aXDqaX6HM?autoplay=1&mute=1&controls=0&loop=1&playlist=y6aXDqaX6HM'
