@@ -120,6 +120,7 @@
       "curriculo": "Currículo | Gustavo Henrique",
       "medias": "MediasAPI | Gustavo Henrique",
       "finance": "FinanceAPI | Gustavo Henrique",
+      "pricewatch": "PriceWatch | Gustavo Henrique",
       "projects": "Projetos | Gustavo Henrique",
       "trajetoria": "Trajetória | Gustavo Henrique",
       "blog": "Blog | Gustavo Henrique",
@@ -474,6 +475,105 @@
       },
       "tecnologias": {
         "title": "Tecnologias"
+      }
+    }
+  },
+  "priceWatch": {
+    "menu": {
+      "apresentacao": "Apresentação",
+      "arquitetura": "Arquitetura",
+      "funcionalidades": "Funcionalidades",
+      "endpoints": "Endpoints",
+      "praticas": "Práticas Adotadas"
+    },
+    "title": "Monitor de preços do Mercado Livre — API, SPA e Extensão Chrome",
+    "heroDescription": "Solução completa para monitoramento de preços: API .NET 8 com Clean Architecture, SPA Angular 20 e extensão Chrome que adiciona um botão de acompanhamento direto na página do produto.",
+    "features": [
+      { "icon": "👁️", "title": "Monitoramento Automático", "description": "Verificação de preços a cada hora via API do Mercado Livre." },
+      { "icon": "📬", "title": "Alertas por E-mail", "description": "Notificação enviada quando o preço atinge o alvo definido." },
+      { "icon": "📊", "title": "Histórico de Preços", "description": "Gráfico de evolução do preço ao longo do tempo." },
+      { "icon": "📋", "title": "Listas de Produtos", "description": "Organize produtos em listas com análise de preços." },
+      { "icon": "🔔", "title": "Notificações In-App", "description": "Centro de notificações com polling em tempo real." },
+      { "icon": "🧩", "title": "Extensão Chrome", "description": "Botão de acompanhamento direto na página do Mercado Livre." }
+    ],
+    "endpoints": {
+      "title": "Endpoints da API",
+      "items": [
+        { "method": "POST", "route": "/api/auth/register", "description": "Criar conta no sistema." },
+        { "method": "POST", "route": "/api/auth/login", "description": "Autenticar e obter token JWT." },
+        { "method": "POST", "route": "/api/products", "description": "Adicionar produto para monitoramento (idempotente por URL)." },
+        { "method": "GET", "route": "/api/products", "description": "Listar todos os produtos do usuário." },
+        { "method": "GET", "route": "/api/products/:id/history", "description": "Histórico de snapshots de preço." },
+        { "method": "POST", "route": "/api/lists", "description": "Criar lista de produtos." },
+        { "method": "GET", "route": "/api/lists/:id/analysis", "description": "Análise de preços da lista." },
+        { "method": "GET", "route": "/api/notifications", "description": "Listar notificações do usuário." }
+      ]
+    },
+    "apresentacao": {
+      "title": "Apresentação",
+      "p1": "O PriceWatch resolve um problema cotidiano: acompanhar o preço de um produto no Mercado Livre sem precisar entrar no site repetidamente. Você cola a URL de catálogo, define um preço-alvo e o sistema monitora automaticamente — enviando um alerta por e-mail e uma notificação in-app quando o preço atingir sua meta.",
+      "p2": "O projeto foi construído em três camadas independentes: uma API REST em .NET 8, um SPA em Angular 20 e uma extensão Chrome em Manifest V3. Cada camada com suas decisões de arquitetura e stack próprias, todas integradas ao mesmo backend.",
+      "p3": "O sistema está em produção, rodando no meu home server com deploy automático via Watchtower. A extensão Chrome está sendo submetida para a Chrome Web Store."
+    },
+    "arquitetura": {
+      "title": "Arquitetura",
+      "p1": "O projeto segue Clean Architecture estrita no backend — quatro camadas com dependências sempre apontando para dentro. O Domain não conhece nenhum detalhe de infraestrutura: MongoDB, Redis, SMTP ou a API do Mercado Livre são detalhes declarados como interfaces e implementados na camada Infrastructure.",
+      "backend": {
+        "title": "Backend — .NET 8",
+        "p1": "A camada de Application é composta por use cases separados por responsabilidade: AddProductUseCase, PriceCheckWorker, ProcessAlertUseCase. Dois background workers rodam continuamente: o PriceCheckWorker acorda a cada minuto e verifica produtos com nextCheckAt vencido, o AlertDispatchWorker consome o Redis Stream 'price-alerts' e despacha e-mails e notificações.",
+        "p2": "A escolha de MongoDB como banco principal foi intencional — aprender document databases num contexto real. Redis foi escolhido para rate limiting e Redis Streams como mensageria leve, em vez de Kafka, desnecessário para o volume do projeto."
+      },
+      "frontend": {
+        "title": "Frontend — Angular 20",
+        "p1": "SPA construído com os padrões modernos do Angular: standalone components, inject(), Angular Signals, control flow (@if, @for) e lazy loading. Design inspirado no Mercado Livre para criar coerência visual com a plataforma integrada. Chart.js para o gráfico de histórico de preços, polling a cada 30 segundos para notificações."
+      },
+      "extensao": {
+        "title": "Extensão Chrome — Manifest V3",
+        "p1": "Content script injetado em todas as páginas do mercadolivre.com.br que detecta o buy box e injeta o botão 'Acompanhar com PriceWatch'. MutationObserver garante que o botão seja reinjetado após navegações internas da SPA do ML. A extensão tem popup de login próprio — não depende do SPA aberto em outra aba."
+      }
+    },
+    "funcionalidades": {
+      "title": "Principais Funcionalidades"
+    },
+    "praticas": {
+      "title": "Práticas Adotadas",
+      "arquitetura": {
+        "title": "Arquitetura e Design",
+        "items": [
+          "Clean Architecture estrita — Domain sem dependências externas",
+          "Use cases como unidade de trabalho na Application Layer",
+          "Strategy Pattern para múltiplas fontes de preço (PriceFetcherResolver)",
+          "Options Pattern para configuração tipada no .NET",
+          "GlobalExceptionHandler com ProblemDetails para erros padronizados",
+          "Standalone components, Signals e control flow moderno no Angular"
+        ]
+      },
+      "mensageria": {
+        "title": "Mensageria e Processamento Assíncrono",
+        "items": [
+          "Redis Streams como mensageria leve — alternativa ao Kafka para volume baixo",
+          "Background Workers com IHostedService (.NET BackgroundService)",
+          "Processamento assíncrono de alertas: detecção → stream → e-mail + notificação",
+          "Polling no frontend para notificações in-app (sem SSE — frequência baixa)"
+        ]
+      },
+      "seguranca": {
+        "title": "Segurança e Qualidade",
+        "items": [
+          "Autenticação JWT HS256 com interceptor no Angular",
+          "Rate limiting por IP nos endpoints públicos e por usuário nos autenticados",
+          "Idempotência no cadastro de produtos — sem duplicatas, sem erro 409",
+          "Verificação de e-mail com templates HTML bilíngues (EmbeddedResource)"
+        ]
+      },
+      "deploy": {
+        "title": "Deploy e Infraestrutura",
+        "items": [
+          "Home server Ubuntu 24.04 com Docker Compose — MongoDB, Redis, Nginx, Watchtower",
+          "Cloudflare Tunnel para exposição sem abrir portas (CGNAT)",
+          "CI/CD automático: git push → GitHub Actions → Docker Hub → Watchtower",
+          "SPA no Vercel com deploy automático a cada push"
+        ]
       }
     }
   },

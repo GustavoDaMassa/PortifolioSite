@@ -120,6 +120,7 @@
       "curriculo": "Resume | Gustavo Henrique",
       "medias": "MediasAPI | Gustavo Henrique",
       "finance": "FinanceAPI | Gustavo Henrique",
+      "pricewatch": "PriceWatch | Gustavo Henrique",
       "projects": "Projects | Gustavo Henrique",
       "trajetoria": "Journey | Gustavo Henrique",
       "blog": "Blog | Gustavo Henrique",
@@ -474,6 +475,105 @@
       },
       "tecnologias": {
         "title": "Technologies"
+      }
+    }
+  },
+  "priceWatch": {
+    "menu": {
+      "apresentacao": "Overview",
+      "arquitetura": "Architecture",
+      "funcionalidades": "Features",
+      "endpoints": "Endpoints",
+      "praticas": "Practices"
+    },
+    "title": "Mercado Livre Price Monitor — API, SPA and Chrome Extension",
+    "heroDescription": "Complete price monitoring solution: .NET 8 API with Clean Architecture, Angular 20 SPA and a Chrome extension that adds a tracking button directly on the product page.",
+    "features": [
+      { "icon": "👁️", "title": "Automatic Monitoring", "description": "Price checks every hour via Mercado Livre API." },
+      { "icon": "📬", "title": "Email Alerts", "description": "Notification sent when the price reaches your target." },
+      { "icon": "📊", "title": "Price History", "description": "Price evolution chart over time." },
+      { "icon": "📋", "title": "Product Lists", "description": "Organize products in lists with price analysis." },
+      { "icon": "🔔", "title": "In-App Notifications", "description": "Notification center with real-time polling." },
+      { "icon": "🧩", "title": "Chrome Extension", "description": "Tracking button directly on the Mercado Livre product page." }
+    ],
+    "endpoints": {
+      "title": "API Endpoints",
+      "items": [
+        { "method": "POST", "route": "/api/auth/register", "description": "Create an account." },
+        { "method": "POST", "route": "/api/auth/login", "description": "Authenticate and get JWT token." },
+        { "method": "POST", "route": "/api/products", "description": "Add a product for monitoring (idempotent by URL)." },
+        { "method": "GET", "route": "/api/products", "description": "List all user products." },
+        { "method": "GET", "route": "/api/products/:id/history", "description": "Price snapshot history." },
+        { "method": "POST", "route": "/api/lists", "description": "Create a product list." },
+        { "method": "GET", "route": "/api/lists/:id/analysis", "description": "List price analysis." },
+        { "method": "GET", "route": "/api/notifications", "description": "List user notifications." }
+      ]
+    },
+    "apresentacao": {
+      "title": "Overview",
+      "p1": "PriceWatch solves a daily problem: tracking a product's price on Mercado Livre without having to check the site repeatedly. You paste the catalog URL, set a target price, and the system monitors automatically — sending an email alert and an in-app notification when the price hits your goal.",
+      "p2": "The project was built in three independent layers: a REST API in .NET 8, an SPA in Angular 20, and a Chrome extension in Manifest V3. Each layer with its own architectural decisions and stack, all integrated with the same backend.",
+      "p3": "The system is in production, running on my home server with automatic deployment via Watchtower. The Chrome extension is being submitted to the Chrome Web Store."
+    },
+    "arquitetura": {
+      "title": "Architecture",
+      "p1": "The project follows strict Clean Architecture in the backend — four layers with dependencies always pointing inward. The Domain knows nothing about infrastructure details: MongoDB, Redis, SMTP, or the Mercado Livre API are declared as interfaces and implemented in the Infrastructure layer.",
+      "backend": {
+        "title": "Backend — .NET 8",
+        "p1": "The Application layer is composed of use cases separated by responsibility: AddProductUseCase, PriceCheckWorker, ProcessAlertUseCase. Two background workers run continuously: PriceCheckWorker wakes up every minute and checks products with expired nextCheckAt, AlertDispatchWorker consumes the Redis Stream 'price-alerts' and dispatches emails and notifications.",
+        "p2": "Choosing MongoDB as the main database was intentional — learning document databases in a real context. Redis was chosen for rate limiting and Redis Streams as lightweight messaging, instead of Kafka, which is unnecessary for the project's volume."
+      },
+      "frontend": {
+        "title": "Frontend — Angular 20",
+        "p1": "SPA built with modern Angular patterns: standalone components, inject(), Angular Signals, control flow (@if, @for) and lazy loading. Design inspired by Mercado Livre to create visual coherence with the integrated platform. Chart.js for the price history chart, 30-second polling for notifications."
+      },
+      "extensao": {
+        "title": "Chrome Extension — Manifest V3",
+        "p1": "Content script injected into all mercadolivre.com.br pages that detects the buy box and injects the 'Track with PriceWatch' button. MutationObserver ensures the button is reinjected after internal navigations in ML's SPA. The extension has its own login popup — it does not depend on the SPA being open in another tab."
+      }
+    },
+    "funcionalidades": {
+      "title": "Main Features"
+    },
+    "praticas": {
+      "title": "Practices Adopted",
+      "arquitetura": {
+        "title": "Architecture and Design",
+        "items": [
+          "Strict Clean Architecture — Domain without external dependencies",
+          "Use cases as unit of work in the Application Layer",
+          "Strategy Pattern for multiple price sources (PriceFetcherResolver)",
+          "Options Pattern for typed configuration in .NET",
+          "GlobalExceptionHandler with ProblemDetails for standardized errors",
+          "Standalone components, Signals and modern control flow in Angular"
+        ]
+      },
+      "mensageria": {
+        "title": "Messaging and Async Processing",
+        "items": [
+          "Redis Streams as lightweight messaging — Kafka alternative for low volume",
+          "Background Workers with IHostedService (.NET BackgroundService)",
+          "Async alert processing: detection → stream → email + notification",
+          "Frontend polling for in-app notifications (no SSE — low frequency)"
+        ]
+      },
+      "seguranca": {
+        "title": "Security and Quality",
+        "items": [
+          "JWT HS256 authentication with interceptor in Angular",
+          "Rate limiting by IP on public endpoints and by user on authenticated ones",
+          "Idempotent product registration — no duplicates, no 409 error",
+          "Email verification with bilingual HTML templates (EmbeddedResource)"
+        ]
+      },
+      "deploy": {
+        "title": "Deploy and Infrastructure",
+        "items": [
+          "Home server Ubuntu 24.04 with Docker Compose — MongoDB, Redis, Nginx, Watchtower",
+          "Cloudflare Tunnel for exposure without opening ports (CGNAT)",
+          "Automated CI/CD: git push → GitHub Actions → Docker Hub → Watchtower",
+          "SPA on Vercel with automatic deploy on every push"
+        ]
       }
     }
   },

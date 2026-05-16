@@ -9,6 +9,7 @@ import { Home } from './pages/Home/Home';
 import { Curriculo } from './pages/Curriculo/Curriculo';
 import { MediasAPI } from './pages/MediasAPI/MediasAPI';
 import { FinanceAPI } from './pages/FinanceAPI/FinanceAPI';
+import { PriceWatch } from './pages/PriceWatch/PriceWatch';
 import { AllProjects } from './pages/AllProjects/AllProjects';
 import { Trajetoria } from './pages/Trajetoria/Trajetoria';
 import { Blog } from './pages/Blog/Blog';
@@ -18,12 +19,13 @@ import './i18n/config';
 import './styles/global.css';
 
 const MAIN_FLOW_PATHS = ['/', '/projetos', '/trajetoria', '/blog'];
-const PAGE_ORDER = { '/curriculo': -1, '/': 0, '/medias': 1, '/finance': 2, '/projetos': 3, '/trajetoria': 4, '/blog': 5 };
+const PAGE_ORDER = { '/curriculo': -1, '/': 0, '/medias': 1, '/finance': 2, '/pricewatch': 2.5, '/projetos': 3, '/trajetoria': 4, '/blog': 5 };
 const TITLE_KEY_BY_PATH = {
   '/': 'meta.pageTitle.home',
   '/curriculo': 'meta.pageTitle.curriculo',
   '/medias': 'meta.pageTitle.medias',
   '/finance': 'meta.pageTitle.finance',
+  '/pricewatch': 'meta.pageTitle.pricewatch',
   '/projetos': 'meta.pageTitle.projects',
   '/trajetoria': 'meta.pageTitle.trajetoria',
   '/blog': 'meta.pageTitle.blog',
@@ -71,6 +73,7 @@ function AnimatedRoutes() {
           <Route path="/" element={<MainFlow />} />
           <Route path="/medias" element={<MediasAPI />} />
           <Route path="/finance" element={<FinanceAPI />} />
+          <Route path="/pricewatch" element={<PriceWatch />} />
           <Route path="/projetos" element={<MainFlow />} />
           <Route path="/trajetoria" element={<MainFlow />} />
           <Route path="/blog" element={<MainFlow />} />
