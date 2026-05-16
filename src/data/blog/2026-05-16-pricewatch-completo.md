@@ -133,7 +133,7 @@ O deploy é automático: `git push → GitHub Actions → Docker Hub → Watchto
 
 ## Demo
 
-[![Assistir demo](https://img.youtube.com/vi/y6aXDqaX6HM/maxresdefault.jpg)](https://www.youtube.com/watch?v=y6aXDqaX6HM)
+[![Assistir demo](https://raw.githubusercontent.com/GustavoDaMassa/PriceWatchExtension/main/icons/128.png)](https://www.youtube.com/watch?v=y6aXDqaX6HM)
 
 [Assistir demo no YouTube →](https://www.youtube.com/watch?v=y6aXDqaX6HM)
 
@@ -262,6 +262,6 @@ Deployment is automatic: `git push → GitHub Actions → Docker Hub → Watchto
 
 ## Demo
 
-[![Watch demo](https://img.youtube.com/vi/y6aXDqaX6HM/maxresdefault.jpg)](https://www.youtube.com/watch?v=y6aXDqaX6HM)
+[![Watch demo](https://raw.githubusercontent.com/GustavoDaMassa/PriceWatchExtension/main/icons/128.png)](https://www.youtube.com/watch?v=y6aXDqaX6HM)
 
 [Watch demo on YouTube →](https://www.youtube.com/watch?v=y6aXDqaX6HM)
