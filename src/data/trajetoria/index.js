@@ -19,7 +19,8 @@ const ORDERED_FILES = [
   './16-refatoracao.md',
   './17-classview.md',
   './18-microservicos.md',
-  './19-momento-atual.md',
+  './19-pricewatch.md',
+  './20-momento-atual.md',
 ];
 
 const modules = import.meta.glob('./*.md', { query: '?raw', import: 'default', eager: true });
