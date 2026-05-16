@@ -586,6 +586,10 @@
       "title": "FinanceAPI",
       "description": "API GraphQL que processa transações bancárias via Open Finance. Recebe webhooks de agregadores financeiros, categoriza movimentações e calcula saldos com Kafka para processamento assíncrono."
     },
+    "pricewatch": {
+      "title": "PriceWatch",
+      "description": "Monitor de preços do Mercado Livre com API .NET 8, SPA Angular 20 e extensão Chrome. Alerta por e-mail quando o produto atinge o preço-alvo."
+    },
     "tiobolas": {
       "title": "Tio Bolas",
       "description": "Projeto em equipe com TAD, manipulação de arquivos, busca binária e fila. Desenvolvido em C."

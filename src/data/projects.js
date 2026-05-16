@@ -14,6 +14,13 @@ export const featuredProjects = [
     route: '/finance',
     featured: true,
     video: 'https://www.youtube.com/embed/F6fvKmKf_W0?autoplay=1&mute=1&controls=0&loop=1&playlist=F6fvKmKf_W0'
+  },
+  {
+    id: 'pricewatch',
+    image: 'https://raw.githubusercontent.com/GustavoDaMassa/PriceWatchExtension/main/marquee-1400x560.png',
+    route: '/pricewatch',
+    featured: true,
+    video: 'https://www.youtube.com/embed/y6aXDqaX6HM?autoplay=1&mute=1&controls=0&loop=1&playlist=y6aXDqaX6HM'
   }
 ];
 
