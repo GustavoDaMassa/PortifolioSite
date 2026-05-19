@@ -66,7 +66,7 @@ export const Curriculo = () => {
               </div>
               <div className={styles.skillRow}>
                 <span className={styles.skillLabel}>{t('curriculo.habilidades.databases')}</span>
-                <span className={styles.skillValue}>PostgreSQL, MySQL</span>
+                <span className={styles.skillValue}>PostgreSQL, MySQL, MongoDB, Redis</span>
               </div>
               <div className={styles.skillRow}>
                 <span className={styles.skillLabel}>{t('curriculo.habilidades.infra')}</span>
@@ -134,6 +134,29 @@ export const Curriculo = () => {
                 <li>{t('curriculo.experiencia.medias.item5')}</li>
               </ul>
             </div>
+
+            <div className={styles.jobBlock}>
+              <div className={styles.jobHeader}>
+                <span className={styles.jobTitle}>{t('curriculo.jobTitlePriceWatch')}</span>
+                <span className={styles.jobDate}>2026 – {t('curriculo.present')}</span>
+              </div>
+              <p className={styles.jobStack}>C# · ASP.NET Core · MongoDB · Redis · Docker · Angular</p>
+              <p className={styles.jobLinks}>
+                <a href="https://github.com/GustavoDaMassa/PriceWatch" target="_blank" rel="noopener noreferrer">
+                  github.com/GustavoDaMassa/PriceWatch
+                </a>
+                <span className={styles.linkSep}>&nbsp;·&nbsp;</span>
+                <a href="https://pricewatch.gustavohdev.com.br" target="_blank" rel="noopener noreferrer">
+                  pricewatch.gustavohdev.com.br
+                </a>
+              </p>
+              <ul className={styles.jobList}>
+                <li>{t('curriculo.experiencia.pricewatch.item1')}</li>
+                <li>{t('curriculo.experiencia.pricewatch.item2')}</li>
+                <li>{t('curriculo.experiencia.pricewatch.item3')}</li>
+                <li>{t('curriculo.experiencia.pricewatch.item4')}</li>
+              </ul>
+            </div>
           </section>
 
           <section className={styles.section}>
@@ -168,19 +191,19 @@ export const Curriculo = () => {
                   <td>{t('curriculo.outros.goianinha')}</td>
                 </tr>
                 <tr>
-                  <td>SimplifiedWallet</td>
-                  <td>Java, Spring Boot</td>
-                  <td>{t('curriculo.outros.wallet')}</td>
+                  <td>ClassView</td>
+                  <td>TypeScript, React</td>
+                  <td>{t('curriculo.outros.classview')}</td>
                 </tr>
                 <tr>
-                  <td>AgendaToDo</td>
-                  <td>Java, Spring Boot</td>
-                  <td>{t('curriculo.outros.agenda')}</td>
+                  <td>cleanMediasAPI</td>
+                  <td>Java, Spring</td>
+                  <td>{t('curriculo.outros.cleanMediasAPI')}</td>
                 </tr>
                 <tr>
-                  <td>CodinomeUol</td>
-                  <td>Java</td>
-                  <td>{t('curriculo.outros.codinome')}</td>
+                  <td>MSFinanceAPI</td>
+                  <td>.NET, ASP.NET</td>
+                  <td>{t('curriculo.outros.msfinanceapi')}</td>
                 </tr>
               </tbody>
             </table>

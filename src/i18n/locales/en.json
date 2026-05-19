@@ -12,12 +12,13 @@
     "pageTitle": "Resume",
     "download": "Download PDF",
     "present": "present",
-    "subtitle": "Fullstack Developer | Java · Spring Boot · Angular",
+    "subtitle": "Software Developer and Engineer",
     "jobTitleFinance": "Independent Fullstack Developer — FinanceAPI",
     "jobTitleMedias": "Independent Fullstack Developer — MédiasAPI",
+    "jobTitlePriceWatch": "Independent Fullstack Developer — PriceWatch",
     "sobre": {
       "title": "About",
-      "text": "Developer with 3 years of continuous practice building APIs and web interfaces focused on architecture and code quality. Production projects with Open Finance integration, async processing with Kafka, Angular interfaces and infrastructure as code with Terraform. Computer Science degree at UFG. Working across multiple ecosystems (Java, .NET, Node.js) with emphasis on concepts over tools."
+      "text": "Developer with 4 years of continuous practice building APIs and web interfaces focused on architecture and code quality. Production projects with Open Finance integration, async processing with Kafka, Angular interfaces and infrastructure as code with Terraform. Computer Science degree at UFG. Working across multiple ecosystems (Java, .NET, Node.js) with emphasis on concepts over tools."
     },
     "habilidades": {
       "title": "Technical Skills",
@@ -43,6 +44,12 @@
         "item3": "Developed web interface with Angular and JWT authentication",
         "item4": "Production deploy with infrastructure as code (Terraform) and automated CI/CD",
         "item5": "Reimplemented in .NET (C#) and Node.js (NestJS/TypeScript)"
+      },
+      "pricewatch": {
+        "item1": "Built a price monitoring platform for products with custom lists and alert system",
+        "item2": "Implemented Redis cache to optimize frequent queries and reduce latency",
+        "item3": "Developed SPA interface with Angular Material and integrated authentication",
+        "item4": "Production deploy with automated CI/CD and self-hosted server via Cloudflare Tunnel"
       }
     },
     "formacao": {
@@ -59,9 +66,9 @@
         "desc": "Description"
       },
       "goianinha": "Full compiler with Assembly code generation",
-      "wallet": "User transfer system with business rules",
-      "agenda": "Task management CRUD API (Simplify technical challenge)",
-      "codinome": "XML/JSON processing with in-memory and file persistence"
+      "classview": "Class relationship visualizer for a project",
+      "cleanMediasAPI": "Reimplementation of Medias API with Clean Architecture",
+      "msfinanceapi": "Reimplementation of FinanceAPI as a microservices system"
     }
   },
   "home": {

@@ -12,12 +12,13 @@
     "pageTitle": "Currículo",
     "download": "Baixar PDF",
     "present": "presente",
-    "subtitle": "Desenvolvedor Fullstack | Java · Spring Boot · Angular",
+    "subtitle": "Desenvolvedor e Engenheiro de Software",
     "jobTitleFinance": "Desenvolvedor Fullstack Independente — FinanceAPI",
     "jobTitleMedias": "Desenvolvedor Fullstack Independente — MédiasAPI",
+    "jobTitlePriceWatch": "Desenvolvedor Fullstack Independente — PriceWatch",
     "sobre": {
       "title": "Sobre",
-      "text": "Desenvolvedor com 3 anos de prática contínua construindo APIs e interfaces web com foco em arquitetura e qualidade de código. Projetos em produção com integração Open Finance, processamento assíncrono com Kafka, interfaces Angular e infraestrutura como código com Terraform. Formação em Ciência da Computação na UFG. Trabalho em múltiplos ecossistemas (Java, .NET, Node.js) com ênfase em conceitos, não em ferramentas."
+      "text": "Desenvolvedor com 4 anos de prática contínua construindo APIs e interfaces web com foco em arquitetura e qualidade de código. Projetos em produção com integração Open Finance, processamento assíncrono com Kafka, interfaces Angular e infraestrutura como código com Terraform. Formação em Ciência da Computação na UFG. Trabalho em múltiplos ecossistemas (Java, .NET, Node.js) com ênfase em conceitos, não em ferramentas."
     },
     "habilidades": {
       "title": "Habilidades Técnicas",
@@ -43,6 +44,12 @@
         "item3": "Desenvolvi interface web com Angular e autenticação JWT",
         "item4": "Deploy em produção com infraestrutura como código (Terraform) e CI/CD automatizado",
         "item5": "Reimplementado em .NET (C#) e Node.js (NestJS/TypeScript)"
+      },
+      "pricewatch": {
+        "item1": "Construí plataforma de monitoramento de preços de produtos com listas personalizadas e sistema de alertas",
+        "item2": "Implementei cache com Redis para otimizar consultas frequentes e reduzir latência",
+        "item3": "Desenvolvi interface SPA com Angular Material e autenticação integrada",
+        "item4": "Deploy em produção com CI/CD automatizado e servidor próprio via Cloudflare Tunnel"
       }
     },
     "formacao": {
@@ -59,9 +66,9 @@
         "desc": "Descrição"
       },
       "goianinha": "Compilador completo com geração de código Assembly",
-      "wallet": "Sistema de transferências entre usuários com regras de negócio",
-      "agenda": "API CRUD de gestão de tarefas (desafio técnico Simplify)",
-      "codinome": "Processamento de XML/JSON com persistência em memória e arquivo"
+      "classview": "Visualizador de relações entre classes de um projeto",
+      "cleanMediasAPI": "Reimplementação da Medias API com Arquitetura limpa",
+      "msfinanceapi": "Reimplementação da FinanceAPI como sistema de microsserviços"
     }
   },
   "home": {
