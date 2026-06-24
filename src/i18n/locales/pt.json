@@ -12,51 +12,59 @@
     "pageTitle": "Currículo",
     "download": "Baixar PDF",
     "present": "presente",
-    "subtitle": "Desenvolvedor e Engenheiro de Software",
-    "jobTitleFinance": "Desenvolvedor Fullstack Independente — FinanceAPI",
-    "jobTitleMedias": "Desenvolvedor Fullstack Independente — MédiasAPI",
-    "jobTitlePriceWatch": "Desenvolvedor Fullstack Independente — PriceWatch",
+    "subtitle": "Software Engineer | Fullstack",
+    "jobTitleFinance": "Software Engineer — FinanceAPI",
+    "jobTitleMedias": "Software Engineer — MédiasAPI",
+    "jobTitlePriceWatch": "Software Engineer — PriceWatch",
+    "jobTitleSolidy": "Software Engineer — SolidyContratos",
+    "jobTitleZap": "Software Engineer — ZapAgenda",
     "sobre": {
       "title": "Sobre",
-      "text": "Desenvolvedor com 4 anos de prática contínua construindo APIs e interfaces web com foco em arquitetura e qualidade de código. Projetos em produção com integração Open Finance, processamento assíncrono com Kafka, interfaces Angular e infraestrutura como código com Terraform. Formação em Ciência da Computação na UFG. Trabalho em múltiplos ecossistemas (Java, .NET, Node.js) com ênfase em conceitos, não em ferramentas."
+      "text": "Engenheiro de Software com 4 anos de experiência no desenvolvimento de ecossistemas completos, desde a infraestrutura e APIs de alta performance até interfaces modernas e responsivas. Especialista em arquiteturas backend (Java/Spring, .NET, Node.js e Ruby on Rails), com forte base em Ciência da Computação e foco em qualidade de código via TDD e Clean Architecture. Experiência na implementação de soluções complexas, como interpretadores de DSLs, processamento assíncrono com Kafka/RabbitMQ e integração de IA Generativa. Proficiente na construção de interfaces escaláveis com React e Angular, unindo rigor técnico no servidor com excelência em UX no cliente."
     },
     "habilidades": {
       "title": "Habilidades Técnicas",
-      "databases": "Bancos de Dados",
-      "infra": "Infraestrutura",
-      "tools": "Ferramentas",
-      "practices": "Práticas",
+      "databases": "Bancos de Dados & Mensageria",
+      "infra": "Infraestrutura & DevOps",
+      "tools": "IA & Engenharia de Dados",
+      "practices": "Qualidade & Processos",
       "tests": "Testes Automatizados"
     },
     "experiencia": {
       "title": "Experiência",
       "finance": {
-        "item1": "Construí aplicação GraphQL que integra com agregadores financeiros (Pluggy) para capturar e classificar transações bancárias automaticamente",
-        "item2": "Implementei processamento assíncrono de webhooks com Apache Kafka",
-        "item3": "Desenvolvi interface web responsiva com Angular",
-        "item4": "Estruturei em Clean Architecture com autenticação via X-API-KEY e tratamento padronizado de erros",
-        "item5": "Deploy em produção com CI/CD automatizado (GitHub Actions → Docker Hub → servidor próprio)",
-        "item6": "Reimplementado em .NET/ASP.NET Core como exercício de versatilidade tecnológica"
+        "item1": "Projetei e implementei uma arquitetura orientada a GraphQL para agregação de dados financeiros via Pluggy, otimizando o consumo de dados e eliminando o over-fetching",
+        "item2": "Desenvolvi um pipeline de processamento assíncrono de webhooks utilizando Apache Kafka, garantindo a resiliência e a consistência do processamento de transações em larga escala",
+        "item3": "Implementei a solução em dois ecossistemas distintos (Java/Spring e .NET Core) para validar a portabilidade da arquitetura e a performance entre runtimes",
+        "item4": "Estruturei o deploy via CI/CD automatizado com Docker, reduzindo o tempo de entrega de novas versões"
       },
       "medias": {
-        "item1": "Construí API REST para calcular médias acadêmicas com fórmulas dinâmicas, usando interpretador baseado no algoritmo Shunting Yard",
-        "item2": "Implementei projeção de notas e simulação de cenários acadêmicos",
-        "item3": "Desenvolvi interface web com Angular e autenticação JWT",
-        "item4": "Deploy em produção com infraestrutura como código (Terraform) e CI/CD automatizado",
-        "item5": "Reimplementado em .NET (C#) e Node.js (NestJS/TypeScript)"
+        "item1": "Desenvolvi um interpretador de fórmulas dinâmicas baseado no algoritmo Shunting-Yard, convertendo expressões matemáticas para Notação Polonesa Inversa (RPN) e avaliando-as via máquina de pilha",
+        "item2": "Implementei a solução em três stacks (Java, .NET e Node.js), focando na abstração da lógica de negócio para que fosse independente da linguagem",
+        "item3": "Automatizei o provisionamento da infraestrutura utilizando Terraform, garantindo a reprodutibilidade do ambiente de produção"
       },
       "pricewatch": {
         "item1": "Construí plataforma de monitoramento de preços de produtos com listas personalizadas e sistema de alertas",
         "item2": "Implementei cache com Redis para otimizar consultas frequentes e reduzir latência",
         "item3": "Desenvolvi interface SPA com Angular Material e autenticação integrada",
         "item4": "Deploy em produção com CI/CD automatizado e servidor próprio via Cloudflare Tunnel"
+      },
+      "solidy": {
+        "item1": "Liderei o desenvolvimento de um sistema de gestão contratual com foco em alta tipagem e segurança de dados utilizando Prisma ORM",
+        "item2": "Implementei um mecanismo de busca semântica utilizando Embeddings Vetoriais, permitindo a recuperação inteligente de cláusulas contratuais via IA",
+        "item3": "Estabeleci a cultura de TDD de Duplo Loop, garantindo cobertura total nos fluxos críticos de assinatura digital e medição de obras",
+        "item4": "Desenvolvi o frontend em React com Zustand e React Query, otimizando o estado global e a performance de cache de requisições"
+      },
+      "zap": {
+        "item1": "Arquiteturei um ecossistema de agendamento inteligente integrado ao WhatsApp, utilizando NestJS e um microsserviço Python (FastAPI) para processamento de NLP via Google Gemini",
+        "item2": "Implementei a orquestração de notificações e lembretes assíncronos via RabbitMQ, garantindo a entrega de mensagens mesmo em cenários de instabilidade da API de destino"
       }
     },
     "formacao": {
       "title": "Formação Acadêmica",
       "degree": "Bacharelado em Ciência da Computação",
-      "item1": "Base em estruturas de dados, algoritmos, arquitetura de software e bancos de dados",
-      "item2": "Compilador completo para linguagem Goianinha: análise léxica, sintática, semântica e geração de código Assembly (C)"
+      "item1": "Base sólida em estruturas de dados, algoritmos, arquitetura de software e bancos de dados",
+      "item2": "Destaque Técnico: Desenvolvimento de um Compilador Completo para a linguagem Goianinha, implementando todas as fases: análise léxica, sintática, semântica e geração de código Assembly em C"
     },
     "outros": {
       "title": "Outros Projetos",
@@ -72,9 +80,13 @@
     }
   },
   "home": {
-    "title": "Gustavo Henrique | Desenvolvedor Full Stack",
-    "description1": "Desenvolvedor full stack cursando Ciência da Computação na UFG. Back-end com Java e Spring Boot, front-end com Angular — do design da API à interface final. Trabalho com autenticação JWT, mensageria Kafka, integração via Open Finance e deploy com Docker, CI/CD via GitHub Actions e servidor próprio. Também explorei .NET e Node.js para solidificar os conceitos além de uma única stack.",
-    "description2": "Ao lado estão alguns dos meus projetos. Cada um nasceu de um problema real e foi entregue com testes, documentação e boas práticas de engenharia de software.",
+    "title": "Gustavo Henrique | Software Engineer",
+    "description1": "Engenheiro de Software Fullstack cursando Ciência da Computação na UFG. Especialista em arquiteturas backend poliglotas (Java, .NET, Node.js) e interfaces modernas com React e Angular. Do design da infraestrutura ao deploy em produção, foco em qualidade de código via TDD, Clean Architecture e integração de IA Generativa.",
+    "description2": "Ao lado estão alguns dos meus projetos. Cada um nasceu de um problema real e foi entregue com testes, documentação e rigorosos padrões de engenharia de software.",
+    "techTitle": "Tecnologias",
+    "curriculoHint": "Currículo disponível ao lado",
+    "blogHint": "Acompanhe o blog"
+  },
     "techTitle": "Tecnologias",
     "curriculoHint": "Currículo disponível ao lado",
     "blogHint": "Acompanhe o blog"

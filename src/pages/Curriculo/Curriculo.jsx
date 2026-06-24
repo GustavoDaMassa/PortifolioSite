@@ -58,23 +58,23 @@ export const Curriculo = () => {
             <div className={styles.skillsGrid}>
               <div className={styles.skillRow}>
                 <span className={styles.skillLabel}>Back-end</span>
-                <span className={styles.skillValue}>Java, Spring Boot (Data JPA, Security), C#/ASP.NET Core, TypeScript/NestJS, REST APIs, GraphQL, Apache Kafka</span>
+                <span className={styles.skillValue}>Java, Spring Boot, C#/ASP.NET Core, TypeScript/NestJS, Ruby on Rails, Python, REST, GraphQL, Kafka</span>
               </div>
               <div className={styles.skillRow}>
                 <span className={styles.skillLabel}>Front-end</span>
-                <span className={styles.skillValue}>Angular, React</span>
+                <span className={styles.skillValue}>React, Angular, TypeScript, TailwindCSS</span>
               </div>
               <div className={styles.skillRow}>
                 <span className={styles.skillLabel}>{t('curriculo.habilidades.databases')}</span>
-                <span className={styles.skillValue}>PostgreSQL, MySQL, MongoDB, Redis</span>
+                <span className={styles.skillValue}>PostgreSQL, MySQL, MongoDB, Redis, RabbitMQ, Apache Kafka</span>
               </div>
               <div className={styles.skillRow}>
                 <span className={styles.skillLabel}>{t('curriculo.habilidades.infra')}</span>
-                <span className={styles.skillValue}>Docker, CI/CD (GitHub Actions), Terraform, AWS</span>
+                <span className={styles.skillValue}>Docker, Terraform, CI/CD (GitHub Actions), Cloudflare Tunnels, Nginx, Ubuntu Server</span>
               </div>
               <div className={styles.skillRow}>
                 <span className={styles.skillLabel}>{t('curriculo.habilidades.tools')}</span>
-                <span className={styles.skillValue}>Git, Swagger/OpenAPI, Flyway, JUnit</span>
+                <span className={styles.skillValue}>Google Gemini API, Vector Embeddings, RAG, Git, Swagger, Flyway</span>
               </div>
               <div className={styles.skillRow}>
                 <span className={styles.skillLabel}>{t('curriculo.habilidades.practices')}</span>
@@ -106,8 +106,20 @@ export const Curriculo = () => {
                 <li>{t('curriculo.experiencia.finance.item2')}</li>
                 <li>{t('curriculo.experiencia.finance.item3')}</li>
                 <li>{t('curriculo.experiencia.finance.item4')}</li>
-                <li>{t('curriculo.experiencia.finance.item5')}</li>
-                <li>{t('curriculo.experiencia.finance.item6')}</li>
+              </ul>
+            </div>
+
+            <div className={styles.jobBlock}>
+              <div className={styles.jobHeader}>
+                <span className={styles.jobTitle}>{t('curriculo.jobTitleSolidy')}</span>
+                <span className={styles.jobDate}>2025 – {t('curriculo.present')}</span>
+              </div>
+              <p className={styles.jobStack}>Node.js · TypeScript · Prisma · PostgreSQL · React · Zustand · React Query</p>
+              <ul className={styles.jobList}>
+                <li>{t('curriculo.experiencia.solidy.item1')}</li>
+                <li>{t('curriculo.experiencia.solidy.item2')}</li>
+                <li>{t('curriculo.experiencia.solidy.item3')}</li>
+                <li>{t('curriculo.experiencia.solidy.item4')}</li>
               </ul>
             </div>
 
@@ -116,7 +128,7 @@ export const Curriculo = () => {
                 <span className={styles.jobTitle}>{t('curriculo.jobTitleMedias')}</span>
                 <span className={styles.jobDate}>2023 – {t('curriculo.present')}</span>
               </div>
-              <p className={styles.jobStack}>Java · Spring Boot · JWT · MySQL · Docker · Swagger · Angular · Terraform</p>
+              <p className={styles.jobStack}>Java · Spring Boot · .NET Core · Node.js · Terraform · Docker · Angular</p>
               <p className={styles.jobLinks}>
                 <a href="https://github.com/GustavoDaMassa/MediasAPI" target="_blank" rel="noopener noreferrer">
                   github.com/GustavoDaMassa/MediasAPI
@@ -130,8 +142,18 @@ export const Curriculo = () => {
                 <li>{t('curriculo.experiencia.medias.item1')}</li>
                 <li>{t('curriculo.experiencia.medias.item2')}</li>
                 <li>{t('curriculo.experiencia.medias.item3')}</li>
-                <li>{t('curriculo.experiencia.medias.item4')}</li>
-                <li>{t('curriculo.experiencia.medias.item5')}</li>
+              </ul>
+            </div>
+
+            <div className={styles.jobBlock}>
+              <div className={styles.jobHeader}>
+                <span className={styles.jobTitle}>{t('curriculo.jobTitleZap')}</span>
+                <span className={styles.jobDate}>2024 – {t('curriculo.present')}</span>
+              </div>
+              <p className={styles.jobStack}>NestJS · Python · FastAPI · Google Gemini API · RabbitMQ · Baileys</p>
+              <ul className={styles.jobList}>
+                <li>{t('curriculo.experiencia.zap.item1')}</li>
+                <li>{t('curriculo.experiencia.zap.item2')}</li>
               </ul>
             </div>
 
