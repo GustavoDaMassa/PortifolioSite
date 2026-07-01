@@ -83,6 +83,7 @@
     "title": "Gustavo Henrique | Software Engineer",
     "description1": "Engenheiro de Software Fullstack cursando Ciência da Computação na UFG. Especialista em arquiteturas backend (Java, .NET, Node.js) e interfaces modernas com React e Angular. Do design da infraestrutura ao deploy em produção, foco em qualidade de código via TDD, Clean Architecture e integração de IA Generativa.",
     "description2": "Ao lado estão alguns dos meus projetos. Cada um nasceu de um problema real e foi entregue com testes, documentação e rigorosos padrões de engenharia de software.",
+    "videoPlaceholder": "Vídeo de apresentação em breve",
     "techTitle": "Tecnologias",
     "curriculoHint": "Currículo disponível ao lado",
     "blogHint": "Acompanhe o blog"

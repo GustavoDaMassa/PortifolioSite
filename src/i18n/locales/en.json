@@ -75,6 +75,7 @@
     "title": "Gustavo Henrique | Full Stack Developer",
     "description1": "Full stack developer pursuing a Computer Science degree at UFG. Back-end with Java and Spring Boot, front-end with Angular — from API design to the final interface. I work with JWT authentication, Kafka messaging, Open Finance integration and deployment with Docker, CI/CD via GitHub Actions and a self-hosted server. I also explored .NET and Node.js to solidify the concepts beyond a single stack.",
     "description2": "On the side are some of my projects. Each one was born from a real problem and delivered with tests, documentation and software engineering best practices.",
+    "videoPlaceholder": "Presentation video coming soon",
     "techTitle": "Technologies",
     "curriculoHint": "Resume available on the left",
     "blogHint": "Check out the blog"
