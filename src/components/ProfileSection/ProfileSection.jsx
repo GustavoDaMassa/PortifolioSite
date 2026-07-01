@@ -22,19 +22,16 @@ export const ProfileSection = () => {
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
+            className={styles.socialItem}
           >
-            <img src={link.icon} alt={link.alt} />
+            <span className={styles.socialIcon}>
+              <img src={link.icon} alt={link.alt} />
+            </span>
+            <span className={styles.socialName}>{link.name}</span>
+            <span className={styles.socialValue}>{link.value}</span>
           </a>
         ))}
       </div>
-
-      <p className={styles.techText}>
-        {t('home.description1')}
-      </p>
-
-      <p className={styles.techText}>
-        {t('home.description2')}
-      </p>
 
       <div className={styles.hints}>
         <Link to="/curriculo" className={styles.curriculoHint}>

@@ -6,28 +6,32 @@ export const socialLinks = [
     name: 'GitHub',
     url: 'https://github.com/GustavoDaMassa',
     icon: getAssetPath('assets/images/icons/githubicon.png'),
-    alt: 'GitHub'
+    alt: 'GitHub',
+    value: '@GustavoDaMassa'
   },
   {
     id: 'linkedin',
     name: 'LinkedIn',
     url: 'https://www.linkedin.com/in/gustavohpereiradev/',
     icon: getAssetPath('assets/images/icons/linkedinicon.png'),
-    alt: 'LinkedIn'
+    alt: 'LinkedIn',
+    value: '@gustavohpereiradev'
   },
   {
     id: 'whatsapp',
     name: 'WhatsApp',
     url: 'https://wa.me/5562991281661',
     icon: getAssetPath('assets/images/icons/whatsappicon.svg'),
-    alt: 'WhatsApp'
+    alt: 'WhatsApp',
+    value: '(62) 99128-1661'
   },
   {
     id: 'email',
     name: 'E-mail',
-    url: 'mailto:gustavo.pereira@discente.ufg.br',
+    url: 'mailto:gustavohenrique3gb@gmail.com',
     icon: getAssetPath('assets/images/icons/emailicon.png'),
-    alt: 'E-mail'
+    alt: 'E-mail',
+    value: 'gustavohenrique3gb@gmail.com'
   },
   {
     id: 'resume',
