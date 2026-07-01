@@ -15,14 +15,14 @@ export const BlogContent = () => {
   const filtered = activeTag ? posts.filter(p => p.tags?.includes(activeTag)) : posts;
 
   return (
-    <main className={styles.page}>
+    <>
       <div className={styles.hero}>
         <h1 className={styles.title}>{t('blog.title')}</h1>
         <p className={styles.description}>{t('blog.description')}</p>
       </div>
 
       <div className={styles.filter}>
-        <TagFilter tags={tags} counts={tagCounts} active={activeTag} onChange={setActiveTag} />
+        <TagFilter tags={tags} counts={tagCounts} total={posts.length} active={activeTag} onChange={setActiveTag} />
       </div>
 
       {filtered.length === 0 ? (
@@ -34,7 +34,7 @@ export const BlogContent = () => {
           ))}
         </div>
       )}
-    </main>
+    </>
   );
 };
 

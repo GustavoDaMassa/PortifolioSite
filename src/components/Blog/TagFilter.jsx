@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import styles from './TagFilter.module.css';
 
-export const TagFilter = ({ tags, counts = {}, active, onChange }) => {
+export const TagFilter = ({ tags, counts = {}, total, active, onChange }) => {
   const { t } = useTranslation();
 
   return (
@@ -11,6 +11,9 @@ export const TagFilter = ({ tags, counts = {}, active, onChange }) => {
       onClick={() => onChange(null)}
     >
       {t('blog.allTags')}
+      {total !== undefined && (
+        <span className={styles.count}>{total}</span>
+      )}
     </button>
     {tags.map(tag => (
       <button
