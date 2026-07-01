@@ -11,8 +11,8 @@ import styles from './MainFlow.module.css';
 const FLOW_SECTIONS = [
   { path: '/', id: 'home', component: <HomeContent showNavArrows={false} /> },
   { path: '/projetos', id: 'projects', component: <AllProjectsContent /> },
-  { path: '/trajetoria', id: 'trajetoria', component: <TrajetoriaContent /> },
   { path: '/blog', id: 'blog', component: <BlogContent /> },
+  { path: '/trajetoria', id: 'trajetoria', component: <TrajetoriaContent /> },
 ];
 
 export const MainFlow = () => {

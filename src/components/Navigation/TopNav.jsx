@@ -29,11 +29,11 @@ export const TopNav = () => {
         <Link to="/projetos" className={location.pathname === '/projetos' || location.pathname === '/medias' || location.pathname === '/finance' ? styles.active : ''}>
           {t('nav.projects')}
         </Link>
-        <Link to="/trajetoria" className={location.pathname === '/trajetoria' ? styles.active : ''}>
-          {t('nav.trajetoria')}
-        </Link>
         <Link to="/blog" className={location.pathname.startsWith('/blog') ? styles.active : ''}>
           {t('nav.blog')}
+        </Link>
+        <Link to="/trajetoria" className={location.pathname === '/trajetoria' ? styles.active : ''}>
+          {t('nav.trajetoria')}
         </Link>
       </div>
     </nav>
