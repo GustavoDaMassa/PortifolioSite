@@ -598,6 +598,22 @@
       "title": "PriceWatch",
       "description": "Mercado Livre price monitor with .NET 8 API, Angular 20 SPA and Chrome extension. Sends email alert when the product reaches the target price."
     },
+    "solidycontratos": {
+      "title": "pContratos",
+      "description": "Contract management SaaS with electronic signature, semantic clause search via vector embeddings and double-loop TDD. Backend in Node.js/Prisma, frontend in React with Zustand and React Query."
+    },
+    "caixaflow": {
+      "title": "CaixaFlow",
+      "description": "Point-of-sale (POS) system in Ruby on Rails, with cash register control, orders, products, customers and fiscal document issuance."
+    },
+    "devdraw": {
+      "title": "DevDraw",
+      "description": "Real-time collaborative whiteboard with node versioning, project invitations and end-to-end encryption. Frontend with tldraw/React, backend in NestJS."
+    },
+    "zapagenda": {
+      "title": "ZapAgenda",
+      "description": "Smart scheduling ecosystem integrated with WhatsApp, with NLP via Google Gemini and asynchronous notifications orchestrated with RabbitMQ."
+    },
     "tiobolas": {
       "title": "Tio Bolas",
       "description": "Team project with ADT, file manipulation, binary search and queue. Built in C."

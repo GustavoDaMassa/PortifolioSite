@@ -606,6 +606,22 @@
       "title": "PriceWatch",
       "description": "Monitor de preços do Mercado Livre com API .NET 8, SPA Angular 20 e extensão Chrome. Alerta por e-mail quando o produto atinge o preço-alvo."
     },
+    "solidycontratos": {
+      "title": "pContratos",
+      "description": "Sistema SaaS de gestão contratual com assinatura eletrônica, busca semântica de cláusulas via embeddings vetoriais e TDD de duplo loop. Backend em Node.js/Prisma, frontend em React com Zustand e React Query."
+    },
+    "caixaflow": {
+      "title": "CaixaFlow",
+      "description": "Sistema de PDV (ponto de venda) em Ruby on Rails, com controle de caixa, pedidos, produtos, clientes e emissão de documentos fiscais."
+    },
+    "devdraw": {
+      "title": "DevDraw",
+      "description": "Whiteboard colaborativo em tempo real com versionamento de nós, convites de projeto e criptografia ponta a ponta. Frontend com tldraw/React, backend em NestJS."
+    },
+    "zapagenda": {
+      "title": "ZapAgenda",
+      "description": "Ecossistema de agendamento inteligente integrado ao WhatsApp, com NLP via Google Gemini e notificações assíncronas orquestradas com RabbitMQ."
+    },
     "tiobolas": {
       "title": "Tio Bolas",
       "description": "Projeto em equipe com TAD, manipulação de arquivos, busca binária e fila. Desenvolvido em C."

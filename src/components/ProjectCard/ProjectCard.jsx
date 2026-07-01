@@ -6,28 +6,42 @@ import styles from './ProjectCard.module.css';
 export const ProjectCard = ({ project }) => {
   const { t } = useTranslation();
   const [isHovered, setIsHovered] = useState(false);
+  const title = t(`projects.${project.id}.title`);
+
+  const cover = project.image ? (
+    <img src={project.image} alt={title} />
+  ) : (
+    <div
+      className={styles.generatedCover}
+      style={project.coverColor ? { '--cover-color': project.coverColor } : undefined}
+    >
+      {project.coverIcon ? (
+        <img src={project.coverIcon} alt={title} className={styles.coverIcon} />
+      ) : (
+        <span className={styles.coverInitials}>{project.coverLabel}</span>
+      )}
+    </div>
+  );
 
   const mediaArea = project.featured ? (
     <div className={styles.mediaWrapper}>
-      <img src={project.image} alt={t(`projects.${project.id}.title`)} />
+      {cover}
       {project.video && isHovered && (
         <iframe
           src={project.video}
           className={styles.videoPreview}
           allow="autoplay; encrypted-media"
-          title={t(`projects.${project.id}.title`)}
+          title={title}
         />
       )}
     </div>
-  ) : (
-    <img src={project.image} alt={t(`projects.${project.id}.title`)} />
-  );
+  ) : cover;
 
   const cardContent = (
     <>
       {mediaArea}
       <div className={styles.content}>
-        <h1>{t(`projects.${project.id}.title`)}</h1>
+        <h1>{title}</h1>
         <p>{t(`projects.${project.id}.description`)}</p>
         {!project.featured && (
           project.additionalLinks ? (
@@ -45,13 +59,15 @@ export const ProjectCard = ({ project }) => {
           )
         )}
         {project.featured && (
-          <span className={styles.viewHint}>{t('allProjects.viewProject')} →</span>
+          <span className={styles.viewHint}>
+            {project.route ? t('allProjects.viewProject') : t('allProjects.viewGithub')} →
+          </span>
         )}
       </div>
     </>
   );
 
-  if (project.featured) {
+  if (project.featured && project.route) {
     return (
       <Link
         to={project.route}
@@ -61,6 +77,19 @@ export const ProjectCard = ({ project }) => {
       >
         {cardContent}
       </Link>
+    );
+  }
+
+  if (project.featured) {
+    return (
+      <a
+        href={project.github}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`${styles.projectCard} ${styles.featured}`}
+      >
+        {cardContent}
+      </a>
     );
   }
 

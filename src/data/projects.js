@@ -21,6 +21,33 @@ export const featuredProjects = [
     route: '/pricewatch',
     featured: true,
     video: 'https://www.youtube.com/embed/y6aXDqaX6HM?autoplay=1&mute=1&controls=0&loop=1&playlist=y6aXDqaX6HM'
+  },
+  {
+    id: 'caixaflow',
+    featured: true,
+    coverIcon: getAssetPath('assets/images/icons/caixaflowicon.svg'),
+    github: 'https://github.com/GustavoDaMassa/MVP-CaixaFlow'
+  },
+  {
+    id: 'zapagenda',
+    featured: true,
+    coverColor: '#25D366',
+    coverLabel: 'ZA',
+    github: 'https://github.com/GustavoDaMassa/ZapAgenda'
+  },
+  {
+    id: 'devdraw',
+    featured: true,
+    coverColor: '#ff8a3d',
+    coverLabel: 'DD',
+    github: 'https://github.com/GustavoDaMassa/DevDraw'
+  },
+  {
+    id: 'solidycontratos',
+    featured: true,
+    coverColor: '#863bff',
+    coverLabel: 'PC',
+    github: 'https://github.com/GustavoDaMassa/SolidyContratos'
   }
 ];
 
