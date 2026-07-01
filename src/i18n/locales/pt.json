@@ -3,7 +3,7 @@
     "curriculo": "Currículo",
     "home": "Início",
     "medias": "MediasAPI",
-    "finance": "FinanceAPI",
+    "finance": "FinanceMY",
     "projects": "Projetos",
     "trajetoria": "Trajetória",
     "blog": "Blog"
@@ -13,7 +13,7 @@
     "download": "Baixar PDF",
     "present": "presente",
     "subtitle": "Software Engineer | Fullstack",
-    "jobTitleFinance": "Software Engineer — FinanceAPI",
+    "jobTitleFinance": "Software Engineer — FinanceMY",
     "jobTitleMedias": "Software Engineer — MédiasAPI",
     "jobTitlePriceWatch": "Software Engineer — PriceWatch",
     "jobTitleSolidy": "Software Engineer — SolidyContratos",
@@ -135,7 +135,7 @@
       "home": "Início | Gustavo Henrique",
       "curriculo": "Currículo | Gustavo Henrique",
       "medias": "MediasAPI | Gustavo Henrique",
-      "finance": "FinanceAPI | Gustavo Henrique",
+      "finance": "FinanceMY | Gustavo Henrique",
       "pricewatch": "PriceWatch | Gustavo Henrique",
       "projects": "Projetos | Gustavo Henrique",
       "trajetoria": "Trajetória | Gustavo Henrique",
@@ -599,7 +599,7 @@
       "description": "API REST para cálculo dinâmico de médias acadêmicas com fórmulas customizáveis. Usa o algoritmo Shunting Yard para interpretar expressões matemáticas definidas pelo usuário."
     },
     "financeapi": {
-      "title": "FinanceAPI",
+      "title": "FinanceMY",
       "description": "API GraphQL que processa transações bancárias via Open Finance. Recebe webhooks de agregadores financeiros, categoriza movimentações e calcula saldos com Kafka para processamento assíncrono."
     },
     "pricewatch": {

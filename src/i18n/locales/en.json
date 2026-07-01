@@ -3,7 +3,7 @@
     "curriculo": "Resume",
     "home": "Home",
     "medias": "MediasAPI",
-    "finance": "FinanceAPI",
+    "finance": "FinanceMY",
     "projects": "Projects",
     "trajetoria": "Journey",
     "blog": "Blog"
@@ -13,7 +13,7 @@
     "download": "Download PDF",
     "present": "present",
     "subtitle": "Software Developer and Engineer",
-    "jobTitleFinance": "Independent Fullstack Developer — FinanceAPI",
+    "jobTitleFinance": "Independent Fullstack Developer — FinanceMY",
     "jobTitleMedias": "Independent Fullstack Developer — MédiasAPI",
     "jobTitlePriceWatch": "Independent Fullstack Developer — PriceWatch",
     "sobre": {
@@ -127,7 +127,7 @@
       "home": "Home | Gustavo Henrique",
       "curriculo": "Resume | Gustavo Henrique",
       "medias": "MediasAPI | Gustavo Henrique",
-      "finance": "FinanceAPI | Gustavo Henrique",
+      "finance": "FinanceMY | Gustavo Henrique",
       "pricewatch": "PriceWatch | Gustavo Henrique",
       "projects": "Projects | Gustavo Henrique",
       "trajetoria": "Journey | Gustavo Henrique",
@@ -591,7 +591,7 @@
       "description": "REST API for dynamic academic grade calculation with customizable formulas. Uses the Shunting Yard algorithm to interpret user-defined mathematical expressions."
     },
     "financeapi": {
-      "title": "FinanceAPI",
+      "title": "FinanceMY",
       "description": "GraphQL API that processes bank transactions via Open Finance. Receives webhooks from financial aggregators, categorizes transactions and calculates balances with Kafka for async processing."
     },
     "pricewatch": {

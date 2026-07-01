@@ -35,7 +35,7 @@ export const FinanceAPI = () => {
       <NavArrows rightPath="/projetos" />
       <main className={styles.content}>
         <div className={styles.contentHeader}>
-          <span className={styles.projectTitle}>FinanceAPI</span>
+          <span className={styles.projectTitle}>FinanceMY</span>
           <SideMenu items={menuItems} />
         </div>
 
