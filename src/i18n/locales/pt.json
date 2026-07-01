@@ -97,7 +97,8 @@
   },
   "trajetoria": {
     "title": "Trajetória",
-    "description": "Quatro anos de desenvolvimento, dois projetos em produção, uma infraestrutura própria e código em quatro stacks diferentes — construído do zero, conciliando faculdade e estudo autodidata.",
+    "description": "Quatro anos de desenvolvimento, sete projetos no ar, uma infraestrutura própria e código em diferentes stacks — construído do zero, conciliando faculdade e estudo autodidata, à produção.",
+    "videoPlaceholder": "Vídeo de apresentação em breve",
     "toggle": {
       "narrativo": "Narrativo",
       "tecnico": "Técnico"

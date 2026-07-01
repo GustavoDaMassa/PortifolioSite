@@ -1,7 +1,7 @@
 .page {
-  max-width: 760px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 80px var(--spacing-lg) var(--spacing-2xl);
+  padding: 80px var(--spacing-xl) var(--spacing-2xl);
 }
 
 .hero {
@@ -26,20 +26,65 @@
   margin: 0 auto;
 }
 
+.contentRow {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  gap: var(--spacing-xl);
+  height: clamp(360px, 60vh, 640px);
+}
+
+.videoColumn {
+  min-width: 0;
+  height: 100%;
+}
+
+.videoPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  background: var(--color-bg-secondary);
+  border: 1px dashed var(--color-border-default);
+  border-radius: var(--border-radius-md);
+}
+
+.playIcon {
+  width: 0;
+  height: 0;
+  margin-left: 4px;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-left: 22px solid var(--color-accent-primary);
+}
+
+.videoText {
+  font-size: 13px;
+  color: var(--color-text-tertiary);
+  text-align: center;
+  padding: 0 var(--spacing-md);
+}
+
+.timelineColumn {
+  min-width: 0;
+  height: 100%;
+  overflow-y: auto;
+  padding-left: var(--spacing-sm);
+  padding-right: var(--spacing-sm);
+}
+
 .toggleBar {
   position: sticky;
-  top: 48px;
-  z-index: 90;
+  top: 0;
+  z-index: 2;
   display: flex;
   justify-content: center;
   padding: var(--spacing-sm) 0;
   background: var(--color-bg-primary);
   border-bottom: 1px solid var(--color-border-default);
-  margin-bottom: var(--spacing-2xl);
-}
-
-.timelineContainer {
-  padding-left: var(--spacing-sm);
+  margin-bottom: var(--spacing-lg);
 }
 
 /* ── Timeline ── */
@@ -100,6 +145,35 @@
 
 .periodEntries {
   padding-left: 0;
+}
+
+@media (max-width: 900px) {
+  .contentRow {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .videoColumn {
+    height: auto;
+  }
+
+  .videoPlaceholder {
+    height: auto;
+    aspect-ratio: 16 / 9;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .timelineColumn {
+    height: auto;
+    overflow-y: visible;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .toggleBar {
+    top: 48px;
+  }
 }
 
 @media (max-width: 768px) {

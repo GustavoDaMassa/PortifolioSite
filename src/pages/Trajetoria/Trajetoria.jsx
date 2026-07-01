@@ -48,28 +48,37 @@ export const TrajetoriaContent = () => {
         <p className={styles.description}>{t('trajetoria.description')}</p>
       </div>
 
-      <div className={styles.toggleBar}>
-        <ModeToggle mode={mode} onChange={handleModeChange} />
-      </div>
+      <div className={styles.contentRow}>
+        <div className={styles.videoColumn}>
+          <div className={styles.videoPlaceholder}>
+            <span className={styles.playIcon} />
+            <span className={styles.videoText}>{t('trajetoria.videoPlaceholder')}</span>
+          </div>
+        </div>
 
-      <div className={styles.timelineContainer}>
-        <div className={styles.timeline}>
-          {groups.map((group) => {
-            const hasMarco = group.entries.some(e => e.type === 'marco');
-            return (
-              <div key={group.key} className={styles.periodGroup}>
-                <div className={`${styles.periodDot} ${hasMarco ? styles.periodDotMarco : ''}`} />
-                <div className={styles.periodHeader}>
-                  <span className={styles.periodLabel}>{group.key}</span>
+        <div className={styles.timelineColumn}>
+          <div className={styles.toggleBar}>
+            <ModeToggle mode={mode} onChange={handleModeChange} />
+          </div>
+
+          <div className={styles.timeline}>
+            {groups.map((group) => {
+              const hasMarco = group.entries.some(e => e.type === 'marco');
+              return (
+                <div key={group.key} className={styles.periodGroup}>
+                  <div className={`${styles.periodDot} ${hasMarco ? styles.periodDotMarco : ''}`} />
+                  <div className={styles.periodHeader}>
+                    <span className={styles.periodLabel}>{group.key}</span>
+                  </div>
+                  <div className={styles.periodEntries}>
+                    {group.entries.map((entry) => (
+                      <TimelineEntry key={entry.id} entry={entry} mode={mode} />
+                    ))}
+                  </div>
                 </div>
-                <div className={styles.periodEntries}>
-                  {group.entries.map((entry) => (
-                    <TimelineEntry key={entry.id} entry={entry} mode={mode} />
-                  ))}
-                </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
     </main>

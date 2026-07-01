@@ -90,6 +90,7 @@
   "trajetoria": {
     "title": "Journey",
     "description": "Four years of development, two projects in production, self-owned infrastructure and code in four different stacks — built from scratch, balancing university and self-taught study.",
+    "videoPlaceholder": "Presentation video coming soon",
     "toggle": {
       "narrativo": "Narrative",
       "tecnico": "Technical"
