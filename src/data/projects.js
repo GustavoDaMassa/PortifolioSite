@@ -24,29 +24,26 @@ export const featuredProjects = [
   },
   {
     id: 'caixaflow',
+    image: getAssetPath('assets/images/logoCaixaFlow.png'),
     featured: true,
-    coverIcon: getAssetPath('assets/images/icons/caixaflowicon.svg'),
     github: 'https://github.com/GustavoDaMassa/MVP-CaixaFlow'
   },
   {
     id: 'zapagenda',
+    image: getAssetPath('assets/images/logozapagenda.png'),
     featured: true,
-    coverColor: '#25D366',
-    coverLabel: 'ZA',
     github: 'https://github.com/GustavoDaMassa/ZapAgenda'
   },
   {
     id: 'devdraw',
+    image: getAssetPath('assets/images/logodevdraw.png'),
     featured: true,
-    coverColor: '#ff8a3d',
-    coverLabel: 'DD',
     github: 'https://github.com/GustavoDaMassa/DevDraw'
   },
   {
     id: 'solidycontratos',
+    image: getAssetPath('assets/images/logogcontratos.png'),
     featured: true,
-    coverColor: '#863bff',
-    coverLabel: 'PC',
     github: 'https://github.com/GustavoDaMassa/SolidyContratos'
   }
 ];

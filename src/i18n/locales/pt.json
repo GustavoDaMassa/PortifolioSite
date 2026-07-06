@@ -608,7 +608,7 @@
       "description": "Monitor de preços do Mercado Livre com API .NET 8, SPA Angular 20 e extensão Chrome. Alerta por e-mail quando o produto atinge o preço-alvo."
     },
     "solidycontratos": {
-      "title": "pContratos",
+      "title": "gContratos",
       "description": "Sistema SaaS de gestão contratual com assinatura eletrônica, busca semântica de cláusulas via embeddings vetoriais e TDD de duplo loop. Backend em Node.js/Prisma, frontend em React com Zustand e React Query."
     },
     "caixaflow": {

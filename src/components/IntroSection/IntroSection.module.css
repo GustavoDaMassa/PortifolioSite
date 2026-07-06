@@ -1,6 +1,7 @@
 .introSection {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* VIDEO: restaurar para "1fr 1fr" quando o vídeo for adicionado */
+  grid-template-columns: 1fr;
   gap: var(--spacing-2xl);
   align-items: start;
   max-width: 1400px;

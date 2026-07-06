@@ -14,12 +14,14 @@ export const IntroSection = () => {
         <TechStack rows={3} />
       </div>
 
+      {/* VIDEO: restaurar quando disponível
       <div className={styles.videoColumn}>
         <div className={styles.videoPlaceholder}>
           <span className={styles.playIcon} />
           <span className={styles.videoText}>{t('home.videoPlaceholder')}</span>
         </div>
       </div>
+      */}
     </div>
   );
 };

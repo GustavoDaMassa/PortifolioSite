@@ -600,7 +600,7 @@
       "description": "Mercado Livre price monitor with .NET 8 API, Angular 20 SPA and Chrome extension. Sends email alert when the product reaches the target price."
     },
     "solidycontratos": {
-      "title": "pContratos",
+      "title": "gContratos",
       "description": "Contract management SaaS with electronic signature, semantic clause search via vector embeddings and double-loop TDD. Backend in Node.js/Prisma, frontend in React with Zustand and React Query."
     },
     "caixaflow": {
