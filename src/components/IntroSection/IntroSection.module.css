@@ -62,16 +62,9 @@
 /* Responsive */
 @media (max-width: 900px) {
   .introSection {
+    /* VIDEO: restaurar grid para 1fr 1fr quando o vídeo for adicionado */
     grid-template-columns: 1fr;
-  }
-
-  .videoColumn {
-    width: 100%;
-  }
-
-  .videoPlaceholder {
-    max-width: 220px;
-    margin: 0 auto;
+    margin-top: 120px;
   }
 }
 

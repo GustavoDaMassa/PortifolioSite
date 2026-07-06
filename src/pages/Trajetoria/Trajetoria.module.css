@@ -150,25 +150,8 @@
 }
 
 @media (max-width: 900px) {
-  .contentRow {
-    grid-template-columns: 1fr;
-    height: auto;
-  }
-
-  .videoColumn {
-    height: auto;
-  }
-
-  .videoPlaceholder {
-    height: auto;
-    aspect-ratio: 16 / 9;
-    max-width: 480px;
-    margin: 0 auto;
-  }
-
+  /* VIDEO: restaurar videoColumn e videoPlaceholder quando o vídeo for adicionado */
   .timelineColumn {
-    height: auto;
-    overflow-y: visible;
     padding-left: 0;
     padding-right: 0;
   }
