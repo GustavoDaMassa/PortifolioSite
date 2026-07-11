@@ -27,8 +27,6 @@ export const ProfileSection = () => {
             <span className={styles.socialIcon}>
               <img src={link.icon} alt={link.alt} />
             </span>
-            <span className={styles.socialName}>{link.name}</span>
-            <span className={styles.socialValue}>{link.value}</span>
           </a>
         ))}
       </div>

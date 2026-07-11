@@ -105,17 +105,6 @@
   filter: brightness(0) saturate(100%) invert(61%) sepia(89%) saturate(2798%) hue-rotate(197deg) brightness(103%) contrast(101%);
 }
 
-.socialName {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--color-text-primary);
-}
-
-.socialValue {
-  font-size: 12px;
-  color: var(--color-text-tertiary);
-}
-
 /* Responsive */
 @media (max-width: 768px) {
   .profileSection {
@@ -139,14 +128,6 @@
   .socialIcon img {
     width: 22px;
     height: 22px;
-  }
-
-  .socialName {
-    font-size: 13px;
-  }
-
-  .socialValue {
-    font-size: 11px;
   }
 }
 
@@ -180,14 +161,5 @@
   .socialIcon img {
     width: 20px;
     height: 20px;
-  }
-
-  .socialName {
-    font-size: 12px;
-  }
-
-  .socialValue {
-    font-size: 10px;
-    word-break: break-all;
   }
 }
