@@ -97,44 +97,6 @@
   border-radius: 3px;
 }
 
-.navArrow {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  background: var(--color-bg-secondary);
-  color: var(--color-text-primary);
-  border: 1px solid var(--color-border-default);
-  border-radius: var(--border-radius-md);
-  width: 48px;
-  height: 48px;
-  font-size: 20px;
-  cursor: pointer;
-  z-index: 50;
-  transition: all 0.2s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: var(--shadow-md);
-}
-
-.navArrow:hover {
-  background: var(--color-bg-tertiary);
-  border-color: var(--color-text-tertiary);
-  transform: translateY(-50%) scale(1.05);
-}
-
-.navArrow:active {
-  transform: translateY(-50%) scale(0.98);
-}
-
-.navArrow.right {
-  right: var(--spacing-xl);
-}
-
-.navArrow.left {
-  left: var(--spacing-xl);
-}
-
 /* Responsive */
 @media (max-width: 768px) {
   .topNav {
@@ -151,10 +113,6 @@
   }
 
   .curriculoBtn {
-    display: none;
-  }
-
-  .navArrow {
     display: none;
   }
 }
