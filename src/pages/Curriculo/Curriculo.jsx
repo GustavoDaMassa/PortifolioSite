@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next';
 import { Layout } from '../../components/Layout/Layout';
-import { NavArrows } from '../../components/Navigation/NavArrows';
 import { getAssetPath } from '../../utils/paths';
 import styles from './Curriculo.module.css';
 
@@ -11,7 +10,6 @@ export const Curriculo = () => {
 
   return (
     <Layout>
-      <NavArrows rightPath="/" />
       <div className={styles.container}>
 
         <div className={styles.topBar}>

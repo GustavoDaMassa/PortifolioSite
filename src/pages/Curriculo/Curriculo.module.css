@@ -1,7 +1,7 @@
 .container {
-  max-width: 860px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 72px var(--spacing-xl) var(--spacing-2xl);
+  padding: 72px var(--spacing-xl) 96px;
 }
 
 .topBar {
@@ -38,12 +38,26 @@
   transform: translateY(-1px);
 }
 
-/* Resume card */
+/* Resume "page" — Google Docs style: always a white sheet, regardless of site theme */
 .resumeCard {
+  --color-bg-secondary: #ffffff;
+  --color-bg-tertiary: #f1f3f4;
+  --color-border-default: #d0d7de;
+  --color-border-muted: #e8eaed;
+  --color-text-primary: #202124;
+  --color-text-secondary: #3c4043;
+  --color-text-tertiary: #5f6368;
+  --color-accent-primary: #0969da;
+  --color-accent-emphasis: #0550ae;
+
+  width: 1040px;
+  max-width: 100%;
+  margin: 0 auto;
   background: var(--color-bg-secondary);
-  border: 1px solid var(--color-border-default);
-  border-radius: var(--border-radius-lg);
-  padding: var(--spacing-2xl);
+  color: var(--color-text-primary);
+  border-radius: 2px;
+  padding: 110px 90px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 4px 12px 2px rgba(0, 0, 0, 0.18);
 }
 
 /* Resume header */
@@ -54,20 +68,20 @@
 }
 
 .resumeHeader h1 {
-  font-size: 22px;
+  font-size: 42px;
   font-weight: 700;
   color: var(--color-text-primary);
   margin-bottom: var(--spacing-xs);
 }
 
 .resumeTitle {
-  font-size: 13px;
+  font-size: 19px;
   color: var(--color-text-secondary);
   margin-bottom: var(--spacing-sm);
 }
 
 .resumeContact {
-  font-size: 12px;
+  font-size: 15px;
   color: var(--color-text-tertiary);
   line-height: 1.6;
   word-break: break-all;
@@ -97,7 +111,7 @@
 }
 
 .sectionTitle {
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -106,7 +120,7 @@
 }
 
 .sectionText {
-  font-size: 13.5px;
+  font-size: 19px;
   line-height: 1.7;
   color: var(--color-text-secondary);
 }
@@ -121,14 +135,14 @@
 .skillRow {
   display: flex;
   gap: var(--spacing-md);
-  font-size: 13px;
+  font-size: 17px;
   line-height: 1.5;
 }
 
 .skillLabel {
   font-weight: 600;
   color: var(--color-text-primary);
-  min-width: 130px;
+  min-width: 170px;
   flex-shrink: 0;
 }
 
@@ -156,25 +170,25 @@
 
 .jobTitle {
   font-weight: 600;
-  font-size: 13.5px;
+  font-size: 18px;
   color: var(--color-text-primary);
 }
 
 .jobDate {
-  font-size: 12px;
+  font-size: 15px;
   color: var(--color-text-tertiary);
   white-space: nowrap;
   padding-top: 2px;
 }
 
 .jobStack {
-  font-size: 12px;
+  font-size: 15px;
   color: var(--color-text-tertiary);
   margin-bottom: 4px;
 }
 
 .jobLinks {
-  font-size: 12px;
+  font-size: 15px;
   margin-bottom: var(--spacing-sm);
   word-break: break-all;
   overflow-wrap: anywhere;
@@ -195,7 +209,7 @@
 }
 
 .jobList li {
-  font-size: 13px;
+  font-size: 17px;
   color: var(--color-text-secondary);
   line-height: 1.6;
   margin-bottom: 3px;
@@ -209,7 +223,7 @@
 .table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 12.5px;
+  font-size: 15px;
 }
 
 .table th {
@@ -219,7 +233,7 @@
   color: var(--color-text-primary);
   font-weight: 600;
   border: 1px solid var(--color-border-default);
-  font-size: 11px;
+  font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -236,6 +250,23 @@
 }
 
 /* Responsive */
+@media (max-width: 1100px) {
+  .resumeCard {
+    width: 100%;
+    padding: var(--spacing-2xl) var(--spacing-xl);
+  }
+
+  .resumeHeader h1 {
+    font-size: 32px;
+  }
+
+  .sectionText,
+  .jobList li,
+  .skillRow {
+    font-size: 16px;
+  }
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 64px var(--spacing-md) var(--spacing-xl);
@@ -290,6 +321,6 @@
   }
 
   .resumeHeader h1 {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
