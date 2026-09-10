@@ -1,25 +1,20 @@
+import { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
+import { LanguageGateContext } from '../../context/LanguageGateContext';
 import styles from './LanguageSelector.module.css';
-
-const LANGUAGE_STORAGE_KEY = 'app-language';
 
 export const LanguageSelector = () => {
   const { i18n, t } = useTranslation();
-  const isPt = i18n.language.startsWith('pt');
-
-  const toggleLanguage = () => {
-    const newLang = isPt ? 'en' : 'pt';
-    window.localStorage.setItem(LANGUAGE_STORAGE_KEY, newLang);
-    i18n.changeLanguage(newLang);
-  };
+  const { openGate } = useContext(LanguageGateContext);
 
   return (
     <button
-      onClick={toggleLanguage}
+      type="button"
+      onClick={openGate}
       className={styles.langSelector}
       aria-label={t('ui.changeLanguage')}
     >
-      {isPt ? 'EN' : 'PT'}
+      {i18n.language.slice(0, 2).toUpperCase()}
     </button>
   );
 };

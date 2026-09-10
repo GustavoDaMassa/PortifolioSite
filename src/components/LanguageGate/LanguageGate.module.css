@@ -1,0 +1,86 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md);
+  background: color-mix(in srgb, var(--color-bg-primary) 25%, transparent);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  animation: fadeIn 0.4s ease;
+}
+
+.close {
+  position: absolute;
+  top: var(--spacing-lg);
+  right: var(--spacing-lg);
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.close:hover,
+.close:focus-visible {
+  color: var(--color-accent-primary);
+  transform: scale(1.1);
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 520px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+  width: 100%;
+}
+
+.option {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.option:hover,
+.option:focus-visible {
+  color: var(--color-accent-primary);
+  transform: scale(1.05);
+}
+
+.optionActive {
+  color: var(--color-accent-primary);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 480px) {
+  .options {
+    gap: 40px;
+  }
+
+  .option {
+    font-size: 2.75rem;
+  }
+}

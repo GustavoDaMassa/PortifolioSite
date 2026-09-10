@@ -2,9 +2,10 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import pt from './locales/pt.json';
 import en from './locales/en.json';
+import it from './locales/it.json';
 
 const LANGUAGE_STORAGE_KEY = 'app-language';
-const SUPPORTED_LANGUAGES = ['pt', 'en'];
+const SUPPORTED_LANGUAGES = ['pt', 'en', 'it'];
 
 function getInitialLanguage() {
   if (typeof window === 'undefined') {
@@ -25,7 +26,8 @@ i18n
   .init({
     resources: {
       pt: { translation: pt },
-      en: { translation: en }
+      en: { translation: en },
+      it: { translation: it }
     },
     supportedLngs: SUPPORTED_LANGUAGES,
     load: 'languageOnly',

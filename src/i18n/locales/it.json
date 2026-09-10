@@ -1,0 +1,692 @@
+{
+  "nav": {
+    "curriculo": "Curriculum",
+    "home": "Home",
+    "medias": "MediasAPI",
+    "finance": "FinanceMY",
+    "projects": "Progetti",
+    "trajetoria": "Percorso",
+    "blog": "Blog"
+  },
+  "curriculo": {
+    "pageTitle": "Curriculum",
+    "download": "Scarica PDF",
+    "present": "presente",
+    "subtitle": "Software Engineer | Fullstack",
+    "jobTitleFinance": "Software Engineer — FinanceMY",
+    "jobTitleMedias": "Software Engineer — MediasAPI",
+    "jobTitlePriceWatch": "Software Engineer — PriceWatch",
+    "jobTitleSolidy": "Software Engineer — SolidyContratos",
+    "jobTitleZap": "Software Engineer — ZapAgenda",
+    "sobre": {
+      "title": "Profilo",
+      "text": "Ingegnere del Software con 4 anni di esperienza nello sviluppo di ecosistemi completi, dall'infrastruttura e API ad alte prestazioni fino a interfacce moderne e responsive. Specializzato in architetture backend (Java/Spring, .NET, Node.js e Ruby on Rails), con solide basi in Informatica e un focus sulla qualità del codice tramite TDD e Clean Architecture. Esperienza nell'implementazione di soluzioni complesse, come interpreti di DSL, elaborazione asincrona con Kafka/RabbitMQ e integrazione di IA Generativa. Competente nella costruzione di interfacce scalabili con React e Angular, unendo rigore tecnico lato server a eccellenza UX lato client."
+    },
+    "habilidades": {
+      "title": "Competenze Tecniche",
+      "databases": "Database & Messaggistica",
+      "infra": "Infrastruttura & DevOps",
+      "tools": "IA & Data Engineering",
+      "practices": "Qualità & Processi",
+      "tests": "Test Automatizzati"
+    },
+    "experiencia": {
+      "title": "Esperienza",
+      "finance": {
+        "item1": "Ho progettato e implementato un'architettura orientata a GraphQL per l'aggregazione di dati finanziari tramite Pluggy, ottimizzando il consumo di dati ed eliminando l'over-fetching",
+        "item2": "Ho sviluppato una pipeline di elaborazione asincrona di webhook utilizzando Apache Kafka, garantendo resilienza e coerenza nell'elaborazione di transazioni su larga scala",
+        "item3": "Ho implementato la soluzione in due ecosistemi distinti (Java/Spring e .NET Core) per validare la portabilità dell'architettura e le prestazioni tra runtime diversi",
+        "item4": "Ho strutturato il deploy tramite CI/CD automatizzato con Docker, riducendo il tempo di rilascio delle nuove versioni"
+      },
+      "medias": {
+        "item1": "Ho sviluppato un interprete di formule dinamiche basato sull'algoritmo Shunting-Yard, convertendo espressioni matematiche in Notazione Polacca Inversa (RPN) e valutandole tramite una macchina a pila",
+        "item2": "Ho implementato la soluzione in tre stack diversi (Java, .NET e Node.js), concentrandomi sull'astrazione della logica di business per renderla indipendente dal linguaggio",
+        "item3": "Ho automatizzato il provisioning dell'infrastruttura utilizzando Terraform, garantendo la riproducibilità dell'ambiente di produzione"
+      },
+      "pricewatch": {
+        "item1": "Ho costruito una piattaforma di monitoraggio prezzi di prodotti con liste personalizzate e sistema di avvisi",
+        "item2": "Ho implementato una cache con Redis per ottimizzare le query frequenti e ridurre la latenza",
+        "item3": "Ho sviluppato un'interfaccia SPA con Angular Material e autenticazione integrata",
+        "item4": "Deploy in produzione con CI/CD automatizzato e server proprio tramite Cloudflare Tunnel"
+      },
+      "solidy": {
+        "item1": "Ho guidato lo sviluppo di un sistema di gestione contrattuale con focus su tipizzazione forte e sicurezza dei dati utilizzando Prisma ORM",
+        "item2": "Ho implementato un motore di ricerca semantica utilizzando Embeddings Vettoriali, permettendo il recupero intelligente di clausole contrattuali tramite IA",
+        "item3": "Ho stabilito la cultura del TDD a Doppio Loop, garantendo copertura totale nei flussi critici di firma digitale e misurazione dei lavori",
+        "item4": "Ho sviluppato il frontend in React con Zustand e React Query, ottimizzando lo stato globale e le prestazioni della cache delle richieste"
+      },
+      "zap": {
+        "item1": "Ho progettato un ecosistema di prenotazione intelligente integrato con WhatsApp, utilizzando NestJS e un microservizio Python (FastAPI) per l'elaborazione NLP tramite Google Gemini",
+        "item2": "Ho implementato l'orchestrazione di notifiche e promemoria asincroni tramite RabbitMQ, garantendo la consegna dei messaggi anche in scenari di instabilità dell'API di destinazione"
+      }
+    },
+    "formacao": {
+      "title": "Formazione Accademica",
+      "degree": "Laurea in Informatica",
+      "item1": "Solide basi in strutture dati, algoritmi, architettura del software e database",
+      "item2": "Punto di rilievo tecnico: sviluppo di un compilatore completo per il linguaggio Goianinha, implementando tutte le fasi: analisi lessicale, sintattica, semantica e generazione di codice Assembly in C"
+    },
+    "outros": {
+      "title": "Altri Progetti",
+      "col": {
+        "project": "Progetto",
+        "tech": "Tecnologia",
+        "desc": "Descrizione"
+      },
+      "goianinha": "Compilatore completo con generazione di codice Assembly",
+      "classview": "Visualizzatore delle relazioni tra classi di un progetto",
+      "cleanMediasAPI": "Reimplementazione della Medias API con Clean Architecture",
+      "msfinanceapi": "Reimplementazione della FinanceAPI come sistema a microservizi"
+    }
+  },
+  "home": {
+    "title": "Gustavo Henrique | Software Engineer",
+    "description1": "Ingegnere del Software Fullstack, laureando in Informatica presso l'UFG. Specializzato in architetture backend (Java, .NET, Node.js) e interfacce moderne con React e Angular. Dalla progettazione dell'infrastruttura al deploy in produzione, con focus sulla qualità del codice tramite TDD, Clean Architecture e integrazione di IA Generativa.",
+    "description2": "Qui accanto trovi alcuni dei miei progetti. Ognuno è nato da un problema reale ed è stato consegnato con test, documentazione e rigorosi standard di ingegneria del software.",
+    "videoPlaceholder": "Video di presentazione in arrivo",
+    "techTitle": "Tecnologie",
+    "curriculoHint": "Curriculum disponibile qui accanto",
+    "blogHint": "Segui il blog",
+    "projectsHint": "Guarda i progetti"
+  },
+  "allProjects": {
+    "featured": "Progetti in evidenza",
+    "all": "Altri progetti",
+    "viewProject": "Vedi progetto",
+    "viewGithub": "Vedi su GitHub",
+    "ctaText": "Vuoi vedere di più? Dai un'occhiata al blog tecnico e al percorso completo.",
+    "trajetoriaHint": "Guarda il percorso"
+  },
+  "projectShowcase": {
+    "presentationVideoPlaceholder": "Video di presentazione in arrivo",
+    "techVideoPlaceholder": "Video tecnico in arrivo",
+    "app": "Applicazione",
+    "docs": "Documentazione",
+    "github": "GitHub"
+  },
+  "trajetoria": {
+    "title": "Percorso",
+    "description": "Quattro anni di sviluppo, sette progetti online, un'infrastruttura propria e codice in diversi stack — costruito da zero, conciliando università e studio autodidatta, fino alla produzione.",
+    "videoPlaceholder": "Video di presentazione in arrivo",
+    "types": {
+      "marco": "Tappa",
+      "projeto": "Progetto",
+      "aprendizado": "Apprendimento",
+      "infra": "Infrastruttura"
+    },
+    "months": ["Gen", "Feb", "Mar", "Apr", "Mag", "Giu", "Lug", "Ago", "Set", "Ott", "Nov", "Dic"],
+    "quarter": "T{{count}}",
+    "viewGithub": "Vedi su GitHub"
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Contenuto tecnico approfondito",
+    "empty": "Nessun post trovato.",
+    "allTags": "Tutti",
+    "tagLabel": "Filtra per tag",
+    "allPosts": "Tutti i post",
+    "searchPlaceholder": "Cerca nel blog",
+    "sortLabel": "Ordina post",
+    "sortRecent": "Più recenti",
+    "sortOldest": "Meno recenti",
+    "notFound": "Post non trovato.",
+    "back": "← Torna al blog",
+    "backBtn": "← Blog",
+    "prevPost": "Post precedente",
+    "nextPost": "Post successivo",
+    "monthsShort": ["Gen", "Feb", "Mar", "Apr", "Mag", "Giu", "Lug", "Ago", "Set", "Ott", "Nov", "Dic"],
+    "monthsLong": ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"]
+  },
+  "ui": {
+    "changeLanguage": "Cambia lingua",
+    "toggleTheme": "Cambia tema"
+  },
+  "meta": {
+    "pageTitle": {
+      "default": "Portfolio | Gustavo Henrique",
+      "home": "Home | Gustavo Henrique",
+      "curriculo": "Curriculum | Gustavo Henrique",
+      "medias": "MediasAPI | Gustavo Henrique",
+      "finance": "FinanceMY | Gustavo Henrique",
+      "pricewatch": "PriceWatch | Gustavo Henrique",
+      "caixaflow": "CaixaFlow | Gustavo Henrique",
+      "zapagenda": "ZapAgenda | Gustavo Henrique",
+      "devdraw": "DevDraw | Gustavo Henrique",
+      "solidycontratos": "SolidyContratos | Gustavo Henrique",
+      "projects": "Progetti | Gustavo Henrique",
+      "trajetoria": "Percorso | Gustavo Henrique",
+      "blog": "Blog | Gustavo Henrique",
+      "blogPost": "Post del Blog | Gustavo Henrique"
+    }
+  },
+  "mediasAPI": {
+    "menu": {
+      "apresentacao": "Presentazione",
+      "motivacao": "Motivazione e Soluzione",
+      "funcionalidades": "Funzionalità Principali",
+      "utilizandoApi": "Utilizzo dell'API",
+      "praticas": "Pratiche Adottate"
+    },
+    "title": "API REST per la Gestione di Voti e Proiezioni Accademiche",
+    "heroDescription": "API REST per il calcolo dinamico delle medie accademiche con supporto a formule personalizzabili. Usa l'algoritmo Shunting Yard e la notazione polacca inversa per interpretare espressioni matematiche definite dall'utente.",
+    "features": [
+      {
+        "icon": "📊",
+        "title": "Archiviazione dei Voti",
+        "description": "Archivia i voti in modo strutturato ed efficiente."
+      },
+      {
+        "icon": "🧮",
+        "title": "Calcolo Personalizzato",
+        "description": "Definisci metodi personalizzati per il calcolo delle medie."
+      },
+      {
+        "icon": "🎯",
+        "title": "Obiettivi Accademici",
+        "description": "Ottieni automaticamente il punteggio necessario per raggiungere i tuoi obiettivi."
+      },
+      {
+        "icon": "📈",
+        "title": "Simulazioni",
+        "description": "Simula diversi scenari per la pianificazione strategica."
+      },
+      {
+        "icon": "📚",
+        "title": "Gestione delle Materie",
+        "description": "Gestisci le materie con totale flessibilità."
+      }
+    ],
+    "endpoints": [
+      {
+        "method": "POST",
+        "route": "/api/auth/register",
+        "description": "Crea un profilo registrandoti nel sistema."
+      },
+      {
+        "method": "POST",
+        "route": "/api/auth/login",
+        "description": "Convalida le credenziali e ottieni il token JWT."
+      },
+      {
+        "method": "GET",
+        "route": "/api/disciplinas",
+        "description": "Elenca tutte le materie dell'utente."
+      },
+      {
+        "method": "POST",
+        "route": "/api/disciplinas",
+        "description": "Crea una materia con metodo di calcolo personalizzato."
+      },
+      {
+        "method": "GET",
+        "route": "/api/projecoes",
+        "description": "Visualizza le proiezioni e simula scenari."
+      },
+      {
+        "method": "PUT",
+        "route": "/api/avaliacoes/{id}",
+        "description": "Inserisci e aggiorna i voti delle valutazioni."
+      }
+    ],
+    "placeholder": "QUI",
+    "apresentacao": {
+      "title": "Presentazione",
+      "docLink": "Documentazione tecnica",
+      "p1": "Una piattaforma intelligente di gestione accademica che trasforma il modo in cui studenti e docenti gestiscono le valutazioni. La soluzione offre archiviazione centralizzata dei voti, calcolo automatico delle medie e, soprattutto, proiezioni strategiche che permettono agli utenti di simulare scenari e pianificare in anticipo il proprio rendimento.",
+      "p2": "Il punto di forza è la flessibilità: ogni materia può avere il proprio metodo di calcolo personalizzato tramite espressioni matematiche configurabili. Il sistema elabora queste espressioni dinamicamente, identifica variabili e costanti tramite regex, e applica l'algoritmo Shunting Yard con notazione polacca inversa (RPN) per garantire la corretta precedenza degli operatori — tutto questo senza compromettere prestazioni o usabilità.",
+      "p3": "Sviluppata seguendo i principi SOLID e un'architettura a livelli, l'API combina validazioni robuste (Bean Validation), autenticazione JWT, test automatizzati con mock e documentazione OpenAPI 3. La soluzione è stata containerizzata con Docker e utilizza Spring Data JPA per query ottimizzate, dimostrando un'implementazione backend completa e professionale."
+    },
+    "motivacao": {
+      "title": "Motivazione e Soluzione",
+      "p1": "Durante il percorso universitario, gestire i voti o anche solo archiviarli è un processo che può essere automatizzato in modo efficiente. Tuttavia, poiché ogni docente e materia definisce i propri metodi di valutazione e criteri di rendimento secondo le proprie preferenze e approcci, esiste una grande variabilità e flessibilità in questo processo.",
+      "p2": "Per permettere all'applicazione di supportare queste definizioni personalizzate, è stata implementata una soluzione basata sull'elaborazione di espressioni regolari, consentendo l'identificazione e la manipolazione dinamica di variabili, costanti e operatori. In questo modo, il calcolo delle medie finali è automatizzato in modo flessibile e adattabile a diverse regole di valutazione.",
+      "p3": "Un'altra sfida è stata l'implementazione di questo calcolo dinamico. La soluzione adottata utilizza la notazione polacca inversa (RPN), che elimina la necessità di parentesi definendo l'ordine corretto di precedenza direttamente nella sua struttura. Inoltre, è stato impiegato un adattamento dell'algoritmo Shunting Yard, utilizzando pile e liste come strutture dati per garantire la corretta valutazione delle espressioni."
+    },
+    "funcionalidades": {
+      "title": "Funzionalità Principali",
+      "items": [
+        "Archivia i voti in modo strutturato ed efficiente.",
+        "Definisci metodi personalizzati per il calcolo delle medie.",
+        "Ottieni automaticamente il punteggio necessario per raggiungere gli obiettivi accademici.",
+        "Simula diversi scenari per la pianificazione strategica.",
+        "Gestisci le materie."
+      ]
+    },
+    "utilizandoApi": {
+      "title": "Utilizzo dell'API",
+      "login": {
+        "title": "Login:",
+        "item": "L'utente crea il proprio profilo registrandosi nel sistema."
+      },
+      "autenticacao": {
+        "title": "Autenticazione:",
+        "item": "L'API convalida le credenziali e, in caso di successo, restituisce un token JWT."
+      },
+      "disciplinas": {
+        "title": "Materie:",
+        "item": "L'utente può creare e modificare le proprie materie personalizzate."
+      },
+      "projecoes": {
+        "title": "Proiezioni:",
+        "item": "Una proiezione viene creata automaticamente alla definizione del metodo di calcolo nel passaggio precedente. Gli utenti possono creare, modificare e visualizzare altre proiezioni."
+      },
+      "avaliacoes": {
+        "title": "Valutazioni:",
+        "item": "Create automaticamente anche a ogni proiezione. Gli utenti possono inserire i voti."
+      }
+    },
+    "praticas": {
+      "title": "Pratiche Adottate",
+      "arquitetura": {
+        "title": "Architettura e Design",
+        "items": [
+          "API REST con divisione in livelli",
+          "Applicazione dei principi SOLID",
+          "Dependency Injection",
+          "Uso del pattern Data Transfer Object (DTO)"
+        ]
+      },
+      "validacao": {
+        "title": "Validazione e Sicurezza",
+        "items": [
+          "Validazioni personalizzate e uso di Bean Validation",
+          "Implementazione di autenticazione e autorizzazione tramite JWT"
+        ]
+      },
+      "erros": {
+        "title": "Gestione di Errori e Risposte",
+        "items": [
+          "Cattura e gestione standardizzata degli errori"
+        ]
+      },
+      "documentacao": {
+        "title": "Documentazione",
+        "items": [
+          "Documentazione dell'API con diagrammi ed esempi",
+          "Documentazione tecnica degli endpoint con OpenAPI 3"
+        ]
+      },
+      "testes": {
+        "title": "Test e Qualità del Codice",
+        "items": [
+          "Test automatizzati con creazione di mock e ambiente separato"
+        ]
+      },
+      "banco": {
+        "title": "Database",
+        "items": [
+          "Modellazione del database relazionale con definizione dei vincoli",
+          "Query JPQL e SQL nativo con Spring Data JPA"
+        ]
+      },
+      "ferramentas": {
+        "title": "Strumenti e Deploy",
+        "items": [
+          "Uso di API Client e Database Client durante lo sviluppo",
+          "Incapsulamento dell'applicazione con Docker, creando immagini e container personalizzati",
+          "Versionamento del codice con Git"
+        ]
+      },
+      "tecnologias": {
+        "title": "Tecnologie"
+      }
+    }
+  },
+  "financeAPI": {
+    "menu": {
+      "apresentacao": "Presentazione",
+      "motivacao": "Motivazione e Soluzione",
+      "funcionalidades": "Funzionalità Principali",
+      "utilizandoApi": "Utilizzo dell'API",
+      "praticas": "Pratiche Adottate"
+    },
+    "title": "API GraphQL di Integrazione Bancaria, Analisi e Classificazione delle Transazioni",
+    "heroDescription": "API GraphQL che elabora transazioni bancarie tramite Open Finance. Riceve webhook da aggregatori finanziari, categorizza i movimenti e calcola i saldi — con messaggistica Kafka per l'elaborazione asincrona.",
+    "features": [
+      {
+        "icon": "🔄",
+        "title": "Webhook Automatici",
+        "description": "Ricevi transazioni automaticamente tramite webhook Pluggy."
+      },
+      {
+        "icon": "💾",
+        "title": "Persistenza Sicura",
+        "description": "Persisti le transazioni in un database relazionale."
+      },
+      {
+        "icon": "🏷️",
+        "title": "Categorizzazione Intelligente",
+        "description": "Classifica per categorie personalizzate."
+      },
+      {
+        "icon": "📜",
+        "title": "Storico Completo",
+        "description": "Consulta lo storico delle transazioni con filtri avanzati."
+      },
+      {
+        "icon": "🔍",
+        "title": "Filtri Avanzati",
+        "description": "Visualizza le transazioni per categoria, periodo e tipo."
+      },
+      {
+        "icon": "💰",
+        "title": "Calcolo del Saldo",
+        "description": "Saldo automatico delle transazioni selezionate."
+      }
+    ],
+    "endpoints": [
+      {
+        "method": "POST",
+        "route": "/graphql - mutation createUser",
+        "description": "Crea un profilo registrandoti nel sistema."
+      },
+      {
+        "method": "POST",
+        "route": "/graphql - mutation createAccount",
+        "description": "Crea e modifica conti bancari."
+      },
+      {
+        "method": "POST",
+        "route": "/graphql - mutation connectAccount",
+        "description": "Collega il conto a un'istituzione finanziaria tramite Pluggy."
+      },
+      {
+        "method": "POST",
+        "route": "/graphql - mutation createCategory",
+        "description": "Crea e gestisci categorie personalizzate."
+      },
+      {
+        "method": "GET",
+        "route": "/graphql - query transactions",
+        "description": "Elenca le transazioni con filtri e calcola automaticamente il saldo."
+      }
+    ],
+    "placeholder": "QUI",
+    "apresentacao": {
+      "title": "Presentazione",
+      "docLink": "Documentazione tecnica",
+      "p1": "Un'API GraphQL completa per la gestione finanziaria intelligente che collega l'ecosistema Open Finance all'utente finale. La piattaforma cattura automaticamente le transazioni bancarie tramite webhook, organizza i movimenti in categorie personalizzate e offre analisi dettagliate con calcolo automatico del saldo — tutto tramite query GraphQL flessibili e precise.",
+      "p2": "Il sistema è stato progettato per risolvere un problema reale: la difficoltà di consolidare e categorizzare i movimenti finanziari di più conti. Attraverso l'integrazione con l'aggregatore Pluggy in ambiente sandbox, l'API simula il comportamento di un'istituzione partecipante all'Open Finance, elaborando webhook in tempo reale e persistendo dati con relazioni complesse in PostgreSQL.",
+      "p3": "L'architettura implementa messaggistica con Kafka per l'elaborazione asincrona, Spring Security con autenticazione X-API-KEY, e utilizza GraphQL per offrire ai client (dashboard, app mobile, integrazioni) la flessibilità di richiedere esattamente i dati necessari. Il progetto dimostra una conoscenza approfondita nell'integrazione di API esterne, nell'elaborazione di eventi in tempo reale e nella progettazione di API moderne orientate a GraphQL."
+    },
+    "motivacao": {
+      "title": "Motivazione e Soluzione",
+      "p1": "L'intenzione iniziale era costruire un sistema integrato e funzionale in grado di elaborare automaticamente i movimenti finanziari. Tuttavia, ottenere, classificare e analizzare le transazioni bancarie in tempo reale è un processo che richiede un alto livello di integrazione con le istituzioni finanziarie. L'accesso diretto a dati bancari reali richiede infatti l'abilitazione come istituzione autorizzata nell'Open Finance. Per proseguire con l'obiettivo, è stata implementata una soluzione che utilizza un aggregatore di dati finanziari con ambiente sandbox, simulando il comportamento di un'istituzione partecipante all'Open Finance. È stato così possibile simulare webhook, testando scenari reali senza dipendere da dati sensibili.",
+      "p2": "Un altro punto rilevante è stata la scelta di GraphQL, che consente query flessibili e precise, restituendo solo i dati realmente necessari per ciascun client o integrazione. Questo facilita la costruzione di dashboard dinamiche e applicazioni front-end, oltre all'analisi personale.",
+      "p3": "Inoltre, l'API consente la categorizzazione intelligente delle transazioni, permettendo all'utente finale o all'applicazione di selezionare solo i movimenti rilevanti e calcolare automaticamente il saldo per analisi, filtraggio o integrazione con report finanziari personalizzati."
+    },
+    "funcionalidades": {
+      "title": "Funzionalità Principali",
+      "items": [
+        "Ricevere transazioni automaticamente tramite webhook Pluggy.",
+        "Persistere le transazioni in un database relazionale.",
+        "Classificare per categorie personalizzate.",
+        "Consultare lo storico delle transazioni.",
+        "Visualizzare le transazioni in base a filtri — per categoria, periodo e tipo.",
+        "Calcolo automatico del saldo in base alle transazioni selezionate."
+      ]
+    },
+    "utilizandoApi": {
+      "title": "Utilizzo dell'API",
+      "users": {
+        "title": "Users:",
+        "item": "L'utente crea il proprio profilo registrandosi nel sistema."
+      },
+      "accounts": {
+        "title": "Accounts:",
+        "item": "L'utente può creare e modificare i propri conti, ancora senza connessione con l'aggregatore."
+      },
+      "integration": {
+        "title": "FinancialIntegration:",
+        "item": "Con il conto creato è possibile collegarlo a un'istituzione finanziaria."
+      },
+      "category": {
+        "title": "Category:",
+        "item": "Gli utenti creano e gestiscono le proprie categorie e sottocategorie che potranno essere assegnate alle transazioni"
+      },
+      "transactions": {
+        "title": "Transactions:",
+        "item": "Archivia e seleziona le transazioni desiderate calcolando automaticamente il saldo."
+      }
+    },
+    "praticas": {
+      "title": "Pratiche Adottate",
+      "arquitetura": {
+        "title": "Architettura e Design",
+        "items": [
+          "API GraphQL con divisione in livelli",
+          "Applicazione dei principi SOLID",
+          "Dependency Injection",
+          "Uso del pattern Data Transfer Object (DTO)",
+          "Uso di strumenti di Tunneling (Ngrok)",
+          "Integrazione con il modello dati di API esterne (Pluggy)",
+          "Messaggistica con Kafka",
+          "Archiviazione delle credenziali in file"
+        ]
+      },
+      "validacao": {
+        "title": "Validazione e Sicurezza",
+        "items": [
+          "Validazioni personalizzate e uso di Bean Validation",
+          "Implementazione dell'autenticazione tramite X-API-KEY"
+        ]
+      },
+      "erros": {
+        "title": "Gestione di Errori e Risposte",
+        "items": [
+          "Cattura e gestione standardizzata degli errori"
+        ]
+      },
+      "documentacao": {
+        "title": "Documentazione",
+        "items": [
+          "Documentazione dell'API con diagrammi ed esempi",
+          "Documentazione tecnica degli endpoint con GraphiQL"
+        ]
+      },
+      "testes": {
+        "title": "Test e Qualità del Codice",
+        "items": [
+          "Test automatizzati con creazione di mock e ambiente separato"
+        ]
+      },
+      "banco": {
+        "title": "Database",
+        "items": [
+          "Modellazione del database relazionale con definizione dei vincoli",
+          "Query JPQL e SQL nativo con Spring Data JPA"
+        ]
+      },
+      "ferramentas": {
+        "title": "Strumenti e Deploy",
+        "items": [
+          "Uso di API Client, Database Client e Ambiente Sandbox durante lo sviluppo",
+          "Incapsulamento dell'applicazione con Docker, creando immagini e container personalizzati",
+          "Versionamento del codice con Git"
+        ]
+      },
+      "tecnologias": {
+        "title": "Tecnologie"
+      }
+    }
+  },
+  "priceWatch": {
+    "menu": {
+      "apresentacao": "Presentazione",
+      "arquitetura": "Architettura",
+      "funcionalidades": "Funzionalità",
+      "endpoints": "Endpoint",
+      "praticas": "Pratiche Adottate"
+    },
+    "title": "Monitor prezzi di Mercado Livre — API, SPA ed Estensione Chrome",
+    "heroDescription": "Soluzione completa per il monitoraggio dei prezzi: API .NET 8 con Clean Architecture, SPA Angular 20 ed estensione Chrome che aggiunge un pulsante di monitoraggio direttamente sulla pagina del prodotto.",
+    "features": [
+      { "icon": "👁️", "title": "Monitoraggio Automatico", "description": "Verifica dei prezzi ogni ora tramite l'API di Mercado Livre." },
+      { "icon": "📬", "title": "Avvisi via E-mail", "description": "Notifica inviata quando il prezzo raggiunge l'obiettivo definito." },
+      { "icon": "📊", "title": "Storico Prezzi", "description": "Grafico dell'andamento del prezzo nel tempo." },
+      { "icon": "📋", "title": "Liste di Prodotti", "description": "Organizza i prodotti in liste con analisi dei prezzi." },
+      { "icon": "🔔", "title": "Notifiche In-App", "description": "Centro notifiche con polling in tempo reale." },
+      { "icon": "🧩", "title": "Estensione Chrome", "description": "Pulsante di monitoraggio direttamente sulla pagina di Mercado Livre." }
+    ],
+    "endpoints": {
+      "title": "Endpoint dell'API",
+      "items": [
+        { "method": "POST", "route": "/api/auth/register", "description": "Crea un account nel sistema." },
+        { "method": "POST", "route": "/api/auth/login", "description": "Autenticati e ottieni il token JWT." },
+        { "method": "POST", "route": "/api/products", "description": "Aggiungi un prodotto da monitorare (idempotente per URL)." },
+        { "method": "GET", "route": "/api/products", "description": "Elenca tutti i prodotti dell'utente." },
+        { "method": "GET", "route": "/api/products/:id/history", "description": "Storico degli snapshot di prezzo." },
+        { "method": "POST", "route": "/api/lists", "description": "Crea una lista di prodotti." },
+        { "method": "GET", "route": "/api/lists/:id/analysis", "description": "Analisi dei prezzi della lista." },
+        { "method": "GET", "route": "/api/notifications", "description": "Elenca le notifiche dell'utente." }
+      ]
+    },
+    "apresentacao": {
+      "title": "Presentazione",
+      "p1": "PriceWatch risolve un problema quotidiano: seguire il prezzo di un prodotto su Mercado Livre senza doverlo controllare ripetutamente sul sito. Incolli l'URL del prodotto, definisci un prezzo obiettivo e il sistema monitora automaticamente — inviando un avviso via e-mail e una notifica in-app quando il prezzo raggiunge il tuo obiettivo.",
+      "p2": "Il progetto è stato costruito in tre livelli indipendenti: un'API REST in .NET 8, una SPA in Angular 20 ed un'estensione Chrome in Manifest V3. Ogni livello con le proprie decisioni di architettura e stack, tutti integrati allo stesso backend.",
+      "p3": "Il sistema è in produzione, in esecuzione sul mio home server con deploy automatico tramite Watchtower. L'estensione Chrome è in fase di invio al Chrome Web Store."
+    },
+    "arquitetura": {
+      "title": "Architettura",
+      "p1": "Il progetto segue una Clean Architecture rigorosa nel backend — quattro livelli con dipendenze sempre rivolte verso l'interno. Il Domain non conosce alcun dettaglio dell'infrastruttura: MongoDB, Redis, SMTP o l'API di Mercado Livre sono dettagli dichiarati come interfacce e implementati nel livello Infrastructure.",
+      "backend": {
+        "title": "Backend — .NET 8",
+        "p1": "Il livello Application è composto da use case separati per responsabilità: AddProductUseCase, PriceCheckWorker, ProcessAlertUseCase. Due background worker sono in esecuzione continua: il PriceCheckWorker si attiva ogni minuto e verifica i prodotti con nextCheckAt scaduto, l'AlertDispatchWorker consuma lo Stream Redis 'price-alerts' e invia e-mail e notifiche.",
+        "p2": "La scelta di MongoDB come database principale è stata intenzionale — per imparare i document database in un contesto reale. Redis è stato scelto per il rate limiting e Redis Streams come messaggistica leggera, al posto di Kafka, non necessario per il volume del progetto."
+      },
+      "frontend": {
+        "title": "Frontend — Angular 20",
+        "p1": "SPA costruita con gli standard moderni di Angular: standalone components, inject(), Angular Signals, control flow (@if, @for) e lazy loading. Design ispirato a Mercado Livre per creare coerenza visiva con la piattaforma integrata. Chart.js per il grafico dello storico prezzi, polling ogni 30 secondi per le notifiche."
+      },
+      "extensao": {
+        "title": "Estensione Chrome — Manifest V3",
+        "p1": "Content script iniettato in tutte le pagine di mercadolivre.com.br che rileva la buy box e inietta il pulsante 'Segui con PriceWatch'. MutationObserver garantisce che il pulsante venga reiniettato dopo le navigazioni interne della SPA di ML. L'estensione ha un proprio popup di login — non dipende dalla SPA aperta in un'altra scheda."
+      }
+    },
+    "funcionalidades": {
+      "title": "Funzionalità Principali"
+    },
+    "praticas": {
+      "title": "Pratiche Adottate",
+      "arquitetura": {
+        "title": "Architettura e Design",
+        "items": [
+          "Clean Architecture rigorosa — Domain senza dipendenze esterne",
+          "Use case come unità di lavoro nell'Application Layer",
+          "Strategy Pattern per più fonti di prezzo (PriceFetcherResolver)",
+          "Options Pattern per configurazione tipizzata in .NET",
+          "GlobalExceptionHandler con ProblemDetails per errori standardizzati",
+          "Standalone components, Signals e control flow moderno in Angular"
+        ]
+      },
+      "mensageria": {
+        "title": "Messaggistica ed Elaborazione Asincrona",
+        "items": [
+          "Redis Streams come messaggistica leggera — alternativa a Kafka per basso volume",
+          "Background Worker con IHostedService (.NET BackgroundService)",
+          "Elaborazione asincrona degli avvisi: rilevamento → stream → e-mail + notifica",
+          "Polling nel frontend per le notifiche in-app (senza SSE — bassa frequenza)"
+        ]
+      },
+      "seguranca": {
+        "title": "Sicurezza e Qualità",
+        "items": [
+          "Autenticazione JWT HS256 con interceptor in Angular",
+          "Rate limiting per IP sugli endpoint pubblici e per utente su quelli autenticati",
+          "Idempotenza nella registrazione dei prodotti — senza duplicati, senza errore 409",
+          "Verifica e-mail con template HTML bilingue (EmbeddedResource)"
+        ]
+      },
+      "deploy": {
+        "title": "Deploy e Infrastruttura",
+        "items": [
+          "Home server Ubuntu 24.04 con Docker Compose — MongoDB, Redis, Nginx, Watchtower",
+          "Cloudflare Tunnel per l'esposizione senza aprire porte (CGNAT)",
+          "CI/CD automatico: git push → GitHub Actions → Docker Hub → Watchtower",
+          "SPA su Vercel con deploy automatico a ogni push"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "mediasapi": {
+      "title": "MediasAPI",
+      "description": "API REST per il calcolo dinamico delle medie accademiche con formule personalizzabili. Usa l'algoritmo Shunting Yard per interpretare espressioni matematiche definite dall'utente."
+    },
+    "financeapi": {
+      "title": "FinanceMY",
+      "description": "API GraphQL che elabora transazioni bancarie tramite Open Finance. Riceve webhook da aggregatori finanziari, categorizza i movimenti e calcola i saldi con Kafka per l'elaborazione asincrona."
+    },
+    "pricewatch": {
+      "title": "PriceWatch",
+      "description": "Monitor prezzi di Mercado Livre con API .NET 8, SPA Angular 20 ed estensione Chrome. Avviso via e-mail quando il prodotto raggiunge il prezzo obiettivo."
+    },
+    "solidycontratos": {
+      "title": "gContratos",
+      "description": "Sistema SaaS di gestione contrattuale con firma elettronica, ricerca semantica delle clausole tramite embeddings vettoriali e TDD a doppio loop. Backend in Node.js/Prisma, frontend in React con Zustand e React Query."
+    },
+    "caixaflow": {
+      "title": "CaixaFlow",
+      "description": "Sistema POS (punto vendita) in Ruby on Rails, con gestione cassa, ordini, prodotti, clienti ed emissione di documenti fiscali."
+    },
+    "devdraw": {
+      "title": "DevDraw",
+      "description": "Whiteboard collaborativa in tempo reale con versionamento dei nodi, inviti al progetto e crittografia end-to-end. Frontend con tldraw/React, backend in NestJS."
+    },
+    "zapagenda": {
+      "title": "ZapAgenda",
+      "description": "Ecosistema di prenotazione intelligente integrato con WhatsApp, con NLP tramite Google Gemini e notifiche asincrone orchestrate con RabbitMQ."
+    },
+    "tiobolas": {
+      "title": "Tio Bolas",
+      "description": "Progetto di gruppo con TAD, gestione file, ricerca binaria e coda. Sviluppato in C."
+    },
+    "hashtable": {
+      "title": "HashTable",
+      "description": "Implementazione di una tabella hash con gestione delle collisioni e operazioni di inserimento, ricerca e rimozione."
+    },
+    "agenda": {
+      "title": "AgendaToDO",
+      "description": "API REST per la gestione di attività (CRUD completo) con Spring Boot, validazioni e documentazione Swagger."
+    },
+    "codinome": {
+      "title": "CodinomeUol",
+      "description": "Applicazione Java che legge dati XML e JSON, li persiste in un database in memoria e li mostra in una semplice interfaccia web."
+    },
+    "wallet": {
+      "title": "SimplifiedWallet",
+      "description": "Sistema di trasferimenti tra utenti comuni ed esercenti, con validazione del saldo, autorizzazione esterna e notifiche."
+    },
+    "dotnetFinance": {
+      "title": ".FinanceAPI",
+      "description": "Versione REST dell'API di elaborazione transazioni bancarie basata su Open Finance, sviluppata in .NET"
+    },
+    "dotnetMedias": {
+      "title": ".MediasAPI",
+      "description": "Progetto Medias API: gestione medie e proiezione voti accademici. Scritto in altri due stack — .NET e NodeJS",
+      "linkLabel": ".Net",
+      "additionalLabel": "NodeJS"
+    },
+    "compiler": {
+      "title": "GoianinhaCompiler",
+      "description": "Compilatore completo in C: analisi lessicale, sintattica, semantica, tabella dei simboli e generazione di codice Assembly."
+    },
+    "devbrain": {
+      "title": "DevBrain",
+      "description": "Base di conoscenza personale con oltre 100 documenti su ingegneria del software, System Design, sicurezza, test e preparazione ai colloqui."
+    },
+    "classview": {
+      "title": "ClassView",
+      "description": "Applicazione web frontend che analizza e visualizza le relazioni tra classi di un progetto in forma di grafo, con supporto a più linguaggi."
+    },
+    "msfinanceapi": {
+      "title": "MSFinanceApi",
+      "description": "Reimplementazione della FinanceAPI come sistema a microservizi in .NET 9, con servizi isolati di Gateway, Identity, Finance e Webhook comunicanti tramite Kafka."
+    },
+    "homeserver": {
+      "title": "Home Server",
+      "description": "Server domestico configurato da zero con Ubuntu, Docker e Cloudflare Tunnel per ospitare applicazioni in produzione senza dipendere da infrastrutture cloud."
+    }
+  }
+}
