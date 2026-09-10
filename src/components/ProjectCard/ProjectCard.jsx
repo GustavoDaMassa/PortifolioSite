@@ -1,11 +1,9 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import styles from './ProjectCard.module.css';
 
 export const ProjectCard = ({ project }) => {
   const { t } = useTranslation();
-  const [isHovered, setIsHovered] = useState(false);
   const title = t(`projects.${project.id}.title`);
 
   const cover = project.image ? (
@@ -26,14 +24,6 @@ export const ProjectCard = ({ project }) => {
   const mediaArea = project.featured ? (
     <div className={styles.mediaWrapper}>
       {cover}
-      {project.video && isHovered && (
-        <iframe
-          src={project.video}
-          className={styles.videoPreview}
-          allow="autoplay; encrypted-media"
-          title={title}
-        />
-      )}
     </div>
   ) : cover;
 
@@ -72,8 +62,6 @@ export const ProjectCard = ({ project }) => {
       <Link
         to={project.route}
         className={`${styles.projectCard} ${styles.featured}`}
-        onMouseEnter={() => project.video && setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
       >
         {cardContent}
       </Link>

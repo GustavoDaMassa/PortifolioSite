@@ -1,10 +1,12 @@
 import { useEffect, useRef } from 'react';
 
-export const useSwipe = (onSwipeLeft, onSwipeRight, threshold = 50) => {
+export const useSwipe = (onSwipeLeft, onSwipeRight, threshold = 50, targetRef) => {
   const startX = useRef(0);
   const endX = useRef(0);
 
   useEffect(() => {
+    const target = targetRef?.current ?? document;
+
     const handleTouchStart = (e) => {
       startX.current = e.touches[0].clientX;
     };
@@ -30,14 +32,14 @@ export const useSwipe = (onSwipeLeft, onSwipeRight, threshold = 50) => {
       endX.current = 0;
     };
 
-    document.addEventListener('touchstart', handleTouchStart);
-    document.addEventListener('touchmove', handleTouchMove);
-    document.addEventListener('touchend', handleTouchEnd);
+    target.addEventListener('touchstart', handleTouchStart);
+    target.addEventListener('touchmove', handleTouchMove);
+    target.addEventListener('touchend', handleTouchEnd);
 
     return () => {
-      document.removeEventListener('touchstart', handleTouchStart);
-      document.removeEventListener('touchmove', handleTouchMove);
-      document.removeEventListener('touchend', handleTouchEnd);
+      target.removeEventListener('touchstart', handleTouchStart);
+      target.removeEventListener('touchmove', handleTouchMove);
+      target.removeEventListener('touchend', handleTouchEnd);
     };
-  }, [onSwipeLeft, onSwipeRight, threshold]);
+  }, [onSwipeLeft, onSwipeRight, threshold, targetRef]);
 };
