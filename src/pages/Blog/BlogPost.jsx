@@ -1,4 +1,4 @@
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import ReactMarkdown from 'react-markdown';
 import { Layout } from '../../components/Layout/Layout';
@@ -11,7 +11,6 @@ import styles from './BlogPost.module.css';
 export const BlogPost = () => {
   const { t, i18n } = useTranslation();
   const { slug } = useParams();
-  const navigate = useNavigate();
   const post = getPost(slug);
   const isEn = i18n.language.startsWith('en');
   const locale = isEn ? 'en-US' : 'pt-BR';
@@ -47,13 +46,11 @@ export const BlogPost = () => {
   return (
     <Layout>
       <ReadingProgress />
-      <main className={styles.page}>
-        <div className={styles.breadcrumb}>
-          <button onClick={() => navigate('/blog')} className={styles.backBtn}>
-            {t('blog.backBtn')}
-          </button>
-        </div>
+      <Link to="/blog" className={styles.floatingBack}>
+        {t('blog.backBtn')}
+      </Link>
 
+      <main className={styles.page}>
         <article className={styles.article}>
           <header className={styles.header}>
             <div className={styles.meta}>
