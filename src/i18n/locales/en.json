@@ -78,23 +78,28 @@
     "videoPlaceholder": "Presentation video coming soon",
     "techTitle": "Technologies",
     "curriculoHint": "Resume available on the left",
-    "blogHint": "Check out the blog"
+    "blogHint": "Check out the blog",
+    "projectsHint": "See the projects"
   },
   "allProjects": {
-    "title": "Projects",
-    "featured": "Featured",
-    "all": "All",
+    "featured": "Featured projects",
+    "all": "Other projects",
     "viewProject": "View project",
-    "viewGithub": "View on GitHub"
+    "viewGithub": "View on GitHub",
+    "ctaText": "Want to see more? Check out the technical blog and the full journey.",
+    "trajetoriaHint": "See the journey"
+  },
+  "projectShowcase": {
+    "presentationVideoPlaceholder": "Presentation video coming soon",
+    "techVideoPlaceholder": "Technical video coming soon",
+    "app": "Application",
+    "docs": "Documentation",
+    "github": "GitHub"
   },
   "trajetoria": {
     "title": "Journey",
     "description": "Four years of development, two projects in production, self-owned infrastructure and code in four different stacks — built from scratch, balancing university and self-taught study.",
     "videoPlaceholder": "Presentation video coming soon",
-    "toggle": {
-      "narrativo": "Narrative",
-      "tecnico": "Technical"
-    },
     "types": {
       "marco": "Milestone",
       "projeto": "Project",
@@ -108,8 +113,14 @@
   "blog": {
     "title": "Blog",
     "description": "In-depth technical content",
-    "empty": "No posts found for this tag.",
+    "empty": "No posts found.",
     "allTags": "All",
+    "tagLabel": "Filter by tag",
+    "allPosts": "All posts",
+    "searchPlaceholder": "Search the blog",
+    "sortLabel": "Sort posts",
+    "sortRecent": "Most recent",
+    "sortOldest": "Least recent",
     "notFound": "Post not found.",
     "back": "← Back to blog",
     "backBtn": "← Blog",
@@ -130,6 +141,10 @@
       "medias": "MediasAPI | Gustavo Henrique",
       "finance": "FinanceMY | Gustavo Henrique",
       "pricewatch": "PriceWatch | Gustavo Henrique",
+      "caixaflow": "CaixaFlow | Gustavo Henrique",
+      "zapagenda": "ZapAgenda | Gustavo Henrique",
+      "devdraw": "DevDraw | Gustavo Henrique",
+      "solidycontratos": "SolidyContratos | Gustavo Henrique",
       "projects": "Projects | Gustavo Henrique",
       "trajetoria": "Journey | Gustavo Henrique",
       "blog": "Blog | Gustavo Henrique",
