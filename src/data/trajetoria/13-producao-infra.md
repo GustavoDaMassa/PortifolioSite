@@ -4,23 +4,13 @@ date: "2025-09"
 title: "Produção e infraestrutura"
 title_en: "Production and Infrastructure"
 type: "marco"
-tags: ["Docker", "Nginx", "CI/CD", "GitHub Actions", "Cloudflare", "SSL", "CORS"]
+tags: ["Docker", "Nginx", "CI/CD", "GitHub Actions", "Cloudflare", "SSL", "Home Server"]
 parallel: []
 github: ""
 ---
 
 <!-- NARRATIVA -->
-Colocar aplicações em produção ensinou coisas que nenhum curso isolado entrega por completo. CORS, SSL, variáveis de ambiente, reverse proxy, DNS e automação deixaram de ser detalhes distantes e passaram a fazer parte do trabalho real.
-
-A limitação de infraestrutura acabou virando laboratório. Em vez de depender só de soluções prontas, fui aprendendo na prática como sustentar serviços rodando fora da minha máquina de desenvolvimento.
-
-<!-- TECNICO -->
-Infraestrutura em servidor próprio com Ubuntu, Docker Compose, Nginx, PostgreSQL, Kafka e outros serviços auxiliares. Acesso externo via Cloudflare Tunnel, SSL gerenciado pela Cloudflare e fluxo de deploy automatizado com GitHub Actions, Docker Hub e Watchtower. Esse período consolidou conhecimentos operacionais de produção e observação de comportamento real de serviços.
+A primeira vez que coloquei a MediasAPI em produção foi na AWS — e o custo me levou a uma decisão que acabou sendo mais valiosa: configurar um servidor próprio num PC antigo. Ali aprendi infraestrutura de verdade: Nginx, Docker Compose, Cloudflare Tunnel para acesso externo sem abrir porta no roteador, SSL gerenciado pela Cloudflare, auto-deploy com Watchtower. O que parecia limitação financeira virou laboratório de DevOps — hardware modesto (i5-3330, 8GB RAM), domínio próprio (`financeapi.com.br`), tudo rodando em casa.
 
 <!-- NARRATIVA_EN -->
-Putting applications into production taught lessons that no isolated course fully delivers. CORS, SSL, environment variables, reverse proxy, DNS and automation stopped being distant details and became part of real work.
-
-The infrastructure limitation turned into a lab. Instead of relying only on ready-made solutions, I learned in practice how to sustain services running outside my development machine.
-
-<!-- TECNICO_EN -->
-Infrastructure on a self-hosted server with Ubuntu, Docker Compose, Nginx, PostgreSQL, Kafka and other supporting services. External access through Cloudflare Tunnel, SSL managed by Cloudflare and an automated deployment flow with GitHub Actions, Docker Hub and Watchtower. This period consolidated operational production knowledge and observation of real service behavior.
+The first time I put MediasAPI into production was on AWS — and the cost led me to a decision that turned out to be more valuable: setting up my own server on an old PC. There I learned real infrastructure: Nginx, Docker Compose, Cloudflare Tunnel for external access without opening a router port, SSL managed by Cloudflare, auto-deploy with Watchtower. What looked like a financial constraint turned into a DevOps lab — modest hardware (i5-3330, 8GB RAM), my own domain (`financeapi.com.br`), all running at home.

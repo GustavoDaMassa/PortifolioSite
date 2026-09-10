@@ -28,8 +28,8 @@
 
 .contentRow {
   display: grid;
-  /* VIDEO: restaurar para "65% 35%" e height: clamp(360px, 60vh, 640px) quando o vídeo for adicionado */
-  grid-template-columns: 1fr;
+  grid-template-columns: 65% 35%;
+  height: clamp(360px, 60vh, 640px);
   gap: var(--spacing-xl);
 }
 
@@ -69,24 +69,13 @@
 
 .timelineColumn {
   min-width: 0;
-  /* VIDEO: restaurar height: 100% e overflow-y: auto quando o vídeo for adicionado */
+  height: 100%;
+  overflow-y: auto;
   max-width: 720px;
   margin: 0 auto;
   width: 100%;
   padding-left: var(--spacing-sm);
   padding-right: var(--spacing-sm);
-}
-
-.toggleBar {
-  position: sticky;
-  top: 0;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  padding: var(--spacing-sm) 0;
-  background: var(--color-bg-primary);
-  border-bottom: 1px solid var(--color-border-default);
-  margin-bottom: var(--spacing-lg);
 }
 
 /* ── Timeline ── */
@@ -150,14 +139,16 @@
 }
 
 @media (max-width: 900px) {
-  /* VIDEO: restaurar videoColumn e videoPlaceholder quando o vídeo for adicionado */
-  .timelineColumn {
-    padding-left: 0;
-    padding-right: 0;
+  .contentRow {
+    grid-template-columns: 1fr;
+    height: auto;
   }
 
-  .toggleBar {
-    top: 48px;
+  .timelineColumn {
+    height: auto;
+    overflow-y: visible;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 

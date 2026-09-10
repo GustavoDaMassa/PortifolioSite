@@ -2,16 +2,14 @@ import { useTranslation } from 'react-i18next';
 import ReactMarkdown from 'react-markdown';
 import styles from './TimelineEntry.module.css';
 
-export const TimelineEntry = ({ entry, mode }) => {
+export const TimelineEntry = ({ entry }) => {
   const { t, i18n } = useTranslation();
   const isEn = i18n.language.startsWith('en');
   const isMarco = entry.type === 'marco';
 
   const title = isEn && entry.title_en ? entry.title_en : entry.title;
   const subtitle = isEn && entry.subtitle_en ? entry.subtitle_en : entry.subtitle;
-  const content = mode === 'tecnico'
-    ? (isEn && entry.tecnico_en ? entry.tecnico_en : entry.tecnico)
-    : (isEn && entry.narrativa_en ? entry.narrativa_en : entry.narrativa);
+  const content = isEn && entry.narrativa_en ? entry.narrativa_en : entry.narrativa;
 
   function formatDate(dateStr) {
     if (!dateStr) return '';
@@ -42,7 +40,7 @@ export const TimelineEntry = ({ entry, mode }) => {
           <ReactMarkdown>{content}</ReactMarkdown>
         </div>
 
-        {mode === 'tecnico' && entry.tags?.length > 0 && (
+        {entry.tags?.length > 0 && (
           <div className={styles.tags}>
             {entry.tags.map(tag => (
               <span key={tag} className={styles.tag}>{tag}</span>

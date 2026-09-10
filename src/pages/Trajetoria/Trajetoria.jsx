@@ -1,8 +1,7 @@
-import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Layout } from '../../components/Layout/Layout';
-import { ModeToggle } from '../../components/Timeline/ModeToggle';
 import { TimelineEntry } from '../../components/Timeline/TimelineEntry';
+import { Footer } from '../../components/Footer/Footer';
 import { entries } from '../../data/trajetoria/index';
 import styles from './Trajetoria.module.css';
 
@@ -32,12 +31,6 @@ function groupByPeriod(entries, t) {
 
 export const TrajetoriaContent = () => {
   const { t } = useTranslation();
-  const [mode, setMode] = useState(() => localStorage.getItem('trajetoria-mode') || 'narrativo');
-
-  const handleModeChange = (newMode) => {
-    setMode(newMode);
-    localStorage.setItem('trajetoria-mode', newMode);
-  };
 
   const groups = groupByPeriod(entries, t);
 
@@ -49,20 +42,14 @@ export const TrajetoriaContent = () => {
       </div>
 
       <div className={styles.contentRow}>
-        {/* VIDEO: restaurar quando disponível
         <div className={styles.videoColumn}>
           <div className={styles.videoPlaceholder}>
             <span className={styles.playIcon} />
             <span className={styles.videoText}>{t('trajetoria.videoPlaceholder')}</span>
           </div>
         </div>
-        */}
 
         <div className={styles.timelineColumn}>
-          <div className={styles.toggleBar}>
-            <ModeToggle mode={mode} onChange={handleModeChange} />
-          </div>
-
           <div className={styles.timeline}>
             {groups.map((group) => {
               const hasMarco = group.entries.some(e => e.type === 'marco');
@@ -74,7 +61,7 @@ export const TrajetoriaContent = () => {
                   </div>
                   <div className={styles.periodEntries}>
                     {group.entries.map((entry) => (
-                      <TimelineEntry key={entry.id} entry={entry} mode={mode} />
+                      <TimelineEntry key={entry.id} entry={entry} />
                     ))}
                   </div>
                 </div>
@@ -89,8 +76,11 @@ export const TrajetoriaContent = () => {
 
 export const Trajetoria = () => {
   return (
-    <Layout>
-      <TrajetoriaContent />
-    </Layout>
+    <>
+      <Layout>
+        <TrajetoriaContent />
+      </Layout>
+      <Footer />
+    </>
   );
 };
