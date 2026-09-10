@@ -88,6 +88,21 @@
   }
 }
 
+@media (max-width: 768px) {
+  .introSection {
+    grid-template-columns: 1fr;
+  }
+
+  .videoColumn {
+    order: -1;
+  }
+
+  .videoPlaceholder {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 480px) {
   .introSection {
     padding: 0 var(--spacing-md);
