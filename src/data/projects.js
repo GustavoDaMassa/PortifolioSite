@@ -80,12 +80,12 @@ export const projects = [
   },
   {
     id: 'dotnetFinance',
-    image: getAssetPath('assets/images/dotnetfinancecard.jpg'),
+    image: getAssetPath('assets/images/dotnetfinancecard.png'),
     github: 'https://github.com/GustavoDaMassa/dotNetFinaAPI'
   },
   {
     id: 'dotnetMedias',
-    image: getAssetPath('assets/images/dotnetmediascard.jpg'),
+    image: getAssetPath('assets/images/dotnetmediascard.png'),
     github: 'https://github.com/GustavoDaMassa/dotNetMediasAPI',
     additionalLinks: [
       { label: '.Net', url: 'https://github.com/GustavoDaMassa/dotNetMediasAPI' },

@@ -25,7 +25,6 @@ export const FeaturedCarousel = ({ projects }) => {
     <>
       <div className={styles.backgroundLayer}>
         <img src={current.image} alt="" className={styles.backgroundImage} />
-        <div className={styles.backgroundOverlay} />
       </div>
 
       <div className={styles.info}>

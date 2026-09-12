@@ -2,16 +2,19 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { socialLinks } from '../../data/socialLinks';
 import { getAssetPath } from '../../utils/paths';
+import { useTheme } from '../../context/ThemeContext';
 import styles from './ProfileSection.module.css';
 
 export const ProfileSection = () => {
   const { t } = useTranslation();
+  const { theme } = useTheme();
+  const profileImage = theme === 'light' ? 'assets/images/profile-light.jpg' : 'assets/images/profile.png';
 
   return (
     <div className={styles.profileSection}>
       <div
         className={styles.profilePic}
-        style={{ backgroundImage: `url(${getAssetPath('assets/images/profile.png')})` }}
+        style={{ backgroundImage: `url(${getAssetPath(profileImage)})` }}
       ></div>
       <h1>{t('home.title')}</h1>
 

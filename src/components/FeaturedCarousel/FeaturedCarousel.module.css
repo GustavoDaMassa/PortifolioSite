@@ -7,7 +7,6 @@
   position: relative;
   border-radius: var(--border-radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-lg);
 }
 
 .stageLink {
@@ -30,12 +29,6 @@
   filter: blur(7px) brightness(0.65) saturate(1.15);
 }
 
-.backgroundOverlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.8) 30%, rgba(0, 0, 0, 0.45) 50%, rgba(0, 0, 0, 0) 65%);
-}
-
 .info {
   position: absolute;
   left: 0;
@@ -56,7 +49,7 @@
   font-size: 19px;
   font-weight: 700;
   line-height: 1.6;
-  color: #ffffff;
+  color: var(--color-text-primary);
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
 }
 
@@ -107,7 +100,7 @@
   padding: 0;
   border-radius: var(--border-radius-md);
   border: 2px solid transparent;
-  background: var(--color-bg-secondary);
+  background: var(--color-bg-canvas);
   cursor: pointer;
   overflow: hidden;
   opacity: 0.5;
@@ -138,13 +131,13 @@
 
 .arrow {
   flex: 0 0 auto;
-  background: var(--color-bg-secondary);
-  color: var(--color-text-primary);
-  border: 1px solid var(--color-border-default);
+  background: transparent;
+  color: var(--color-accent-primary);
+  border: none;
   border-radius: var(--border-radius-md);
-  width: 36px;
-  height: 36px;
-  font-size: 16px;
+  width: 96px;
+  height: 96px;
+  font-size: 48px;
   cursor: pointer;
   transition: all 0.2s ease;
   display: flex;
@@ -154,7 +147,6 @@
 
 .arrow:hover {
   background: var(--color-bg-tertiary);
-  border-color: var(--color-text-tertiary);
   transform: scale(1.05);
 }
 

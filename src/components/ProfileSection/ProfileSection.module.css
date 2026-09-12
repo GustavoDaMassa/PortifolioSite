@@ -81,7 +81,7 @@
   justify-content: center;
   width: 56px;
   height: 56px;
-  background: var(--color-bg-secondary);
+  background: var(--color-bg-canvas);
   border: 1px solid var(--color-border-default);
   border-radius: var(--border-radius-md);
   transition: all 0.2s ease;
@@ -99,6 +99,10 @@
   width: 26px;
   height: 26px;
   filter: brightness(0) saturate(100%) invert(79%) sepia(11%) saturate(293%) hue-rotate(178deg) brightness(93%) contrast(88%);
+}
+
+:global([data-theme='light']) .socialIcon img {
+  filter: brightness(0);
 }
 
 .socialItem:hover .socialIcon img {

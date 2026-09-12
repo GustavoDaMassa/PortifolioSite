@@ -23,7 +23,7 @@ export const TechStack = ({ rows = 3 }) => {
               <div className={`${styles.techStack} ${direction}`}>
                 {duplicatedRow.map((tech, index) => (
                   <div key={`row${rowIndex}-${index}`} className={styles.techItem}>
-                    <img src={tech.icon} alt={tech.alt} />
+                    <img src={tech.icon} alt={tech.alt} className={tech.mono ? styles.mono : undefined} />
                   </div>
                 ))}
               </div>

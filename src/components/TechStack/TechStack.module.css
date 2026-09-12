@@ -112,6 +112,10 @@
   transform: scale(1.1);
 }
 
+:global([data-theme='light']) .mono {
+  filter: invert(1);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .techStackContainer {
